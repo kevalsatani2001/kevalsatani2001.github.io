@@ -3,7 +3,7 @@
     "name": "Keyur H. Satani",
     "title": "Flutter Developer",
     "bio": "Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter & Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.",
-    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
+    "avatarUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&token=f922f1c6-700b-473d-a8cd-7c2c65a402aa",
     "location": "Surat, Gujarat, India",
     "email": "kevalsatani1234@gmail.com",
     "phone": "+91 8758113819",
@@ -289,5 +289,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-07T15:26:29.897078"
+  "updatedAt": "2026-09-07T22:31:15.009594"
 }
