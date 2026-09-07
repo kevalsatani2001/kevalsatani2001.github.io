@@ -347,30 +347,55 @@ header.scrolled {
   transform: translateY(-2px);
 }
 
-/* Hero Terminal & Avatar Card */
+/* Hero Avatar Card & Floating Badges */
 .hero-visual {
   position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
   align-items: center;
 }
 
 .avatar-card {
   position: relative;
-  padding: 16px;
-  border-radius: 30px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.01));
+  padding: 14px;
+  border-radius: 32px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 0 50px rgba(var(--primary-rgb), 0.25);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-avatar {
   width: 320px;
-  height: 350px;
-  border-radius: 22px;
+  height: 360px;
+  border-radius: 24px;
   object-fit: cover;
   display: block;
+}
+
+.avatar-fallback {
+  width: 320px;
+  height: 360px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.35), rgba(var(--accent-rgb), 0.35));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.avatar-fallback span.sub {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  color: var(--text-muted);
 }
 
 .floating-badge {
@@ -385,10 +410,12 @@ header.scrolled {
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
   animation: float 4s ease-in-out infinite;
   z-index: 10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .badge-top-left {
-  top: -16px;
+  top: -14px;
   left: -20px;
   background: rgba(13, 19, 36, 0.95);
   border: 1px solid rgba(var(--primary-rgb), 0.45);
@@ -396,7 +423,7 @@ header.scrolled {
 }
 
 .badge-bottom-right {
-  bottom: -16px;
+  bottom: -14px;
   right: -20px;
   background: rgba(13, 19, 36, 0.95);
   border: 1px solid rgba(var(--accent-rgb), 0.45);
@@ -408,43 +435,6 @@ header.scrolled {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
 }
-
-/* Interactive Dev Terminal Box */
-.terminal-card {
-  width: 100%;
-  max-width: 380px;
-  padding: 16px 20px;
-  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-  font-size: 0.82rem;
-  line-height: 1.6;
-  background: rgba(9, 13, 29, 0.9);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-}
-
-.terminal-header {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.terminal-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.terminal-dot.red { background: #EF4444; }
-.terminal-dot.yellow { background: #F59E0B; }
-.terminal-dot.green { background: #10B981; }
-
-.terminal-code {
-  color: #38BDF8;
-}
-
-.terminal-code .kw { color: #F43F5E; font-weight: 700; }
-.terminal-code .str { color: #34D399; }
-.terminal-code .fn { color: #A78BFA; }
 
 /* Bento Stats Section */
 .bento-stats {
@@ -1057,6 +1047,22 @@ footer {
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 2.3rem;
+  }
+  .hero-avatar, .avatar-fallback {
+    width: 260px;
+    height: 290px;
+  }
+  .badge-top-left {
+    top: -8px;
+    left: -8px;
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+  .badge-bottom-right {
+    bottom: -8px;
+    right: -8px;
+    font-size: 0.75rem;
+    padding: 7px 12px;
   }
   .bento-stats {
     grid-template-columns: 1fr;
