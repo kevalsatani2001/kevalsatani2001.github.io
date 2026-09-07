@@ -7,9 +7,9 @@
   --emerald-rgb: 16, 185, 129;
   --amber: #F59E0B;
   --purple: #8B5CF6;
-  --bg-main: #0A0F1D;
+  --bg-main: #050711;
   --bg-surface: #090D1D;
-  --bg-card: rgba(15, 23, 42, 0.88);
+  --bg-card: rgba(13, 19, 36, 0.75);
   --bg-card-hover: rgba(20, 30, 56, 0.9);
   --border: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(var(--primary-rgb), 0.45);
@@ -38,8 +38,9 @@ body {
   font-family: var(--font-body);
   line-height: 1.65;
   overflow-x: hidden;
-  background-image:       radial-gradient(circle at 30% 10%, rgba(59, 130, 246, 0.16) 0%, transparent 45%),
-      radial-gradient(circle at 70% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 45%);
+  background-image:     radial-gradient(circle at 15% 15%, rgba(var(--primary-rgb), 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(var(--accent-rgb), 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 50% 65%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
