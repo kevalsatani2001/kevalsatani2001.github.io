@@ -1,0 +1,209 @@
+{
+  "profile": {
+    "name": "Keval Satani",
+    "title": "Full Stack Flutter & Mobile App Developer",
+    "bio": "Passionate Mobile & Web Software Engineer dedicated to crafting high-performance, aesthetically stunning, and scalable cross-platform applications using Flutter, Firebase, and modern cloud technologies.",
+    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
+    "location": "Gujarat, India",
+    "email": "kevalsatani1234@gmail.com",
+    "phone": "+91 98765 43210",
+    "resumeUrl": "https://example.com/resume.pdf",
+    "status": "Open to exciting opportunities & freelance projects",
+    "yearsOfExperience": 2,
+    "githubUsername": "kevalsatani"
+  },
+  "skills": [
+    {
+      "id": "1",
+      "name": "Flutter",
+      "category": "Mobile",
+      "proficiency": 95,
+      "icon": "flutter",
+      "colorHex": "#02569B"
+    },
+    {
+      "id": "2",
+      "name": "Dart",
+      "category": "Mobile",
+      "proficiency": 92,
+      "icon": "dart",
+      "colorHex": "#0175C2"
+    },
+    {
+      "id": "3",
+      "name": "Firebase & Firestore",
+      "category": "Backend",
+      "proficiency": 90,
+      "icon": "firebase",
+      "colorHex": "#FFA611"
+    },
+    {
+      "id": "4",
+      "name": "REST APIs & GraphQL",
+      "category": "Backend",
+      "proficiency": 88,
+      "icon": "api",
+      "colorHex": "#6366F1"
+    },
+    {
+      "id": "5",
+      "name": "State Management (Bloc/Provider)",
+      "category": "Mobile",
+      "proficiency": 90,
+      "icon": "code",
+      "colorHex": "#10B981"
+    },
+    {
+      "id": "6",
+      "name": "Git & GitHub CI/CD",
+      "category": "Tools",
+      "proficiency": 85,
+      "icon": "github",
+      "colorHex": "#24292E"
+    },
+    {
+      "id": "7",
+      "name": "UI/UX & Figma",
+      "category": "Design",
+      "proficiency": 82,
+      "icon": "figma",
+      "colorHex": "#F24E1E"
+    },
+    {
+      "id": "8",
+      "name": "Node.js / Cloud Functions",
+      "category": "Backend",
+      "proficiency": 75,
+      "icon": "nodejs",
+      "colorHex": "#339933"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Building Guard Security App",
+      "description": "A robust real-time security management & visitor tracking system with push notifications, QR code check-ins, and multi-tier admin roles built with Flutter & Firebase.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "Cloud Functions",
+        "Provider"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&auto=format&fit=crop&q=80",
+      "liveUrl": "https://github.com/kevalsatani/building-guard-app",
+      "githubUrl": "https://github.com/kevalsatani/building-guard-app",
+      "isFeatured": true,
+      "date": "2026"
+    },
+    {
+      "id": "2",
+      "title": "Smart Portfolio CMS & Publisher",
+      "description": "An intelligent personal portfolio manager app that automates one-click static site generation and live deployment to GitHub Pages via REST API.",
+      "category": "Mobile & Web",
+      "tags": [
+        "Flutter",
+        "GitHub API",
+        "Dart",
+        "Glassmorphism"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani/port",
+      "isFeatured": true,
+      "date": "2026"
+    },
+    {
+      "id": "3",
+      "title": "E-Commerce Marketplace App",
+      "description": "Full-featured shopping app with real-time cart sync, payment gateway integration, smooth animations, and order tracking.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Stripe",
+        "NodeJS",
+        "REST API"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani/ecommerce-app",
+      "isFeatured": false,
+      "date": "2025"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "1",
+      "company": "Tech Solutions Inc.",
+      "role": "Flutter Developer",
+      "location": "Surat, Gujarat",
+      "startDate": "Jan 2025",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Leading development of cross-platform mobile apps, architecting clean state management, and optimizing API network latency by 40%.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Bloc",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "2",
+      "company": "AppVenture Labs",
+      "role": "Junior Mobile Developer Intern",
+      "location": "Remote",
+      "startDate": "Jun 2024",
+      "endDate": "Dec 2024",
+      "isCurrent": false,
+      "description": "Collaborated with senior engineers to implement UI designs into pixel-perfect Flutter widgets and integrated Firebase Authentication & Firestore.",
+      "techStack": [
+        "Flutter",
+        "Git",
+        "Firebase",
+        "Figma"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "institution": "Gujarat Technological University (GTU)",
+      "degree": "Bachelor of Engineering in Information Technology",
+      "fieldOfStudy": "Computer Science / IT",
+      "startYear": "2022",
+      "endYear": "2026",
+      "grade": "8.8 CGPA"
+    }
+  ],
+  "socialLinks": [
+    {
+      "id": "1",
+      "platform": "GitHub",
+      "url": "https://github.com/kevalsatani",
+      "username": "kevalsatani"
+    },
+    {
+      "id": "2",
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/kevalsatani",
+      "username": "kevalsatani"
+    },
+    {
+      "id": "3",
+      "platform": "Email",
+      "url": "mailto:kevalsatani1234@gmail.com",
+      "username": "kevalsatani1234@gmail.com"
+    }
+  ],
+  "theme": {
+    "templateId": "glassmorphism",
+    "primaryColorHex": "#6366F1",
+    "accentColorHex": "#06B6D4",
+    "fontName": "Outfit",
+    "enableGlowEffects": true,
+    "showContactForm": true
+  },
+  "updatedAt": "2026-09-07T13:54:30.595555"
+}
