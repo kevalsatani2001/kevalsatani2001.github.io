@@ -1,21 +1,21 @@
 {
   "profile": {
-    "name": "Keval Satani",
-    "title": "Full Stack Flutter & Mobile App Developer",
-    "bio": "Passionate Mobile & Web Software Engineer dedicated to crafting high-performance, aesthetically stunning, and scalable cross-platform applications using Flutter, Firebase, and modern cloud technologies.",
+    "name": "Keyur H. Satani",
+    "title": "Flutter Developer",
+    "bio": "Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter & Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.",
     "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
-    "location": "Gujarat, India",
+    "location": "Surat, Gujarat, India",
     "email": "kevalsatani1234@gmail.com",
-    "phone": "+91 98765 43210",
-    "resumeUrl": "https://example.com/resume.pdf",
-    "status": "Open to exciting opportunities & freelance projects",
-    "yearsOfExperience": 2,
-    "githubUsername": "kevalsatani"
+    "phone": "+91 8758113819",
+    "resumeUrl": "",
+    "status": "Available for full-time roles & freelance opportunities",
+    "yearsOfExperience": 4,
+    "githubUsername": "kevalsatani2001"
   },
   "skills": [
     {
       "id": "1",
-      "name": "Flutter",
+      "name": "Flutter & Dart",
       "category": "Mobile",
       "proficiency": 95,
       "icon": "flutter",
@@ -23,187 +23,271 @@
     },
     {
       "id": "2",
-      "name": "Dart",
-      "category": "Mobile",
+      "name": "Bloc & Cubit",
+      "category": "State Management",
       "proficiency": 92,
-      "icon": "dart",
-      "colorHex": "#0175C2"
+      "icon": "code",
+      "colorHex": "#6366F1"
     },
     {
       "id": "3",
+      "name": "GetX & Provider",
+      "category": "State Management",
+      "proficiency": 90,
+      "icon": "code",
+      "colorHex": "#8B5CF6"
+    },
+    {
+      "id": "4",
+      "name": "REST APIs & JSON",
+      "category": "Backend",
+      "proficiency": 94,
+      "icon": "api",
+      "colorHex": "#10B981"
+    },
+    {
+      "id": "5",
       "name": "Firebase & Firestore",
       "category": "Backend",
-      "proficiency": 90,
+      "proficiency": 92,
       "icon": "firebase",
       "colorHex": "#FFA611"
     },
     {
-      "id": "4",
-      "name": "REST APIs & GraphQL",
-      "category": "Backend",
-      "proficiency": 88,
-      "icon": "api",
-      "colorHex": "#6366F1"
-    },
-    {
-      "id": "5",
-      "name": "State Management (Bloc/Provider)",
-      "category": "Mobile",
-      "proficiency": 90,
-      "icon": "code",
-      "colorHex": "#10B981"
-    },
-    {
       "id": "6",
-      "name": "Git & GitHub CI/CD",
-      "category": "Tools",
-      "proficiency": 85,
-      "icon": "github",
-      "colorHex": "#24292E"
+      "name": "SQLite & Local Storage",
+      "category": "Database",
+      "proficiency": 88,
+      "icon": "database",
+      "colorHex": "#06B6D4"
     },
     {
       "id": "7",
-      "name": "UI/UX & Figma",
-      "category": "Design",
-      "proficiency": 82,
-      "icon": "figma",
-      "colorHex": "#F24E1E"
+      "name": "Git, GitHub & CI/CD",
+      "category": "Tools",
+      "proficiency": 90,
+      "icon": "github",
+      "colorHex": "#F43F5E"
     },
     {
       "id": "8",
-      "name": "Node.js / Cloud Functions",
-      "category": "Backend",
-      "proficiency": 75,
-      "icon": "nodejs",
-      "colorHex": "#339933"
+      "name": "Postman & Android Studio",
+      "category": "Tools",
+      "proficiency": 92,
+      "icon": "tools",
+      "colorHex": "#EC4899"
     }
   ],
   "projects": [
     {
       "id": "1",
-      "title": "Building Guard Security App",
-      "description": "A robust real-time security management & visitor tracking system with push notifications, QR code check-ins, and multi-tier admin roles built with Flutter & Firebase.",
-      "category": "Mobile App",
+      "title": "TheSpeedTurtle App",
+      "description": "Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.",
+      "category": "Fitness & Productivity",
       "tags": [
         "Flutter",
+        "Dart",
+        "BLoC",
         "Firebase",
-        "Cloud Functions",
-        "Provider"
+        "Push Notifications"
       ],
-      "imageUrl": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&auto=format&fit=crop&q=80",
-      "liveUrl": "https://github.com/kevalsatani/building-guard-app",
-      "githubUrl": "https://github.com/kevalsatani/building-guard-app",
+      "imageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani2001/speed-turtle-app",
       "isFeatured": true,
       "date": "2026"
     },
     {
       "id": "2",
-      "title": "Smart Portfolio CMS & Publisher",
-      "description": "An intelligent personal portfolio manager app that automates one-click static site generation and live deployment to GitHub Pages via REST API.",
-      "category": "Mobile & Web",
+      "title": "MATA News Application",
+      "description": "High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.",
+      "category": "Media & News",
       "tags": [
         "Flutter",
-        "GitHub API",
-        "Dart",
-        "Glassmorphism"
+        "REST APIs",
+        "GetX",
+        "Play Store Live",
+        "Caching"
       ],
-      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
-      "liveUrl": "",
-      "githubUrl": "https://github.com/kevalsatani/port",
+      "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80",
+      "liveUrl": "https://play.google.com/store/apps/details?id=com.mata.today&hl=en",
+      "githubUrl": "",
       "isFeatured": true,
-      "date": "2026"
+      "date": "2025"
     },
     {
       "id": "3",
-      "title": "E-Commerce Marketplace App",
-      "description": "Full-featured shopping app with real-time cart sync, payment gateway integration, smooth animations, and order tracking.",
-      "category": "Mobile App",
+      "title": "QR Scanner & Barcode Pro",
+      "description": "High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.",
+      "category": "Utility & Tools",
       "tags": [
         "Flutter",
-        "Stripe",
-        "NodeJS",
-        "REST API"
+        "Camera ML",
+        "SQLite",
+        "Clean Architecture"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani2001/qr-scanner-app",
+      "isFeatured": true,
+      "date": "2025"
+    },
+    {
+      "id": "4",
+      "title": "Media Player Application",
+      "description": "Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.",
+      "category": "Media & Streaming",
+      "tags": [
+        "Flutter",
+        "Audio Service",
+        "Video Player",
+        "Bloc"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani2001/media-player-app",
+      "isFeatured": false,
+      "date": "2024"
+    },
+    {
+      "id": "5",
+      "title": "E-Commerce & Multi-Vendor Mobile Platform",
+      "description": "Scalable e-commerce mobile application featuring real-time product catalogs, cart & checkout workflows, payment gateway integration, and order tracking.",
+      "category": "E-Commerce",
+      "tags": [
+        "Flutter",
+        "REST APIs",
+        "Payment Gateway",
+        "Firebase"
       ],
       "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80",
       "liveUrl": "",
-      "githubUrl": "https://github.com/kevalsatani/ecommerce-app",
-      "isFeatured": false,
-      "date": "2025"
+      "githubUrl": "https://github.com/kevalsatani2001/ecommerce-app",
+      "isFeatured": true,
+      "date": "2024"
     }
   ],
   "experiences": [
     {
       "id": "1",
-      "company": "Tech Solutions Inc.",
+      "company": "Code Expert Solutions",
       "role": "Flutter Developer",
       "location": "Surat, Gujarat",
-      "startDate": "Jan 2025",
+      "startDate": "Jan 2026",
       "endDate": "Present",
       "isCurrent": true,
-      "description": "Leading development of cross-platform mobile apps, architecting clean state management, and optimizing API network latency by 40%.",
+      "description": "Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.",
       "techStack": [
         "Flutter",
         "Dart",
-        "Firebase",
         "Bloc",
-        "REST APIs"
+        "REST APIs",
+        "E-Commerce"
       ]
     },
     {
       "id": "2",
-      "company": "AppVenture Labs",
-      "role": "Junior Mobile Developer Intern",
-      "location": "Remote",
-      "startDate": "Jun 2024",
-      "endDate": "Dec 2024",
+      "company": "Freshcodes Technology",
+      "role": "Flutter Developer",
+      "location": "Surat, Gujarat",
+      "startDate": "Aug 2024",
+      "endDate": "Oct 2025",
       "isCurrent": false,
-      "description": "Collaborated with senior engineers to implement UI designs into pixel-perfect Flutter widgets and integrated Firebase Authentication & Firestore.",
+      "description": "Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.",
       "techStack": [
         "Flutter",
-        "Git",
+        "REST APIs",
+        "GetX",
         "Firebase",
-        "Figma"
+        "UI/UX"
+      ]
+    },
+    {
+      "id": "3",
+      "company": "StackApp Infotech",
+      "role": "Flutter Developer",
+      "location": "Surat, Gujarat",
+      "startDate": "Feb 2024",
+      "endDate": "Aug 2024",
+      "isCurrent": false,
+      "description": "Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.",
+      "techStack": [
+        "Flutter",
+        "Provider",
+        "Git",
+        "Clean Architecture"
+      ]
+    },
+    {
+      "id": "4",
+      "company": "Dreamvision Infotech",
+      "role": "Flutter Developer",
+      "location": "Surat, Gujarat",
+      "startDate": "Aug 2022",
+      "endDate": "Jan 2024",
+      "isCurrent": false,
+      "description": "Built cross-platform Android & iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.",
+      "techStack": [
+        "Flutter",
+        "Android & iOS",
+        "SQLite",
+        "Firebase"
       ]
     }
   ],
   "education": [
     {
       "id": "1",
-      "institution": "Gujarat Technological University (GTU)",
-      "degree": "Bachelor of Engineering in Information Technology",
-      "fieldOfStudy": "Computer Science / IT",
+      "institution": "Saurashtra University",
+      "degree": "Bachelor of Computer Application (BCA)",
+      "fieldOfStudy": "Computer Applications & Software Engineering",
       "startYear": "2022",
-      "endYear": "2026",
-      "grade": "8.8 CGPA"
+      "endYear": "2025",
+      "grade": "First Class with Distinction"
+    },
+    {
+      "id": "2",
+      "institution": "Saurashtra University",
+      "degree": "Bachelor of Science (B.Sc)",
+      "fieldOfStudy": "Science & Computer Basics",
+      "startYear": "2018",
+      "endYear": "2022",
+      "grade": "Graduated"
     }
   ],
   "socialLinks": [
     {
       "id": "1",
-      "platform": "GitHub",
-      "url": "https://github.com/kevalsatani",
-      "username": "kevalsatani"
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/keyur-satani-00643623a",
+      "username": "keyur-satani-00643623a"
     },
     {
       "id": "2",
-      "platform": "LinkedIn",
-      "url": "https://linkedin.com/in/kevalsatani",
-      "username": "kevalsatani"
+      "platform": "GitHub",
+      "url": "https://github.com/kevalsatani2001",
+      "username": "kevalsatani2001"
     },
     {
       "id": "3",
       "platform": "Email",
       "url": "mailto:kevalsatani1234@gmail.com",
       "username": "kevalsatani1234@gmail.com"
+    },
+    {
+      "id": "4",
+      "platform": "Phone / WhatsApp",
+      "url": "https://wa.me/918758113819",
+      "username": "+91 8758113819"
     }
   ],
   "theme": {
-    "templateId": "glassmorphism",
+    "templateId": "executive",
     "primaryColorHex": "#6366F1",
     "accentColorHex": "#06B6D4",
     "fontName": "Outfit",
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-07T13:54:30.595555"
+  "updatedAt": "2026-09-07T14:33:04.369101"
 }
