@@ -80,6 +80,26 @@
   ],
   "projects": [
     {
+      "id": "9a2da804-ff86-43f4-9a35-cb5960b86903",
+      "title": "Who's Nxt – Salon Appointment Booking & Retail E-Commerce App",
+      "description": "Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "GetX",
+        "Dio & REST APIs",
+        "Stripe Payments",
+        "Biometric Auth",
+        "Secure Storage"
+      ],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd",
+      "liveUrl": "",
+      "githubUrl": "",
+      "isFeatured": true,
+      "date": "2026"
+    },
+    {
       "id": "173b889c-1b8a-4032-a5ca-d850509d37a3",
       "title": "Who's Nxt – Salon Appointment Booking & Retail E-Commerce App",
       "description": "Steve's Barbers (Powered by WhozNxt)\n\nRole: UI/UX & Frontend Development\n\nOverview: A luxury, multi-feature barbershop booking & retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.",
@@ -309,5 +329,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-08T21:37:34.752337"
+  "updatedAt": "2026-09-08T22:58:24.323015"
 }
