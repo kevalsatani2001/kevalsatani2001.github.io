@@ -80,6 +80,26 @@
   ],
   "projects": [
     {
+      "id": "173b889c-1b8a-4032-a5ca-d850509d37a3",
+      "title": "Who's Nxt – Salon Appointment Booking & Retail E-Commerce App",
+      "description": "Steve's Barbers (Powered by WhozNxt)\n\nRole: UI/UX & Frontend Development\n\nOverview: A luxury, multi-feature barbershop booking & retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "GetX",
+        "Dio & REST APIs",
+        "Stripe Payments",
+        "Biometric Auth",
+        "Secure Storage"
+      ],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6",
+      "liveUrl": "",
+      "githubUrl": "",
+      "isFeatured": true,
+      "date": "2026"
+    },
+    {
       "id": "1",
       "title": "TheSpeedTurtle App",
       "description": "Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.",
@@ -289,5 +309,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-07T22:31:15.009594"
+  "updatedAt": "2026-09-08T21:37:34.752337"
 }
