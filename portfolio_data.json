@@ -80,6 +80,26 @@
   ],
   "projects": [
     {
+      "id": "3d3ce08a-0828-46ae-9252-6de0cbc47744",
+      "title": "Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game",
+      "description": "A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Flame Engine",
+        "Forge2D (Box2D)",
+        "Flutter BLoC",
+        "Game Development",
+        "AdMob SDK"
+      ],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1",
+      "liveUrl": "",
+      "githubUrl": "",
+      "isFeatured": true,
+      "date": "2026"
+    },
+    {
       "id": "9a2da804-ff86-43f4-9a35-cb5960b86903",
       "title": "Who's Nxt – Salon Appointment Booking & Retail E-Commerce App",
       "description": "Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.",
@@ -329,5 +349,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-08T22:58:24.323015"
+  "updatedAt": "2026-09-16T19:39:32.065817"
 }
