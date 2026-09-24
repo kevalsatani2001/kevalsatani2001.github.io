@@ -1,2 +1,1 @@
-// Dynamic interaction logic bundled directly in index.html
-console.log('Portfolio bundle loaded for Keyur H. Satani');
+console.log('Enterprise portfolio bundle loaded for Keyur H. Satani');
