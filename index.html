@@ -1,851 +1,681 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Primary SEO Meta -->
   <title>Keyur H. Satani | Flutter Developer</title>
-  <meta name="description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and production cross-platform mobile apps.">
-  <meta name="author" content="Keyur H. Satani">
-  <meta name="theme-color" content="#070d1e">
+  <meta name="description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and cross-platform mobile apps." />
+  <meta name="author" content="Keyur H. Satani" />
+  <meta name="theme-color" content="#070d1e" />
+  
+  <link rel="canonical" href="https://kevalsatani2001.github.io" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Keyur H. Satani | Flutter Developer">
-  <meta property="og:description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and production cross-platform mobile apps.">
-  <meta property="og:site_name" content="Keyur H. Satani">
+  <!-- Schema.org Person Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://kevalsatani2001.github.io/#person",
+    "name": "Keyur H. Satani",
+    "jobTitle": "Flutter Developer",
+    "url": "https://kevalsatani2001.github.io",
+    "image": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa",
+    "email": "mailto:kevalsatani1234@gmail.com",
+    "telephone": "+91 8758113819",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surat, Gujarat, India",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/keyur-satani-00643623a", "https://github.com/kevalsatani2001", "mailto:kevalsatani1234@gmail.com", "https://wa.me/918758113819"
+    ],
+    "knowsAbout": ["Flutter & Dart","Bloc & Cubit","GetX & Provider","REST APIs & JSON","Firebase & Firestore","SQLite & Local Storage","Git, GitHub & CI/CD","Postman & Android Studio"]
+  }
+  </script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-template="glassmorphism">
+<body class="bg-[#fbfdff] dark:bg-[#070d1e] text-[#0B1B3D] dark:text-slate-100 antialiased transition-colors duration-300">
 
-  <!-- Navigation Bar -->
-  <header>
-    <div class="container nav-content">
-      <a href="#" class="logo">
-        <span class="logo-badge">K</span>
-        <div class="logo-info">
-          <span class="logo-title">Keyur H. Satani</span>
-          <span class="logo-sub">&lt;Flutter Developer /&gt;</span>
+  <!-- Netlify Form Detection -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="bot-field" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="service" />
+    <textarea name="message"></textarea>
+  </form>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-[#070d1e]/80 border-b border-slate-200 dark:border-slate-800 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white font-black flex items-center justify-center shadow-md">
+          KH
+        </div>
+        <div>
+          <span class="font-bold text-base tracking-tight text-slate-900 dark:text-white block leading-tight">Keyur H. Satani</span>
+          <span class="text-[11px] text-blue-600 dark:text-blue-400 font-semibold">Flutter Developer</span>
         </div>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#competencies">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Apps (8+)</a>
+        <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
+        <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a>
+        <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Education</a>
+        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+      </nav>
 
-      <div class="nav-actions">
-        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙</button>
-        <button class="btn-resume-modal open-resume-btn"><span>Resume</span> 📄</button>
-        <button class="nav-cta open-enquiry-btn">
-          <span>Let's Talk</span> 🚀
+      <div class="flex items-center gap-3">
+        <button id="themeBtn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer" title="Toggle Theme">
+          🌓
         </button>
-        <button id="hamburgerBtn" class="hamburger-btn" title="Open Menu">☰</button>
+        
+        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-sm transition">
+          Hire Keyur
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div id="drawerOverlay" class="drawer-overlay"></div>
-  <div id="mobileDrawer" class="mobile-drawer">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span style="font-weight: 800; font-size: 1.15rem;">Menu Navigation</span>
-      <button id="drawerCloseBtn" class="modal-close-btn">✕</button>
-    </div>
-    <ul class="drawer-links">
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#competencies">Services & Architecture</a></li>
-      <li><a href="#skills">Tech Stack & Skills</a></li>
-      <li><a href="#projects">Featured Projects</a></li>
-      <li><a href="#experience">Work Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact & Enquiry</a></li>
-    </ul>
-    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
-      <button class="btn btn-outline open-resume-btn" style="width: 100%; justify-content: center;">Official Resume 📄</button>
-      <button class="btn btn-primary open-enquiry-btn" style="width: 100%; justify-content: center;">Instant Project Enquiry 🚀</button>
-    </div>
-  </div>
-
   <!-- Hero Section -->
-  <main>
-    <section class="hero" id="about">
-      <div class="container hero-grid">
-        <div class="reveal">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <span>Available for full-time roles &amp; freelance opportunities</span>
+  <section id="home" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Available for full-time roles &amp; freelance opportunities
           </div>
+          
+          <h1 class="text-4xl sm:text-6xl font-black text-slate-900 dark:text-white leading-[1.15]">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Flutter Developer</span>
+          </h1>
 
-          <h1>Hi, I'm <br><span class="gradient-text">Keyur H. Satani</span></h1>
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+            Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.
+          </p>
 
-          <div class="hero-subtitle">
-            <span class="text-rotator">Flutter Developer</span>
-            <span class="hero-chip">🚀 4+ Yrs Exp</span>
-            <span class="hero-chip">📍 Surat, Gujarat, India</span>
-          </div>
-
-          <p class="hero-bio">Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.</p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Explore Case Studies ↓</a>
-            <button class="btn btn-outline open-resume-btn">Official Resume 📄</button>
-            <button class="btn btn-outline open-enquiry-btn">Let's Discuss 💬</button>
-            <button onclick="copyText('kevalsatani1234@gmail.com', 'Email copied to clipboard!')" class="btn btn-outline">Copy Email 📋</button>
-          </div>
-
-          <div class="hero-social-bar">
-            <a href="https://www.linkedin.com/in/keyur-satani-00643623a" target="_blank" rel="noopener" class="social-pill">LinkedIn ↗</a>
-<a href="https://github.com/kevalsatani2001" target="_blank" rel="noopener" class="social-pill">GitHub ↗</a>
-<a href="mailto:kevalsatani1234@gmail.com" target="_blank" rel="noopener" class="social-pill">Email ↗</a>
-<a href="https://wa.me/918758113819" target="_blank" rel="noopener" class="social-pill">Phone / WhatsApp ↗</a>
-                        <a href="https://api.whatsapp.com/send?phone=+918758113819" target="_blank" rel="noopener" class="social-pill" style="color: #10B981; border-color: rgba(16, 185, 129, 0.4);">
+          <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-md transition">
+              Explore 8+ Production Apps ↓
+            </a>
+                        <a href="https://api.whatsapp.com/send?phone=+918758113819" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-md transition inline-flex items-center gap-1.5">
               <span>Chat on WhatsApp</span> 💬
             </a>
+            <a href="#contact" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+              Get in Touch
+            </a>
           </div>
-        </div>
 
-        <div class="hero-visual reveal">
-          <div class="avatar-card">
-            <div class="floating-badge badge-top-left">
-              <span>💙</span>
-              <span>Flutter & BLoC Specialist</span>
+          <!-- Stats Grid -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-slate-200 dark:border-slate-800">
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-center sm:text-left">
+              <div class="text-2xl font-black text-blue-600 dark:text-blue-400 font-mono">4+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Years Experience</div>
             </div>
-
-            <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" alt="Keyur H. Satani" class="hero-avatar" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';">
-            <div class="avatar-fallback" style="display: none;">
-              <span>K</span>
-              <span class="sub">Keyur H. Satani</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-center sm:text-left">
+              <div class="text-2xl font-black text-blue-600 dark:text-blue-400 font-mono">8+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Production Apps</div>
             </div>
-
-            <div class="floating-badge badge-bottom-right">
-              <span>📱</span>
-              <span>Android & iOS Apps</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-center sm:text-left">
+              <div class="text-2xl font-black text-blue-600 dark:text-blue-400 font-mono">99.9%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Crash-Free Rate</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-center sm:text-left">
+              <div class="text-2xl font-black text-blue-600 dark:text-blue-400 font-mono">100%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Clean Architecture</div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Bento Stats & Metrics -->
-    <div class="container">
-      <div class="bento-stats reveal">
-        <div class="card stat-box">
-          <div class="stat-number">4+</div>
-          <div class="stat-label">Years of Experience</div>
-        </div>
-        <div class="card stat-box">
-          <div class="stat-number">8+</div>
-          <div class="stat-label">Published Store Apps & Projects</div>
-        </div>
-        <div class="card stat-box">
-          <div class="stat-number">99.9%</div>
-          <div class="stat-label">Crash-Free Code Quality</div>
-        </div>
-        <div class="card stat-box">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Clean Architecture & Fidelity</div>
-        </div>
-      </div>
-
-      <!-- Recruiter Quick Info Bar -->
-      <div class="recruiter-bar reveal">
-        <div class="recruiter-pill-item">
-          <div class="pill-icon-box">⚡</div>
-          <div class="pill-text-wrap">
-            <span class="pill-label">Timezone & Remote</span>
-            <span class="pill-value"><span class="live-status-dot"></span> IST (UTC +5:30) • Remote Friendly</span>
-          </div>
-        </div>
-        <div class="recruiter-pill-item">
-          <div class="pill-icon-box">💼</div>
-          <div class="pill-text-wrap">
-            <span class="pill-label">Engagement Model</span>
-            <span class="pill-value">Full-time • Contract • Senior</span>
-          </div>
-        </div>
-        <div class="recruiter-pill-item">
-          <div class="pill-icon-box">⏱️</div>
-          <div class="pill-text-wrap">
-            <span class="pill-label">Response SLA</span>
-            <span class="pill-value">&lt; 12 Hours Fast Turnaround</span>
-          </div>
-        </div>
-        <div class="recruiter-pill-item">
-          <div class="pill-icon-box">🎯</div>
-          <div class="pill-text-wrap">
-            <span class="pill-label">Core Specialization</span>
-            <span class="pill-value">Flutter, Dart, Bloc, Firebase</span>
+        <!-- Profile Avatar Box -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-72 sm:w-80 aspect-[4/5] rounded-3xl p-3 bg-gradient-to-tr from-blue-600/30 to-indigo-600/30 border border-blue-500/40 shadow-2xl">
+            <div class="w-full h-full rounded-2xl overflow-hidden bg-slate-950 relative flex items-center justify-center">
+              <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" alt="Keyur H. Satani" class="w-full h-full object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'" />
+              <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 text-white text-center">
+                <p class="text-sm font-bold">Keyur H. Satani</p>
+                <p class="text-xs text-blue-400">Surat, Gujarat, India • Flutter Developer</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Core Engineering Pillars / Services -->
-    <section id="competencies" style="padding-top: 0;">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Core Capabilities</span>
-          <h2 class="section-title">Engineering Pillars & Services</h2>
-        </div>
-        <div class="competency-grid">
-          <div class="card competency-card reveal">
-            <div class="competency-icon">📱</div>
-            <h3 class="competency-title">Cross-Platform Mobile Apps</h3>
-            <p class="competency-desc">High-performance native compilation for iOS and Android from a single Dart codebase with unified responsive design.</p>
-          </div>
-          <div class="card competency-card reveal">
-            <div class="competency-icon">🎨</div>
-            <h3 class="competency-title">Pixel-Perfect UI & Figma</h3>
-            <p class="competency-desc">Precision conversion from Figma design files into fluid, responsive Flutter widgets with 60fps micro-interactions.</p>
-          </div>
-          <div class="card competency-card reveal">
-            <div class="competency-icon">⚡</div>
-            <h3 class="competency-title">BLoC & Clean Architecture</h3>
-            <p class="competency-desc">Predictable reactive data flows, repository pattern, SOLID principles, and decoupled state management for enterprise scale.</p>
-          </div>
-          <div class="card competency-card reveal">
-            <div class="competency-icon">☁️</div>
-            <h3 class="competency-title">Cloud, APIs & Publishing</h3>
-            <p class="competency-desc">Firebase, REST APIs, Socket.IO, Razorpay gateways, and end-to-end Google Play Store & Apple App Store deployment.</p>
-          </div>
-        </div>
+  <!-- Published Apps Section -->
+  <section id="projects" class="py-20 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Production Portfolio</h2>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Featured Applications & Projects</p>
       </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Technical Matrix</span>
-          <h2 class="section-title">Skills & Tech Stack</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&amp;token=d33672c9-9d6e-4f3a-b710-097eb064dad1" alt="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">Mobile App</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Dart</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flame Engine</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Forge2D (Box2D)</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter BLoC</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Game Development</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">AdMob SDK</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2026</span>
+            <div class="flex items-center gap-2">
+              
+            </div>
+          </div>
         </div>
-        <div class="skills-grid">
-                <div class="card skill-card reveal" data-category="mobile">
-        <div class="skill-top">
-          <span class="skill-name">Flutter &amp; Dart</span>
-          <span class="skill-pct">95%</span>
+        <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&amp;token=efe4c49d-a56d-4a4d-863d-13923f750bcd" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">Mobile App</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Dart</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">GetX</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Dio &amp; REST APIs</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Stripe Payments</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Biometric Auth</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Secure Storage</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2026</span>
+            <div class="flex items-center gap-2">
+              
+            </div>
+          </div>
         </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 95%;"></div>
-        </div>
-      </div>
-      <div class="card skill-card reveal" data-category="state_management">
-        <div class="skill-top">
-          <span class="skill-name">Bloc &amp; Cubit</span>
-          <span class="skill-pct">92%</span>
-        </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 92%;"></div>
-        </div>
-      </div>
-      <div class="card skill-card reveal" data-category="state_management">
-        <div class="skill-top">
-          <span class="skill-name">GetX &amp; Provider</span>
-          <span class="skill-pct">90%</span>
-        </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 90%;"></div>
-        </div>
-      </div>
-      <div class="card skill-card reveal" data-category="backend">
-        <div class="skill-top">
-          <span class="skill-name">REST APIs &amp; JSON</span>
-          <span class="skill-pct">94%</span>
-        </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 94%;"></div>
-        </div>
-      </div>
-      <div class="card skill-card reveal" data-category="backend">
-        <div class="skill-top">
-          <span class="skill-name">Firebase &amp; Firestore</span>
-          <span class="skill-pct">92%</span>
-        </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 92%;"></div>
-        </div>
-      </div>
-      <div class="card skill-card reveal" data-category="database">
-        <div class="skill-top">
-          <span class="skill-name">SQLite &amp; Local Storage</span>
-          <span class="skill-pct">88%</span>
-        </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 88%;"></div>
-        </div>
-      </div>
-      <div class="card skill-card reveal" data-category="tools">
-        <div class="skill-top">
-          <span class="skill-name">Git, GitHub &amp; CI/CD</span>
-          <span class="skill-pct">90%</span>
-        </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 90%;"></div>
-        </div>
-      </div>
-      <div class="card skill-card reveal" data-category="tools">
-        <div class="skill-top">
-          <span class="skill-name">Postman &amp; Android Studio</span>
-          <span class="skill-pct">92%</span>
-        </div>
-        <div class="skill-bar-bg">
-          <div class="skill-bar-fill" style="width: 92%;"></div>
-        </div>
-      </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Portfolio Showcase</span>
-          <h2 class="section-title">Featured Production Applications</h2>
-        </div>
-        <div class="projects-grid">
-                <div class="card project-card reveal" data-category="mobile_app" onclick="openProjectModal('3d3ce08a-0828-46ae-9252-6de0cbc47744')">
-        <div class="project-img-wrapper">
-          <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&amp;token=d33672c9-9d6e-4f3a-b710-097eb064dad1" alt="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game" class="project-image" loading="lazy">
-          <div class="project-badge-top">Mobile App</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game</h3>
-          <p class="project-desc">A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">Flame Engine</span> <span class="tag">Forge2D (Box2D)</span> <span class="tag">Flutter BLoC</span> <span class="tag">Game Development</span> <span class="tag">AdMob SDK</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('3d3ce08a-0828-46ae-9252-6de0cbc47744')">Detailed Case Study 🔍</button> </div>
-        </div>
-      </div>
-      <div class="card project-card reveal" data-category="mobile_app" onclick="openProjectModal('9a2da804-ff86-43f4-9a35-cb5960b86903')">
-        <div class="project-img-wrapper">
-          <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&amp;token=efe4c49d-a56d-4a4d-863d-13923f750bcd" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="project-image" loading="lazy">
-          <div class="project-badge-top">Mobile App</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
-          <p class="project-desc">Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">GetX</span> <span class="tag">Dio &amp; REST APIs</span> <span class="tag">Stripe Payments</span> <span class="tag">Biometric Auth</span> <span class="tag">Secure Storage</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('9a2da804-ff86-43f4-9a35-cb5960b86903')">Detailed Case Study 🔍</button> </div>
-        </div>
-      </div>
-      <div class="card project-card reveal" data-category="mobile_app" onclick="openProjectModal('173b889c-1b8a-4032-a5ca-d850509d37a3')">
-        <div class="project-img-wrapper">
-          <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&amp;token=6ac3d321-745a-4394-959a-32c97ef1bbe6" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="project-image" loading="lazy">
-          <div class="project-badge-top">Mobile App</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
-          <p class="project-desc">Steve&#039;s Barbers (Powered by WhozNxt)
+        <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&amp;token=6ac3d321-745a-4394-959a-32c97ef1bbe6" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">Mobile App</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              Steve&#039;s Barbers (Powered by WhozNxt)
 
 Role: UI/UX &amp; Frontend Development
 
-Overview: A luxury, multi-feature barbershop booking &amp; retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">GetX</span> <span class="tag">Dio &amp; REST APIs</span> <span class="tag">Stripe Payments</span> <span class="tag">Biometric Auth</span> <span class="tag">Secure Storage</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('173b889c-1b8a-4032-a5ca-d850509d37a3')">Detailed Case Study 🔍</button> </div>
+Overview: A luxury, multi-feature barbershop booking &amp; retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Dart</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">GetX</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Dio &amp; REST APIs</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Stripe Payments</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Biometric Auth</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Secure Storage</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2026</span>
+            <div class="flex items-center gap-2">
+              
+            </div>
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="TheSpeedTurtle App" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">Fitness &amp; Productivity</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">TheSpeedTurtle App</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Dart</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">BLoC</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Firebase</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Push Notifications</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2026</span>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">Source Code ↗</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="MATA News Application" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">Media &amp; News</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">MATA News Application</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">REST APIs</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">GetX</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Play Store Live</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Caching</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2025</span>
+            <div class="flex items-center gap-2">
+              <a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-1.5"><span>▶ Play Store</span> ↗</a> 
+            </div>
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="QR Scanner &amp; Barcode Pro" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">Utility &amp; Tools</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">QR Scanner &amp; Barcode Pro</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Camera ML</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">SQLite</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Clean Architecture</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2025</span>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">Source Code ↗</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Media Player Application" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">Media &amp; Streaming</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">Media Player Application</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Audio Service</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Video Player</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Bloc</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2024</span>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">Source Code ↗</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="E-Commerce &amp; Multi-Vendor Mobile Platform" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">E-Commerce</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1.5 truncate">E-Commerce &amp; Multi-Vendor Mobile Platform</h3>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-3.5 leading-relaxed">
+              Scalable e-commerce mobile application featuring real-time product catalogs, cart &amp; checkout workflows, payment gateway integration, and order tracking.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Flutter</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">REST APIs</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Payment Gateway</span> <span class="text-xs text-slate-500 dark:text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Firebase</span></div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
+            <span class="text-[11px] text-slate-400 font-mono">2024</span>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">Source Code ↗</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card project-card reveal" data-category="fitness_productivity" onclick="openProjectModal('1')">
-        <div class="project-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="TheSpeedTurtle App" class="project-image" loading="lazy">
-          <div class="project-badge-top">Fitness &amp; Productivity</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">TheSpeedTurtle App</h3>
-          <p class="project-desc">Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">BLoC</span> <span class="tag">Firebase</span> <span class="tag">Push Notifications</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('1')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
-        </div>
-      </div>
-      <div class="card project-card reveal" data-category="media_news" onclick="openProjectModal('2')">
-        <div class="project-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="MATA News Application" class="project-image" loading="lazy">
-          <div class="project-badge-top">Media &amp; News</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">MATA News Application</h3>
-          <p class="project-desc">High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">REST APIs</span> <span class="tag">GetX</span> <span class="tag">Play Store Live</span> <span class="tag">Caching</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('2')">Detailed Case Study 🔍</button> <a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener" class="link-playstore">▶ Google Play</a> </div>
-        </div>
-      </div>
-      <div class="card project-card reveal" data-category="utility_tools" onclick="openProjectModal('3')">
-        <div class="project-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="QR Scanner &amp; Barcode Pro" class="project-image" loading="lazy">
-          <div class="project-badge-top">Utility &amp; Tools</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">QR Scanner &amp; Barcode Pro</h3>
-          <p class="project-desc">High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Camera ML</span> <span class="tag">SQLite</span> <span class="tag">Clean Architecture</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('3')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
-        </div>
-      </div>
-      <div class="card project-card reveal" data-category="media_streaming" onclick="openProjectModal('4')">
-        <div class="project-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Media Player Application" class="project-image" loading="lazy">
-          <div class="project-badge-top">Media &amp; Streaming</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Media Player Application</h3>
-          <p class="project-desc">Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Audio Service</span> <span class="tag">Video Player</span> <span class="tag">Bloc</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('4')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
-        </div>
-      </div>
-      <div class="card project-card reveal" data-category="e_commerce" onclick="openProjectModal('5')">
-        <div class="project-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="E-Commerce &amp; Multi-Vendor Mobile Platform" class="project-image" loading="lazy">
-          <div class="project-badge-top">E-Commerce</div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">E-Commerce &amp; Multi-Vendor Mobile Platform</h3>
-          <p class="project-desc">Scalable e-commerce mobile application featuring real-time product catalogs, cart &amp; checkout workflows, payment gateway integration, and order tracking.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">REST APIs</span> <span class="tag">Payment Gateway</span> <span class="tag">Firebase</span></div>
-          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('5')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
-        </div>
-      </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Work Experience Timeline Section -->
-        <section id="experience">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Career History</span>
-          <h2 class="section-title">Professional Experience</h2>
-        </div>
-        <div class="timeline">
-                <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">Code Expert Solutions • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Jan 2026 - Present</div>
-          </div>
-          <p class="timeline-desc">Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">Bloc</span> <span class="tag">REST APIs</span> <span class="tag">E-Commerce</span></div>
-        </div>
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Technical Expertise</h2>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Skills & Core Competencies</p>
       </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">Freshcodes Technology • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Aug 2024 - Oct 2025</div>
-          </div>
-          <p class="timeline-desc">Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">REST APIs</span> <span class="tag">GetX</span> <span class="tag">Firebase</span> <span class="tag">UI/UX</span></div>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">StackApp Infotech • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Feb 2024 - Aug 2024</div>
-          </div>
-          <p class="timeline-desc">Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Provider</span> <span class="tag">Git</span> <span class="tag">Clean Architecture</span></div>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">Dreamvision Infotech • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Aug 2022 - Jan 2024</div>
-          </div>
-          <p class="timeline-desc">Built cross-platform Android &amp; iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Android &amp; iOS</span> <span class="tag">SQLite</span> <span class="tag">Firebase</span></div>
-        </div>
-      </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Education Section -->
-        <section id="education">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Academic Background</span>
-          <h2 class="section-title">Education & Credentials</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">Flutter &amp; Dart</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">95%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 95%;"></div>
+          </div>
         </div>
-        <div class="edu-grid">
-                <div class="card edu-card reveal">
-        <div class="edu-degree">Bachelor of Computer Application (BCA)</div>
-        <div class="edu-school">Saurashtra University</div>
-        <div class="edu-meta">
-          <span>📅 2022 - 2025</span>
-          <span>• 🏆 First Class with Distinction</span>
+        <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">Bloc &amp; Cubit</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">92%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 92%;"></div>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">GetX &amp; Provider</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">90%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">REST APIs &amp; JSON</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">94%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 94%;"></div>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">Firebase &amp; Firestore</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">92%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 92%;"></div>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">SQLite &amp; Local Storage</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">88%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 88%;"></div>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">Git, GitHub &amp; CI/CD</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">90%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">Postman &amp; Android Studio</span>
+            <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">92%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" style="width: 92%;"></div>
+          </div>
         </div>
       </div>
-      <div class="card edu-card reveal">
-        <div class="edu-degree">Bachelor of Science (B.Sc)</div>
-        <div class="edu-school">Saurashtra University</div>
-        <div class="edu-meta">
-          <span>📅 2018 - 2022</span>
-          <span>• 🏆 Graduated</span>
-        </div>
-      </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact & Project Enquiry Section -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Start a Project or Hire Keyur</h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-                        <a href="mailto:kevalsatani1234@gmail.com" class="card contact-tile">
-              <div class="contact-icon">✉️</div>
+  <!-- Work Experience Section -->
+    <section id="experience" class="py-20 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Work History</h2>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Professional Experience</p>
+      </div>
+
+      <div class="space-y-6">
+                <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
               <div>
-                <div class="contact-label">Email Address</div>
-                <div class="contact-value">kevalsatani1234@gmail.com</div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">Code Expert Solutions • Surat, Gujarat</p>
               </div>
-            </a>
-
-                        <a href="https://api.whatsapp.com/send?phone=+918758113819" target="_blank" rel="noopener" class="card contact-tile">
-              <div class="contact-icon">💬</div>
-              <div>
-                <div class="contact-label">Phone & WhatsApp</div>
-                <div class="contact-value">+91 8758113819</div>
-              </div>
-            </a>
-
-                        <div class="card contact-tile">
-              <div class="contact-icon">📍</div>
-              <div>
-                <div class="contact-label">Location</div>
-                <div class="contact-value">Surat, Gujarat, India</div>
-              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Jan 2026 – Present</span>
             </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Dart</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Bloc</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">REST APIs</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">E-Commerce</span></div>
+          </div>
+        </div>
+        <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">Freshcodes Technology • Surat, Gujarat</p>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Aug 2024 – Oct 2025</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">REST APIs</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">GetX</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Firebase</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">UI/UX</span></div>
+          </div>
+        </div>
+        <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">StackApp Infotech • Surat, Gujarat</p>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Feb 2024 – Aug 2024</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Provider</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Git</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Clean Architecture</span></div>
+          </div>
+        </div>
+        <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">Dreamvision Infotech • Surat, Gujarat</p>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Aug 2022 – Jan 2024</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Built cross-platform Android &amp; iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Android &amp; iOS</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">SQLite</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Firebase</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+    <section id="education" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Academic Background</h2>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Education & Credentials</p>
+      </div>
+
+      <div class="space-y-4">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Bachelor of Computer Application (BCA)</h4>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Saurashtra University</p>
+          </div>
+          <div class="text-left sm:text-right font-mono text-xs">
+            <span class="text-blue-600 dark:text-blue-400 font-bold block">2022 – 2025</span>
+            <span class="text-slate-500 dark:text-slate-400">First Class with Distinction</span>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Bachelor of Science (B.Sc)</h4>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Saurashtra University</p>
+          </div>
+          <div class="text-left sm:text-right font-mono text-xs">
+            <span class="text-blue-600 dark:text-blue-400 font-bold block">2018 – 2022</span>
+            <span class="text-slate-500 dark:text-slate-400">Graduated</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-slate-50/60 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5 space-y-4">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Connect With Keyur</h2>
+          <p class="text-3xl font-black text-slate-900 dark:text-white">Let's Discuss Your Project</p>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Available for Senior Flutter Developer positions, contract engagements, MVP builds, or cross-platform migrations.
+          </p>
+          <div class="pt-4 space-y-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+            <p><strong>Email:</strong> <a href="mailto:kevalsatani1234@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">kevalsatani1234@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+91 8758113819" class="text-blue-600 dark:text-blue-400 hover:underline">+91 8758113819</a></p>
+            <p><strong>Location:</strong> Surat, Gujarat, India</p>
           </div>
 
-          <form id="portfolioContactForm" class="card contact-form reveal">
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label">Your Name *</label>
-                <input type="text" name="name" class="form-control" placeholder="John Doe" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Your Email *</label>
-                <input type="email" name="email" class="form-control" placeholder="john@company.com" required>
-              </div>
-            </div>
+                    <div class="pt-4 flex flex-wrap gap-2">
+            <a href="https://www.linkedin.com/in/keyur-satani-00643623a" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0b1733] hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs font-bold transition inline-flex items-center gap-1.5"><span>LinkedIn</span> ↗</a>
+<a href="https://github.com/kevalsatani2001" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0b1733] hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs font-bold transition inline-flex items-center gap-1.5"><span>GitHub</span> ↗</a>
+<a href="mailto:kevalsatani1234@gmail.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0b1733] hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs font-bold transition inline-flex items-center gap-1.5"><span>Email</span> ↗</a>
+<a href="https://wa.me/918758113819" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0b1733] hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs font-bold transition inline-flex items-center gap-1.5"><span>Phone / WhatsApp</span> ↗</a>
+          </div>
+        </div>
 
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label">WhatsApp / Phone</label>
-                <input type="tel" name="phone" class="form-control" placeholder="+91 98765 43210">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Service Required</label>
-                <select name="service" class="form-control">
-                  <option value="Flutter Mobile App Development">Flutter Mobile App Development</option>
-                  <option value="Figma to Flutter Code Conversion">Figma to Flutter Code Conversion</option>
-                  <option value="BLoC / Clean Architecture Refactoring">BLoC / Clean Architecture Refactoring</option>
-                  <option value="Store Publishing & CI/CD">Store Publishing & CI/CD</option>
-                  <option value="Full-Time Flutter Developer Role">Full-Time Flutter Developer Role</option>
-                </select>
-              </div>
+        <div class="lg:col-span-7 bg-white dark:bg-[#0b1733] p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
+          <form id="contactForm" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold mb-1 text-slate-700 dark:text-slate-300">Your Name *</label>
+              <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white" placeholder="John Doe" />
             </div>
-
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label">Estimated Budget</label>
-                <select name="budget" class="form-control">
-                  <option value="Under ₹25,000">Under ₹25,000</option>
-                  <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
-                  <option value="₹50,000 – ₹1,00,000">₹50,000 – ₹1,00,000</option>
-                  <option value="₹1,00,000+">₹1,00,000+</option>
-                  <option value="Flexible">Flexible / Hourly</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Target Timeline</label>
-                <select name="timeline" class="form-control">
-                  <option value="Immediately">Immediately</option>
-                  <option value="1–2 Weeks">1–2 Weeks</option>
-                  <option value="2–4 Weeks">2–4 Weeks</option>
-                  <option value="1–2 Months">1–2 Months</option>
-                  <option value="Flexible">Flexible</option>
-                </select>
-              </div>
+            <div>
+              <label class="block text-xs font-bold mb-1 text-slate-700 dark:text-slate-300">Email Address *</label>
+              <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white" placeholder="john@example.com" />
             </div>
-
-            <div class="form-group">
-              <label class="form-label">Project Details & Message *</label>
-              <textarea name="message" class="form-control" rows="3" placeholder="Describe your app requirement, features, or job role..." required></textarea>
+            <div>
+              <label class="block text-xs font-bold mb-1 text-slate-700 dark:text-slate-300">Service Required</label>
+              <select name="service" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b1733] text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white">
+                <option value="Flutter Mobile App Development">Flutter Mobile App Development</option>
+                <option value="Figma to Flutter Code Conversion">Figma to Flutter Code Conversion</option>
+                <option value="BLoC & Architecture Setup">BLoC & Architecture Setup</option>
+                <option value="Store Publishing & CI/CD">Store Publishing & CI/CD</option>
+                <option value="Full-Time Developer Role">Full-Time Developer Role</option>
+              </select>
             </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-              Submit Project Enquiry 🚀
+            <div>
+              <label class="block text-xs font-bold mb-1 text-slate-700 dark:text-slate-300">Message *</label>
+              <textarea name="message" rows="3" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white" placeholder="Tell me about your mobile app project or role..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-md transition cursor-pointer">
+              Send Message 🚀
             </button>
           </form>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- Interactive Resume Modal -->
-  <div id="resumeModal" class="modal-overlay">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div>
-          <h3 style="font-weight: 800; font-size: 1.25rem;">Keyur H. Satani — Official Resume</h3>
-          <p style="font-size: 0.8rem; color: var(--text-muted);">Flutter Developer</p>
-        </div>
-        <div style="display: flex; gap: 8px;">
-          <button onclick="window.print()" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">Print 🖨️</button>
-          
-          <button id="closeResumeModal" class="modal-close-btn">✕</button>
-        </div>
-      </div>
-      <div class="modal-body">
-        <div style="margin-bottom: 20px;">
-          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 6px;">Profile Summary</h4>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.</p>
-        </div>
-
-        <div style="margin-bottom: 20px;">
-          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 8px;">Technical Skills Matrix</h4>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-            <span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Flutter &amp; Dart</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Bloc &amp; Cubit</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">GetX &amp; Provider</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">REST APIs &amp; JSON</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Firebase &amp; Firestore</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">SQLite &amp; Local Storage</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Git, GitHub &amp; CI/CD</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Postman &amp; Android Studio</span>
-          </div>
-        </div>
-
-                <div style="margin-bottom: 20px;">
-          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 10px;">Work History</h4>
-                <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">Code Expert Solutions • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Jan 2026 - Present</div>
-          </div>
-          <p class="timeline-desc">Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">Bloc</span> <span class="tag">REST APIs</span> <span class="tag">E-Commerce</span></div>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">Freshcodes Technology • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Aug 2024 - Oct 2025</div>
-          </div>
-          <p class="timeline-desc">Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">REST APIs</span> <span class="tag">GetX</span> <span class="tag">Firebase</span> <span class="tag">UI/UX</span></div>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">StackApp Infotech • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Feb 2024 - Aug 2024</div>
-          </div>
-          <p class="timeline-desc">Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Provider</span> <span class="tag">Git</span> <span class="tag">Clean Architecture</span></div>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-role">Flutter Developer</div>
-              <div class="timeline-company">Dreamvision Infotech • Surat, Gujarat</div>
-            </div>
-            <div class="timeline-date">Aug 2022 - Jan 2024</div>
-          </div>
-          <p class="timeline-desc">Built cross-platform Android &amp; iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.</p>
-          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Android &amp; iOS</span> <span class="tag">SQLite</span> <span class="tag">Firebase</span></div>
-        </div>
-      </div>
-        </div>
-
-                <div>
-          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 10px;">Education & Credentials</h4>
-                <div class="card edu-card reveal">
-        <div class="edu-degree">Bachelor of Computer Application (BCA)</div>
-        <div class="edu-school">Saurashtra University</div>
-        <div class="edu-meta">
-          <span>📅 2022 - 2025</span>
-          <span>• 🏆 First Class with Distinction</span>
-        </div>
-      </div>
-      <div class="card edu-card reveal">
-        <div class="edu-degree">Bachelor of Science (B.Sc)</div>
-        <div class="edu-school">Saurashtra University</div>
-        <div class="edu-meta">
-          <span>📅 2018 - 2022</span>
-          <span>• 🏆 Graduated</span>
-        </div>
-      </div>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <!-- Instant Project Enquiry Popup Modal -->
-  <div id="enquiryModal" class="modal-overlay">
-    <div class="modal-card" style="max-width: 620px;">
-      <div class="modal-header">
-        <div>
-          <h3 style="font-weight: 800; font-size: 1.2rem;">Instant Project Enquiry</h3>
-          <p style="font-size: 0.8rem; color: var(--text-muted);">Have an app requirement? Let's discuss directly on WhatsApp/Email.</p>
-        </div>
-        <button id="closeEnquiryModal" class="modal-close-btn">✕</button>
-      </div>
-      <div class="modal-body">
-        <form id="popupEnquiryForm">
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label class="form-label">Your Name *</label>
-              <input type="text" name="name" class="form-control" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Your Email *</label>
-              <input type="email" name="email" class="form-control" placeholder="john@company.com" required>
-            </div>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label class="form-label">Phone / WhatsApp</label>
-              <input type="tel" name="phone" class="form-control" placeholder="+91 98765 43210">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Service Required</label>
-              <select name="service" class="form-control">
-                <option value="Flutter Mobile App Development">Flutter Mobile App Development</option>
-                <option value="Figma to Flutter UI Conversion">Figma to Flutter UI Conversion</option>
-                <option value="BLoC & Architecture Setup">BLoC & Architecture Setup</option>
-                <option value="Bug Fixing & Maintenance">Bug Fixing & Maintenance</option>
-                <option value="Full-Time Senior Role">Full-Time Senior Role</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label class="form-label">Estimated Budget</label>
-              <select name="budget" class="form-control">
-                <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
-                <option value="₹50,000 – ₹1,00,000">₹50,000 – ₹1,00,000</option>
-                <option value="₹1,00,000+">₹1,00,000+</option>
-                <option value="Under ₹25,000">Under ₹25,000</option>
-                <option value="Flexible">Flexible</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Target Timeline</label>
-              <select name="timeline" class="form-control">
-                <option value="Immediately">Immediately</option>
-                <option value="1–2 Weeks">1–2 Weeks</option>
-                <option value="2–4 Weeks">2–4 Weeks</option>
-                <option value="1–2 Months">1–2 Months</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Brief Overview *</label>
-            <textarea name="message" class="form-control" rows="3" placeholder="Tell me about your project or role requirement..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-            Send Enquiry Directly 🚀
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Interactive Project Case Study Modal -->
-  <div id="projectCaseStudyModal" class="modal-overlay">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div>
-          <span id="caseStudyCategory" class="section-tag" style="margin-bottom: 2px;">Mobile App</span>
-          <h3 id="caseStudyTitle" style="font-weight: 800; font-size: 1.3rem;">Project Title</h3>
-        </div>
-        <button id="closeProjectModal" class="modal-close-btn">✕</button>
-      </div>
-      <div class="modal-body">
-        <div style="border-radius: 16px; overflow: hidden; max-height: 320px; margin-bottom: 20px; background: var(--bg-card-subtle);">
-          <img id="caseStudyImg" src="" alt="Case Study Mockup" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-
-        <div style="margin-bottom: 20px;">
-          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 6px;">Overview & Problem Statement</h4>
-          <p id="caseStudyDesc" style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.65;"></p>
-        </div>
-
-        <div style="margin-bottom: 24px;">
-          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 8px;">Technologies & Architecture</h4>
-          <div id="caseStudyTags" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
-        </div>
-
-        <div style="display: flex; gap: 12px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border-main);">
-          <a id="caseStudyPlayStore" href="#" target="_blank" rel="noopener" class="btn link-playstore" style="display: none;">▶ Google Play Store</a>
-          <a id="caseStudyLiveDemo" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="display: none;">Live Demo ↗</a>
-          <a id="caseStudyGithub" href="#" target="_blank" rel="noopener" class="btn btn-outline" style="display: none;">Source Code ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2026 Keyur H. Satani • Senior Mobile Application Developer.</p>
-    </div>
+  <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-200 dark:border-slate-800">
+    © 2026 Keyur H. Satani • Flutter Developer (Surat, Gujarat, India)
   </footer>
 
-  <button id="backToTopBtn" class="back-to-top" title="Back to Top">↑</button>
-  <div id="toast"></div>
+  <div id="toast" style="position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px); padding: 12px 24px; border-radius: 12px; background: #0b1733; color: #fff; font-weight: bold; font-size: 13px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); opacity: 0; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 9999;"></div>
 
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById('themeBtn');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('portfolio-theme') || (prefersDark ? 'dark' : 'light');
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      localStorage.setItem('portfolio-theme', theme);
+    }
+    applyTheme(savedTheme);
+
+    themeBtn?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark ? 'light' : 'dark');
+    });
+
+    // Toast
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      if (!t) return;
+      t.textContent = msg;
+      t.style.transform = 'translateX(-50%) translateY(0)';
+      t.style.opacity = '1';
+      setTimeout(() => {
+        t.style.transform = 'translateX(-50%) translateY(100px)';
+        t.style.opacity = '0';
+      }, 3000);
+    }
+
+    // Contact form handler with WhatsApp & Email fallback
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = e.target.querySelector('[name="name"]')?.value || '';
+      const email = e.target.querySelector('[name="email"]')?.value || '';
+      const service = e.target.querySelector('[name="service"]')?.value || '';
+      const msg = e.target.querySelector('[name="message"]')?.value || '';
+
+      const whatsappText = encodeURIComponent(
+        `*New Enquiry for Keyur H. Satani*\n` +
+        `👤 *Name:* ${name}\n` +
+        `📧 *Email:* ${email}\n` +
+        `🚀 *Service:* ${service}\n` +
+        `📝 *Message:* ${msg}`
+      );
+
+      showToast('Opening WhatsApp / Mail...');
+      if ('+918758113819'.length > 5) {
+        window.open('https://api.whatsapp.com/send?phone=+918758113819&text=' + whatsappText, '_blank');
+      } else if ('kevalsatani1234@gmail.com'.length > 0) {
+        window.location.href = 'mailto:kevalsatani1234@gmail.com?subject=' + encodeURIComponent('Project Enquiry: ' + service + ' from ' + name) + '&body=' + encodeURIComponent(msg);
+      }
+      e.target.reset();
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
