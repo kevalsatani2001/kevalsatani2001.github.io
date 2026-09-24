@@ -113,6 +113,72 @@
         linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     }
 
+    /* Ambient Constellation Particle Canvas */
+    #ambientCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Aurora Ambient Glow Orbs */
+    @keyframes auroraFloat {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(30px, -40px) scale(1.12); }
+      100% { transform: translate(-25px, 20px) scale(0.92); }
+    }
+    .aurora-glow-1 { animation: auroraFloat 14s ease-in-out infinite alternate; }
+    .aurora-glow-2 { animation: auroraFloat 20s ease-in-out infinite alternate-reverse; }
+    .aurora-glow-3 { animation: auroraFloat 16s ease-in-out infinite alternate; }
+
+    /* Radar Live Ping Animation */
+    @keyframes radarPing {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(2.8); opacity: 0; }
+    }
+    .radar-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: rgba(52, 211, 153, 0.5);
+      animation: radarPing 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    /* Typewriter Cursor Blinking */
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .typewriter-cursor {
+      display: inline-block;
+      animation: cursorBlink 0.85s infinite;
+      margin-left: 2px;
+    }
+
+    /* Shimmer Light Sweep on CTA Buttons */
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-150%) skewX(-20deg); }
+      100% { transform: translateX(250%) skewX(-20deg); }
+    }
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+      transform: translateX(-150%) skewX(-20deg);
+      animation: shimmerSweep 4.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
     /* 3D Titanium Device Mockup */
     .phone-3d-wrapper {
       perspective: 1200px;
@@ -129,23 +195,44 @@
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 55%);
     }
 
-    /* Interactive Spotlight Mouse Glow */
-    .spotlight-card {
+    /* 3D Interactive Card Tilt with Holographic Glare */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      will-change: transform;
       position: relative;
-      overflow: hidden;
     }
-    .spotlight-card::before {
+    .tilt-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(37, 99, 235, 0.12), transparent 40%);
+      border-radius: inherit;
+      background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.08), transparent 60%);
       opacity: 0;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.3s ease;
       pointer-events: none;
-      z-index: 1;
+      z-index: 20;
     }
-    .spotlight-card:hover::before {
+    .tilt-card:hover::before {
       opacity: 1;
+    }
+
+    /* Scroll Reveal Stagger Animations */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(28px) scale(0.98);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-revealed {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Skill Bar Dynamic Fill */
+    .skill-bar-fill {
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     /* Smooth Scroll Progress Bar */
@@ -175,7 +262,10 @@
   </style>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-[#fbfdff] dark:bg-[#060b19] text-[#0B1B3D] dark:text-slate-100 antialiased cyber-grid selection:bg-blue-600 selection:text-white">
+<body class="bg-[#fbfdff] dark:bg-[#060b19] text-[#0B1B3D] dark:text-slate-100 antialiased cyber-grid selection:bg-blue-600 selection:text-white relative">
+
+  <!-- Interactive Background Canvas Particles -->
+  <canvas id="ambientCanvas" aria-hidden="true"></canvas>
 
   <!-- Scroll Progress Indicator -->
   <div id="scrollProgress" aria-hidden="true"></div>
@@ -190,10 +280,10 @@
     <textarea name="message"></textarea>
   </form>
 
-  <!-- Ambient Light Orbs -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse" aria-hidden="true"></div>
-  <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
-  <div class="fixed bottom-10 left-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+  <!-- Floating Aurora Ambient Light Orbs -->
+  <div class="aurora-glow-1 fixed top-0 left-1/4 w-96 h-96 bg-blue-500/12 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+  <div class="aurora-glow-2 fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/12 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+  <div class="aurora-glow-3 fixed bottom-10 left-10 w-80 h-80 bg-purple-500/12 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
 
   <!-- Global Header Navigation (Ultra-Premium Silicon Valley Capsule Header) -->
   <header role="banner" class="sticky top-0 z-40 backdrop-blur-2xl bg-white/85 dark:bg-[#060b19]/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-all shadow-sm">
@@ -294,23 +384,26 @@
   </div>
 
   <!-- Main Content Landmark -->
-  <main id="main-content" role="main">
+  <main id="main-content" role="main" class="relative z-10">
 
-    <!-- Hero Section: Single H1 for Strict SEO Hierarchy -->
+    <!-- Hero Section: Single H1 for Strict SEO Hierarchy with Animated Typewriter -->
     <section id="home" class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 overflow-hidden" aria-label="Introduction & Headline">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          <!-- Left Hero Copy (matches uploaded design) -->
-          <div class="lg:col-span-7 space-y-6 text-left">
+          <!-- Left Hero Copy -->
+          <div class="lg:col-span-7 space-y-6 text-left reveal-on-scroll">
             
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-[#0B1528] text-slate-300 border border-slate-700/60 shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold bg-[#0B1528] text-slate-300 border border-slate-700/60 shadow-sm relative overflow-hidden">
+              <span class="relative flex h-2.5 w-2.5">
+                <span class="radar-ring"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+              </span>
               <span>Available for full-time roles &amp; freelance opportunities</span>
             </div>
             
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-400 bg-clip-text text-transparent leading-[1.1]">
-              Flutter Developer
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-300 bg-clip-text text-transparent leading-[1.15] min-h-[70px] sm:min-h-[85px] flex items-center flex-wrap">
+              <span id="typewriterText">Flutter Developer</span><span class="typewriter-cursor text-cyan-400 font-light">|</span>
             </h1>
 
             <p class="text-sm sm:text-base text-slate-400 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
@@ -318,51 +411,51 @@
             </p>
 
             <div class="flex flex-wrap gap-3.5 justify-start items-center pt-2">
-              <a href="#projects" class="px-6 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-blue-500/25 transition-all hover:scale-105 flex items-center gap-2" aria-label="Explore 8+ Production Apps">
+              <a href="#projects" class="shimmer-btn px-6 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-blue-500/25 transition-all hover:scale-105 flex items-center gap-2" aria-label="Explore 8+ Production Apps">
                 <span>Explore 8+ Production Apps ↓</span>
               </a>
 
-                            <a href="https://api.whatsapp.com/send?phone=+918758113819&text=Hi%20Keyur%20H.%20Satani%2C%20I%20reviewed%20your%20Flutter%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-600/25 transition-all hover:scale-105 flex items-center gap-2" aria-label="Chat with Keyur H. Satani on WhatsApp">
+                            <a href="https://api.whatsapp.com/send?phone=+918758113819&text=Hi%20Keyur%20H.%20Satani%2C%20I%20reviewed%20your%20Flutter%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="shimmer-btn px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-600/25 transition-all hover:scale-105 flex items-center gap-2" aria-label="Chat with Keyur H. Satani on WhatsApp">
                 <span>Chat on WhatsApp</span> 💬
               </a>
               
 
-              <a href="#contact" class="px-6 py-3.5 rounded-2xl border border-slate-700/80 bg-[#0B1528]/80 hover:bg-slate-800 text-slate-200 font-bold text-xs sm:text-sm transition-all flex items-center gap-2" aria-label="Get in Touch with Keyur H. Satani">
+              <a href="#contact" class="px-6 py-3.5 rounded-2xl border border-slate-700/80 bg-[#0B1528]/80 hover:bg-slate-800 text-slate-200 font-bold text-xs sm:text-sm transition-all flex items-center gap-2 hover:scale-105" aria-label="Get in Touch with Keyur H. Satani">
                 <span>Get in Touch</span>
               </a>
             </div>
 
-            <!-- 4-Card KPI Metric Grid -->
+            <!-- 4-Card KPI Metric Grid with Count-up Animation -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 pt-4">
-              <div class="p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md">
-                <div class="text-2xl sm:text-3xl font-extrabold text-blue-500 font-mono tracking-tight">4+</div>
+              <div class="tilt-card p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md hover:border-blue-500/60 transition-all">
+                <div class="text-2xl sm:text-3xl font-extrabold text-blue-500 font-mono tracking-tight kpi-count" data-target="4" data-suffix="+" data-decimals="1">4+</div>
                 <div class="text-xs text-slate-400 font-medium mt-1">Years Experience</div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md">
-                <div class="text-2xl sm:text-3xl font-extrabold text-blue-500 font-mono tracking-tight">8+</div>
+              <div class="tilt-card p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md hover:border-cyan-500/60 transition-all">
+                <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono tracking-tight kpi-count" data-target="8" data-suffix="+" data-decimals="0">8+</div>
                 <div class="text-xs text-slate-400 font-medium mt-1">Production Apps</div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md">
-                <div class="text-2xl sm:text-3xl font-extrabold text-blue-500 font-mono tracking-tight">99.9%</div>
+              <div class="tilt-card p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md hover:border-indigo-500/60 transition-all">
+                <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono tracking-tight kpi-count" data-target="99.9" data-suffix="%" data-decimals="1">99.9%</div>
                 <div class="text-xs text-slate-400 font-medium mt-1">Crash-Free Rate</div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md">
-                <div class="text-2xl sm:text-3xl font-extrabold text-blue-500 font-mono tracking-tight">100%</div>
+              <div class="tilt-card p-4 rounded-2xl bg-[#0B1528]/80 dark:bg-[#0B1528]/90 border border-slate-800 backdrop-blur-md hover:border-emerald-500/60 transition-all">
+                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono tracking-tight kpi-count" data-target="100" data-suffix="%" data-decimals="0">100%</div>
                 <div class="text-xs text-slate-400 font-medium mt-1">Clean Architecture</div>
               </div>
             </div>
           </div>
 
-          <!-- Right Hero Column: Portrait Photo Frame -->
-          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <!-- Right Hero Column: Portrait Photo Frame with 3D Tilt -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end reveal-on-scroll">
             <div class="relative w-full max-w-[360px] sm:max-w-[400px] group">
-              <!-- Outer Glowing Frame -->
-              <div class="relative rounded-[32px] p-2 sm:p-2.5 bg-gradient-to-b from-blue-600/40 via-indigo-600/30 to-blue-500/20 border-2 border-blue-500/70 shadow-2xl shadow-blue-500/25 overflow-hidden">
+              <!-- Outer Glowing Frame with Tilt -->
+              <div class="tilt-card relative rounded-[32px] p-2 sm:p-2.5 bg-gradient-to-b from-blue-600/40 via-indigo-600/30 to-blue-500/20 border-2 border-blue-500/70 shadow-2xl shadow-blue-500/25 overflow-hidden">
                 <div class="relative rounded-[24px] overflow-hidden aspect-[3/4] bg-slate-900">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" alt="Keyur H. Satani — Flutter Developer" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="eager" />
+                  <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" alt="Keyur H. Satani — Flutter Developer" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="eager" />
                   
                   <!-- Subtle bottom gradient -->
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
@@ -385,7 +478,7 @@
     <section id="showcase" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80 relative" aria-labelledby="showcase-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
             ✦ Interactive 3D Device Studio
           </div>
@@ -400,15 +493,15 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <!-- Left: App Switcher & Features list -->
-          <div class="lg:col-span-5 space-y-6">
-            <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
+          <div class="lg:col-span-5 space-y-6 reveal-on-scroll">
+            <div class="tilt-card p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
               <h3 class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400 mb-4">Select Live Application</h3>
               <div class="space-y-2.5 max-h-[300px] overflow-y-auto pr-1" id="phoneAppSwitcherList">
                 <!-- Dynamically populated -->
               </div>
             </div>
 
-            <div class="p-6 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl shadow-blue-500/20">
+            <div class="tilt-card p-6 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl shadow-blue-500/20">
               <div class="flex items-center justify-between mb-3">
                 <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full">Engineering Highlights</span>
                 <span class="text-xl" aria-hidden="true">⚡</span>
@@ -425,7 +518,7 @@
           </div>
 
           <!-- Center / Right: 3D Titanium Smartphone Frame -->
-          <div class="lg:col-span-7 flex justify-center phone-3d-wrapper">
+          <div class="lg:col-span-7 flex justify-center phone-3d-wrapper reveal-on-scroll">
             <div id="phoneDeviceFrame" class="phone-3d-body relative w-[310px] sm:w-[350px] h-[640px] sm:h-[690px] rounded-[50px] p-3.5 bg-gradient-to-b from-slate-700 via-slate-900 to-black border-4 border-slate-600/60 shadow-2xl select-none" role="region" aria-label="3D Smartphone Simulator">
               
               <!-- Side Buttons -->
@@ -491,7 +584,7 @@
     <section id="projects" class="py-20 sm:py-28" aria-labelledby="projects-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-on-scroll">
           <div>
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-2">
               ✦ Featured Engineering Portfolio
@@ -519,7 +612,7 @@
         <!-- Project Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="projectsGrid">
                   <!-- Project Card: Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game -->
-        <article onclick="openMobilePreview(0)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game">
+        <article onclick="openMobilePreview(0)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -527,14 +620,14 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">Mobile App</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Client Delivery</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -563,7 +656,7 @@
 
         </article>
         <!-- Project Card: Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App -->
-        <article onclick="openMobilePreview(1)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App">
+        <article onclick="openMobilePreview(1)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -571,14 +664,14 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">Mobile App</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Client Delivery</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -607,7 +700,7 @@
 
         </article>
         <!-- Project Card: Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App -->
-        <article onclick="openMobilePreview(2)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App">
+        <article onclick="openMobilePreview(2)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -615,14 +708,14 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">Mobile App</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Client Delivery</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -655,7 +748,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
 
         </article>
         <!-- Project Card: TheSpeedTurtle App -->
-        <article onclick="openMobilePreview(3)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="fitness &amp; productivity" aria-label="TheSpeedTurtle App">
+        <article onclick="openMobilePreview(3)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="fitness &amp; productivity" aria-label="TheSpeedTurtle App">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -663,14 +756,14 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">Fitness &amp; Productivity</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-purple-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Open Source</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -699,7 +792,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
 
         </article>
         <!-- Project Card: MATA News Application -->
-        <article onclick="openMobilePreview(4)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; news" aria-label="MATA News Application">
+        <article onclick="openMobilePreview(4)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; news" aria-label="MATA News Application">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -707,14 +800,14 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">Media &amp; News</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-emerald-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Play Store Live</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -743,7 +836,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
 
         </article>
         <!-- Project Card: QR Scanner &amp; Barcode Pro -->
-        <article onclick="openMobilePreview(5)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="utility &amp; tools" aria-label="QR Scanner &amp; Barcode Pro">
+        <article onclick="openMobilePreview(5)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="utility &amp; tools" aria-label="QR Scanner &amp; Barcode Pro">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -751,14 +844,14 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">Utility &amp; Tools</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-purple-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Open Source</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -787,7 +880,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
 
         </article>
         <!-- Project Card: Media Player Application -->
-        <article onclick="openMobilePreview(6)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; streaming" aria-label="Media Player Application">
+        <article onclick="openMobilePreview(6)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; streaming" aria-label="Media Player Application">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -795,14 +888,14 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">Media &amp; Streaming</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-purple-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Open Source</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -831,7 +924,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
 
         </article>
         <!-- Project Card: E-Commerce &amp; Multi-Vendor Mobile Platform -->
-        <article onclick="openMobilePreview(7)" class="project-card group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="e-commerce" aria-label="E-Commerce &amp; Multi-Vendor Mobile Platform">
+        <article onclick="openMobilePreview(7)" class="project-card tilt-card reveal-on-scroll group relative rounded-3xl bg-[#090e1f]/90 dark:bg-[#090e1f]/95 border border-slate-800/90 hover:border-blue-500/80 shadow-xl hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)] transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="e-commerce" aria-label="E-Commerce &amp; Multi-Vendor Mobile Platform">
           
           <!-- Top Visual Screenshot Banner -->
           <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950">
@@ -839,14 +932,14 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <div class="absolute inset-0 bg-gradient-to-t from-[#090e1f] via-slate-950/30 to-transparent pointer-events-none"></div>
             
             <!-- Top Badges Floating Over Image -->
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 shadow-md">E-Commerce</span>
               <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-purple-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Open Source</span></div>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="p-6 pt-2 flex-1 flex flex-col justify-between">
+          <div class="p-6 pt-2 flex-1 flex flex-col justify-between relative z-10">
             <div>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-900 p-0.5 shrink-0 border border-slate-700 shadow-md group-hover:scale-105 transition-transform">
@@ -882,7 +975,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
     <section id="skills" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="skills-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
             ✦ Technical Architecture
           </div>
@@ -895,7 +988,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                  <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+                  <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -904,10 +997,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">95%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 95%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="95" style="width: 0%;"></div>
           </div>
         </div>
-        <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -916,10 +1009,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">92%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 92%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="92" style="width: 0%;"></div>
           </div>
         </div>
-        <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -928,10 +1021,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">90%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 90%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="90" style="width: 0%;"></div>
           </div>
         </div>
-        <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -940,10 +1033,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">94%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 94%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="94" style="width: 0%;"></div>
           </div>
         </div>
-        <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -952,10 +1045,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">92%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 92%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="92" style="width: 0%;"></div>
           </div>
         </div>
-        <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -964,10 +1057,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">88%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 88%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="88" style="width: 0%;"></div>
           </div>
         </div>
-        <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -976,10 +1069,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">90%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 90%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="90" style="width: 0%;"></div>
           </div>
         </div>
-        <div class="p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -988,7 +1081,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">92%</span>
           </div>
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
-            <div class="h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 92%;"></div>
+            <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="92" style="width: 0%;"></div>
           </div>
         </div>
         </div>
@@ -999,7 +1092,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
     <section id="architecture" class="py-20 sm:py-28" aria-labelledby="architecture-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
             ✦ Engineering SDLC
           </div>
@@ -1013,7 +1106,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div class="tilt-card reveal-on-scroll p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
             <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-4">01</div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Domain & System Modeling</h3>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
@@ -1021,7 +1114,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             </p>
           </div>
 
-          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div class="tilt-card reveal-on-scroll p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
             <div class="text-3xl font-black text-indigo-600 dark:text-indigo-400 font-mono mb-4">02</div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Pixel-Perfect Fluid UI/UX</h3>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
@@ -1029,7 +1122,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             </p>
           </div>
 
-          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div class="tilt-card reveal-on-scroll p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
             <div class="text-3xl font-black text-cyan-600 dark:text-cyan-400 font-mono mb-4">03</div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Reactive State & Offline Data</h3>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
@@ -1037,7 +1130,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             </p>
           </div>
 
-          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div class="tilt-card reveal-on-scroll p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
             <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400 font-mono mb-4">04</div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">CI/CD & Zero-Crash SRE</h3>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
@@ -1048,8 +1141,8 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
         </div>
 
         <!-- Interactive Architecture & Terminal Sandbox -->
-        <div class="mt-12 max-w-4xl mx-auto">
-          <div class="rounded-3xl bg-[#090d1a] border border-slate-700/80 shadow-2xl shadow-blue-500/10 overflow-hidden font-mono text-xs text-slate-300">
+        <div class="mt-12 max-w-4xl mx-auto reveal-on-scroll">
+          <div class="tilt-card rounded-3xl bg-[#090d1a] border border-slate-700/80 shadow-2xl shadow-blue-500/10 overflow-hidden font-mono text-xs text-slate-300">
             
             <!-- Terminal Header -->
             <div class="px-5 py-3.5 bg-[#0e1424] border-b border-slate-800 flex items-center justify-between">
@@ -1139,7 +1232,7 @@ $ flutter doctor -v
     <section id="estimator" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="estimator-title">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900 mb-3">
             ✦ Interactive Scope & Cost Estimator
           </div>
@@ -1151,7 +1244,7 @@ $ flutter doctor -v
           </p>
         </div>
 
-        <div class="p-8 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="tilt-card reveal-on-scroll p-8 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           <!-- Left: Options selection -->
           <div class="lg:col-span-7 space-y-6">
@@ -1231,7 +1324,7 @@ $ flutter doctor -v
     <!-- Work Experience & Milestones -->
         <section id="experience" class="py-20 sm:py-28" aria-labelledby="experience-title">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
             ✦ Career Timeline
           </div>
@@ -1241,9 +1334,9 @@ $ flutter doctor -v
         </div>
 
         <div class="space-y-2">
-                  <div class="relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+                  <div class="reveal-on-scroll relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
           <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060b19] shadow-md shadow-blue-500/60"></div>
-          <div class="p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="tilt-card p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-extrabold text-base sm:text-lg text-white">Flutter Developer</h3>
@@ -1255,9 +1348,9 @@ $ flutter doctor -v
             <div class="mt-4 flex flex-wrap gap-2"><span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Flutter</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Dart</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Bloc</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">REST APIs</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">E-Commerce</span></div>
           </div>
         </div>
-        <div class="relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+        <div class="reveal-on-scroll relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
           <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060b19] shadow-md shadow-blue-500/60"></div>
-          <div class="p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="tilt-card p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-extrabold text-base sm:text-lg text-white">Flutter Developer</h3>
@@ -1269,9 +1362,9 @@ $ flutter doctor -v
             <div class="mt-4 flex flex-wrap gap-2"><span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Flutter</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">REST APIs</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">GetX</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Firebase</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">UI/UX</span></div>
           </div>
         </div>
-        <div class="relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+        <div class="reveal-on-scroll relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
           <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060b19] shadow-md shadow-blue-500/60"></div>
-          <div class="p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="tilt-card p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-extrabold text-base sm:text-lg text-white">Flutter Developer</h3>
@@ -1283,9 +1376,9 @@ $ flutter doctor -v
             <div class="mt-4 flex flex-wrap gap-2"><span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Flutter</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Provider</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Git</span> <span class="text-xs bg-slate-900 text-cyan-300 px-2.5 py-1 rounded-lg font-mono border border-slate-800">Clean Architecture</span></div>
           </div>
         </div>
-        <div class="relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+        <div class="reveal-on-scroll relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
           <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060b19] shadow-md shadow-blue-500/60"></div>
-          <div class="p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="tilt-card p-6 sm:p-7 rounded-3xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 shadow-xl hover:border-blue-500/50 transition-all duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-extrabold text-base sm:text-lg text-white">Flutter Developer</h3>
@@ -1305,14 +1398,14 @@ $ flutter doctor -v
     <!-- Education & Academic Credentials -->
         <section id="education" class="py-16 bg-slate-50/50 dark:bg-slate-900/30 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="education-title">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
           <h2 id="education-title" class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
             Education & Academic Background
           </h2>
         </div>
 
         <div class="space-y-4">
-                  <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div class="reveal-on-scroll tilt-card p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h3 class="font-bold text-base text-slate-900 dark:text-white">Bachelor of Computer Application (BCA)</h3>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Saurashtra University</p>
@@ -1322,7 +1415,7 @@ $ flutter doctor -v
             <span class="text-slate-500 dark:text-slate-400 font-medium">First Class with Distinction</span>
           </div>
         </div>
-        <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="reveal-on-scroll tilt-card p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h3 class="font-bold text-base text-slate-900 dark:text-white">Bachelor of Science (B.Sc)</h3>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Saurashtra University</p>
@@ -1341,7 +1434,7 @@ $ flutter doctor -v
     <section id="faq" class="py-20 sm:py-28" aria-labelledby="faq-title">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
             ✦ Frequently Asked Questions
           </div>
@@ -1353,7 +1446,7 @@ $ flutter doctor -v
           </p>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-4 reveal-on-scroll">
           
           <details class="group p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md transition-all">
             <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-slate-900 dark:text-white cursor-pointer list-none">
@@ -1404,7 +1497,7 @@ $ flutter doctor -v
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+          <div class="lg:col-span-5 space-y-6 text-center lg:text-left reveal-on-scroll">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900">
               ✦ Direct Connect
             </div>
@@ -1417,7 +1510,7 @@ $ flutter doctor -v
 
             <!-- Direct Contact Cards -->
             <div class="space-y-3 pt-2">
-                            <div class="p-4 rounded-2xl bg-[#090e1f]/90 border border-slate-800 flex items-center justify-between gap-3 shadow-md hover:border-emerald-500/50 transition">
+                            <div class="tilt-card p-4 rounded-2xl bg-[#090e1f]/90 border border-slate-800 flex items-center justify-between gap-3 shadow-md hover:border-emerald-500/50 transition">
                 <div class="flex items-center gap-3 text-left">
                   <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg">💬</div>
                   <div>
@@ -1425,11 +1518,11 @@ $ flutter doctor -v
                     <div class="text-sm font-bold text-white">+91 8758113819</div>
                   </div>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=+918758113819&text=Hi%20Keyur%20H.%20Satani%2C%20I%20reviewed%20your%20Flutter%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition shadow-sm whitespace-nowrap">Chat ↗</a>
+                <a href="https://api.whatsapp.com/send?phone=+918758113819&text=Hi%20Keyur%20H.%20Satani%2C%20I%20reviewed%20your%20Flutter%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition shadow-sm whitespace-nowrap hover:scale-105">Chat ↗</a>
               </div>
               
 
-                            <div class="p-4 rounded-2xl bg-[#090e1f]/90 border border-slate-800 flex items-center justify-between gap-3 shadow-md hover:border-blue-500/50 transition">
+                            <div class="tilt-card p-4 rounded-2xl bg-[#090e1f]/90 border border-slate-800 flex items-center justify-between gap-3 shadow-md hover:border-blue-500/50 transition">
                 <div class="flex items-center gap-3 text-left">
                   <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg">✉️</div>
                   <div>
@@ -1437,11 +1530,11 @@ $ flutter doctor -v
                     <div class="text-sm font-bold text-white">kevalsatani1234@gmail.com</div>
                   </div>
                 </div>
-                <button onclick="copyEmail('kevalsatani1234@gmail.com')" class="px-3.5 py-2 rounded-xl border border-blue-500/40 text-cyan-300 hover:bg-blue-600 hover:text-white text-xs font-bold transition cursor-pointer shadow-sm whitespace-nowrap">Copy 📋</button>
+                <button onclick="copyEmail('kevalsatani1234@gmail.com')" class="px-3.5 py-2 rounded-xl border border-blue-500/40 text-cyan-300 hover:bg-blue-600 hover:text-white text-xs font-bold transition cursor-pointer shadow-sm whitespace-nowrap hover:scale-105">Copy 📋</button>
               </div>
               
 
-              <div class="p-4 rounded-2xl bg-[#090e1f]/90 border border-slate-800 flex items-center gap-3 shadow-md text-left">
+              <div class="tilt-card p-4 rounded-2xl bg-[#090e1f]/90 border border-slate-800 flex items-center gap-3 shadow-md text-left">
                 <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg">📍</div>
                 <div>
                   <div class="text-xs text-slate-400 font-medium">Location & Work Mode</div>
@@ -1458,7 +1551,7 @@ $ flutter doctor -v
             </div>
           </div>
 
-          <div class="lg:col-span-7 bg-white/90 dark:bg-[#090e1f]/95 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-slate-800/90 shadow-2xl">
+          <div class="lg:col-span-7 tilt-card reveal-on-scroll bg-white/90 dark:bg-[#090e1f]/95 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-slate-800/90 shadow-2xl">
             <form id="contactForm" name="contact" method="POST" data-netlify="true" class="space-y-4">
               <input type="hidden" name="form-name" value="contact" />
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1487,7 +1580,7 @@ $ flutter doctor -v
                 <textarea name="message" rows="3" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Describe your mobile architecture requirements or project timeline..."></textarea>
               </div>
 
-              <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:opacity-95 text-white font-black text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-[1.01] cursor-pointer" aria-label="Send message">
+              <button type="submit" class="shimmer-btn w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:opacity-95 text-white font-black text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-[1.01] cursor-pointer" aria-label="Send message">
                 Send Message / Initiate Consultation 🚀
               </button>
             </form>
@@ -1668,6 +1761,247 @@ $ flutter doctor -v
     let currentModalAppIdx = 0;
     let currentModalSlideIdx = 0;
     let estimatorPlatform = 'mobile';
+
+    // 1. Interactive Ambient Cyber Constellation Canvas
+    function initAmbientCanvas() {
+      const canvas = document.getElementById('ambientCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      const particles = [];
+      const particleCount = Math.min(Math.floor((width * height) / 18000), 65);
+      let mouse = { x: -1000, y: -1000, radius: 150 };
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 0.7;
+          this.vy = (Math.random() - 0.5) * 0.7;
+          this.radius = Math.random() * 2 + 1;
+        }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          if (this.x < 0 || this.x > width) this.vx *= -1;
+          if (this.y < 0 || this.y > height) this.vy *= -1;
+
+          // Mouse gentle repulsion
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.radius) {
+            const angle = Math.atan2(dy, dx);
+            const force = (mouse.radius - dist) / mouse.radius;
+            this.x -= Math.cos(angle) * force * 2;
+            this.y -= Math.sin(angle) * force * 2;
+          }
+        }
+        draw(isDark) {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = isDark ? 'rgba(56, 189, 248, 0.65)' : 'rgba(37, 99, 235, 0.45)';
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+
+      window.addEventListener('mouseleave', () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+      });
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        const isDark = document.documentElement.classList.contains('dark');
+
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw(isDark);
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 125) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              const alpha = (1 - dist / 125) * (isDark ? 0.22 : 0.12);
+              ctx.strokeStyle = isDark ? `rgba(6, 182, 212, ${alpha})` : `rgba(37, 99, 235, ${alpha})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+
+          // Line to mouse
+          const mdx = mouse.x - particles[i].x;
+          const mdy = mouse.y - particles[i].y;
+          const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+          if (mdist < 140) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            const mAlpha = (1 - mdist / 140) * (isDark ? 0.45 : 0.25);
+            ctx.strokeStyle = isDark ? `rgba(56, 189, 248, ${mAlpha})` : `rgba(37, 99, 235, ${mAlpha})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    // 2. Dynamic Hero Role Typewriter Animation
+    function initHeroTypewriter() {
+      const el = document.getElementById('typewriterText');
+      if (!el) return;
+
+      const roles = [
+        'Flutter Developer',
+        'Senior Flutter & Mobile Architect',
+        '8+ Production Apps on Play Store',
+        'BLoC & Clean Architecture Craftsman',
+        'Sub-16ms 60 FPS Mobile UI Specialist',
+        'Cross-Platform iOS & Android Engineer'
+      ];
+
+      let roleIdx = 0;
+      let charIdx = roles[0].length;
+      let isDeleting = true;
+      let typingSpeed = 50;
+
+      function typeLoop() {
+        const currentRole = roles[roleIdx];
+
+        if (isDeleting) {
+          el.textContent = currentRole.substring(0, charIdx - 1);
+          charIdx--;
+          typingSpeed = 30;
+        } else {
+          el.textContent = currentRole.substring(0, charIdx + 1);
+          charIdx++;
+          typingSpeed = 65;
+        }
+
+        if (!isDeleting && charIdx === currentRole.length) {
+          typingSpeed = 2200;
+          isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+          isDeleting = false;
+          roleIdx = (roleIdx + 1) % roles.length;
+          typingSpeed = 400;
+        }
+
+        setTimeout(typeLoop, typingSpeed);
+      }
+
+      setTimeout(typeLoop, 2500);
+    }
+
+    // 3. Smooth KPI Number Count-Up Easing
+    function initKpiCounters() {
+      const counters = document.querySelectorAll('.kpi-count');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const targetVal = parseFloat(el.getAttribute('data-target') || '0');
+            const suffix = el.getAttribute('data-suffix') || '';
+            const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+            const duration = 1600;
+            const startTime = performance.now();
+
+            function updateCount(now) {
+              const elapsed = now - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+              const currentVal = (easeProgress * targetVal).toFixed(decimals);
+              el.textContent = `${currentVal}${suffix}`;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              } else {
+                el.textContent = `${targetVal.toFixed(decimals)}${suffix}`;
+              }
+            }
+
+            requestAnimationFrame(updateCount);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      counters.forEach(c => observer.observe(c));
+    }
+
+    // 4. 3D Card Parallax Tilt & Holographic Specular Glare
+    function initCardTilt() {
+      const cards = document.querySelectorAll('.tilt-card, .project-card');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = -((y - centerY) / centerY) * 8;
+          const rotateY = ((x - centerX) / centerX) * 8;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+      });
+    }
+
+    // 5. Scroll Reveal Stagger & Skill Progress Fill
+    function initScrollReveal() {
+      const reveals = document.querySelectorAll('.reveal-on-scroll');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            
+            // Trigger skill bars inside this container
+            const skillBars = entry.target.querySelectorAll('.skill-bar-fill');
+            skillBars.forEach(sb => {
+              const targetWidth = sb.getAttribute('data-width') || '85';
+              sb.style.width = targetWidth + '%';
+            });
+
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      reveals.forEach(r => observer.observe(r));
+    }
 
     // Initialize 3D Smartphone Studio
     function initPhoneStudio() {
@@ -2041,6 +2375,11 @@ $ flutter doctor -v
 
     // Init on DOM ready
     window.addEventListener('DOMContentLoaded', () => {
+      initAmbientCanvas();
+      initHeroTypewriter();
+      initKpiCounters();
+      initCardTilt();
+      initScrollReveal();
       initPhoneStudio();
       calculateEstimate();
     });
