@@ -1,18 +1,66 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Primary SEO Meta -->
-  <title>Keyur H. Satani | Flutter Developer</title>
-  <meta name="description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and cross-platform mobile apps." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Keyur H. Satani | Flutter Developer — Mobile App Portfolio</title>
+  <meta name="title" content="Keyur H. Satani | Flutter Developer — Mobile App Portfolio" />
+  <meta name="description" content="Keyur H. Satani is a Flutter Developer with 4+ years of experience engineering production Android, iOS, and Flutter Web apps. Specialized in Clean Architecture, Bloc/Cubit, Firebase, REST APIs, and Google Play Store deployments." />
+  <meta name="keywords" content="Keyur H. Satani, Flutter Developer, Flutter Developer, Dart Developer, Senior Mobile Application Developer, Bloc State Management, GetX, Clean Architecture, Cross-Platform Mobile Apps, Android Developer, iOS Developer, Firebase Developer, Surat, Gujarat, India, Hire Flutter Developer" />
   <meta name="author" content="Keyur H. Satani" />
-  <meta name="theme-color" content="#070d1e" />
-  
+  <meta name="copyright" content="Keyur H. Satani" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://kevalsatani2001.github.io" />
+
+  <!-- Geographic & Locale Meta -->
+  <meta name="geo.region" content="IN-GJ" />
+  <meta name="geo.placename" content="Surat, Gujarat, India" />
+  <meta name="language" content="English" />
+  <meta http-equiv="content-language" content="en-us" />
+  <meta name="rating" content="General" />
+  <meta name="revisit-after" content="7 days" />
+
+  <!-- Theme Color & Mobile Web App Settings -->
+  <meta name="theme-color" content="#060b19" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Keyur H. Satani" />
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Keyur H. Satani — Portfolio" />
+  <meta property="og:url" content="https://kevalsatani2001.github.io" />
+  <meta property="og:title" content="Keyur H. Satani | Flutter Developer" />
+  <meta property="og:description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and high-performance cross-platform mobile apps." />
+  <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" />
+  <meta property="og:image:secure_url" content="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" />
+  <meta property="og:image:alt" content="Keyur H. Satani — Flutter Developer" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="profile:first_name" content="Keyur" />
+  <meta property="profile:username" content="kevalsatani2001" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://kevalsatani2001.github.io" />
+  <meta name="twitter:title" content="Keyur H. Satani | Flutter Developer" />
+  <meta name="twitter:description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and mobile app engineering." />
+  <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" />
+  <meta name="twitter:image:alt" content="Keyur H. Satani — Flutter Developer" />
+  <meta name="twitter:creator" content="@kevalsatani2001" />
+
+  <!-- High-Performance Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
   <!-- Tailwind CSS Play CDN with Class Dark Mode -->
@@ -40,28 +88,9 @@
     };
   </script>
 
-  <!-- Schema.org Person Structured Data -->
+  <!-- Multi-Entity Schema.org JSON-LD Graph for Google Knowledge Panel & Rich Snippets -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://kevalsatani2001.github.io/#person",
-    "name": "Keyur H. Satani",
-    "jobTitle": "Flutter Developer",
-    "url": "https://kevalsatani2001.github.io",
-    "image": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa",
-    "email": "mailto:kevalsatani1234@gmail.com",
-    "telephone": "+91 8758113819",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Surat, Gujarat, India",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/keyur-satani-00643623a", "https://github.com/kevalsatani2001", "mailto:kevalsatani1234@gmail.com", "https://wa.me/918758113819"
-    ],
-    "knowsAbout": ["Flutter & Dart","Bloc & Cubit","GetX & Provider","REST APIs & JSON","Firebase & Firestore","SQLite & Local Storage","Git, GitHub & CI/CD","Postman & Android Studio"]
-  }
+  {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://kevalsatani2001.github.io/#person","name":"Keyur H. Satani","givenName":"Keyur","jobTitle":"Flutter Developer","description":"Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter & Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.","url":"https://kevalsatani2001.github.io","image":{"@type":"ImageObject","@id":"https://kevalsatani2001.github.io/#personimage","url":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&token=f922f1c6-700b-473d-a8cd-7c2c65a402aa","caption":"Keyur H. Satani"},"email":"mailto:kevalsatani1234@gmail.com","telephone":"+91 8758113819","address":{"@type":"PostalAddress","addressLocality":"Surat, Gujarat, India","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/keyur-satani-00643623a","https://github.com/kevalsatani2001","mailto:kevalsatani1234@gmail.com","https://wa.me/918758113819"],"knowsAbout":["Flutter & Dart","Bloc & Cubit","GetX & Provider","REST APIs & JSON","Firebase & Firestore","SQLite & Local Storage","Git, GitHub & CI/CD","Postman & Android Studio"],"hasOccupation":{"@type":"Occupation","name":"Mobile Application Developer","skills":"Flutter, Dart, Bloc, Cubit, GetX, Clean Architecture, REST APIs, Firebase, Android, iOS"}},{"@type":"WebSite","@id":"https://kevalsatani2001.github.io/#website","url":"https://kevalsatani2001.github.io","name":"Keyur H. Satani — Official Developer Portfolio","description":"High-performance production mobile applications and Flutter systems by Keyur H. Satani, Flutter Developer.","publisher":{"@id":"https://kevalsatani2001.github.io/#person"},"inLanguage":"en-US"},{"@type":"ProfilePage","@id":"https://kevalsatani2001.github.io/#webpage","url":"https://kevalsatani2001.github.io","name":"Keyur H. Satani | Flutter Developer — Mobile Architecture & Play Store Portfolio","isPartOf":{"@id":"https://kevalsatani2001.github.io/#website"},"about":{"@id":"https://kevalsatani2001.github.io/#person"},"mainEntity":{"@id":"https://kevalsatani2001.github.io/#person"},"inLanguage":"en-US"},{"@type":"ItemList","@id":"https://kevalsatani2001.github.io/#projects","name":"Published Mobile & Web Applications by Keyur H. Satani","itemListElement":[{"@type":"SoftwareApplication","position":1,"name":"Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.","image":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1","url":"https://kevalsatani2001.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"SoftwareApplication","position":2,"name":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.","image":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd","url":"https://kevalsatani2001.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"SoftwareApplication","position":3,"name":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"Steve's Barbers (Powered by WhozNxt)\n\nRole: UI/UX & Frontend Development\n\nOverview: A luxury, multi-feature barbershop booking & retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.","image":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6","url":"https://kevalsatani2001.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"SoftwareApplication","position":4,"name":"TheSpeedTurtle App","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.","image":"https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80","url":"https://kevalsatani2001.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"SoftwareApplication","position":5,"name":"MATA News Application","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.","image":"https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80","url":"https://play.google.com/store/apps/details?id=com.mata.today&hl=en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"SoftwareApplication","position":6,"name":"QR Scanner & Barcode Pro","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.","image":"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80","url":"https://kevalsatani2001.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"SoftwareApplication","position":7,"name":"Media Player Application","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.","image":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80","url":"https://kevalsatani2001.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"SoftwareApplication","position":8,"name":"E-Commerce & Multi-Vendor Mobile Platform","applicationCategory":"MobileApplication","operatingSystem":"Android, iOS","description":"Scalable e-commerce mobile application featuring real-time product catalogs, cart & checkout workflows, payment gateway integration, and order tracking.","image":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80","url":"https://kevalsatani2001.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}]},{"@type":"FAQPage","@id":"https://kevalsatani2001.github.io/#faq","mainEntity":[{"@type":"Question","name":"What technical stack and architecture does Keyur H. Satani specialize in?","acceptedAnswer":{"@type":"Answer","text":"Keyur H. Satani specializes in Flutter, Dart, Clean Architecture, BLoC/Cubit & GetX state management, REST APIs, WebSockets, Firebase, SQLite, Hive, and automated CI/CD store deployments for Android and iOS."}},{"@type":"Question","name":"Is Keyur H. Satani available for full-time roles, contract development, or consulting?","acceptedAnswer":{"@type":"Answer","text":"Yes, Keyur H. Satani is available for Senior Mobile Engineer full-time opportunities, MVP cross-platform builds, and enterprise mobile architecture consulting."}},{"@type":"Question","name":"How does Keyur H. Satani ensure 60/120 FPS high-performance and zero crashes in mobile apps?","acceptedAnswer":{"@type":"Answer","text":"Keyur H. Satani implements memory profiling, automated widget testing, background isolates for heavy data parsing, robust offline-first SQLite/Hive caching, and Firebase Crashlytics telemetry to maintain a 99.9% crash-free rate."}}]}]}
   </script>
 
   <style>
@@ -143,7 +172,7 @@
 <body class="bg-[#fbfdff] dark:bg-[#060b19] text-[#0B1B3D] dark:text-slate-100 antialiased cyber-grid selection:bg-blue-600 selection:text-white">
 
   <!-- Scroll Progress Indicator -->
-  <div id="scrollProgress"></div>
+  <div id="scrollProgress" aria-hidden="true"></div>
 
   <!-- Netlify Form Detection -->
   <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
@@ -156,14 +185,14 @@
   </form>
 
   <!-- Ambient Light Orbs -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse"></div>
-  <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
-  <div class="fixed bottom-10 left-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse" aria-hidden="true"></div>
+  <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+  <div class="fixed bottom-10 left-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
 
   <!-- Global Header Navigation -->
-  <header class="sticky top-0 z-40 backdrop-blur-2xl bg-white/80 dark:bg-[#060b19]/80 border-b border-slate-200/80 dark:border-slate-800/80 transition-all">
+  <header role="banner" class="sticky top-0 z-40 backdrop-blur-2xl bg-white/80 dark:bg-[#060b19]/80 border-b border-slate-200/80 dark:border-slate-800/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3.5 group">
+      <a href="#home" class="flex items-center gap-3.5 group" aria-label="Keyur H. Satani Homepage">
         <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 p-0.5 shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
           <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-sm tracking-wider">
             KH
@@ -172,12 +201,12 @@
         <div>
           <span class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white block leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Keyur H. Satani</span>
           <span class="text-[11px] font-semibold text-blue-600 dark:text-cyan-400 flex items-center gap-1">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Flutter Developer
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" aria-hidden="true"></span> Flutter Developer
           </span>
         </div>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300">
+      <nav role="navigation" aria-label="Primary Navigation" class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300">
         <a href="#about" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Overview</a>
         <a href="#showcase" class="hover:text-blue-600 dark:hover:text-cyan-400 transition flex items-center gap-1.5">3D Studio <span class="px-1.5 py-0.5 text-[10px] bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 rounded-md font-mono font-bold">PRO</span></a>
         <a href="#projects" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Apps (8+)</a>
@@ -185,6 +214,7 @@
         <a href="#architecture" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Architecture</a>
         <a href="#experience" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
         <a href="#estimator" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Cost Estimator</a>
+        <a href="#faq" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">FAQ</a>
         <a href="#contact" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Contact</a>
       </nav>
 
@@ -193,102 +223,105 @@
           <span>🌙</span>
         </button>
 
-        <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 bg-blue-50/50 dark:bg-blue-950/40 rounded-2xl hover:bg-blue-100 dark:hover:bg-blue-950 transition cursor-pointer shadow-sm">
+        <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 bg-blue-50/50 dark:bg-blue-950/40 rounded-2xl hover:bg-blue-100 dark:hover:bg-blue-950 transition cursor-pointer shadow-sm" aria-label="Open ATS Resume">
           Resume 📄
         </button>
 
-        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-extrabold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-2xl shadow-lg shadow-blue-500/25 transition-all hover:scale-105">
+        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-extrabold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-2xl shadow-lg shadow-blue-500/25 transition-all hover:scale-105" aria-label="Hire Keyur for Flutter projects">
           Hire Keyur ⚡
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section: MNC Engineering Leader -->
-  <section id="home" class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        
-        <!-- Left Hero Copy -->
-        <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+  <!-- Main Content Landmark -->
+  <main id="main-content" role="main">
+
+    <!-- Hero Section: Single H1 for Strict SEO Hierarchy -->
+    <section id="home" class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 overflow-hidden" aria-label="Introduction & Headline">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-blue-50/80 dark:bg-blue-950/60 text-blue-700 dark:text-cyan-300 border border-blue-200/80 dark:border-blue-900/80 backdrop-blur-md shadow-sm">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Available for full-time roles &amp; freelance opportunities</span>
-          </div>
-          
-          <h1 class="text-4xl sm:text-6xl xl:text-7xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight">
-            Architecting <span class="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 bg-clip-text text-transparent">Enterprise-Grade</span> Mobile & Web Systems.
-          </h1>
-
-          <div class="text-xs sm:text-sm font-bold text-blue-600 dark:text-cyan-400 font-mono tracking-wide uppercase">
-            ✦ <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-400 to-cyan-400"&gt;Flutter</span> Developer
-          </div>
-
-          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-            Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.
-          </p>
-
-          <div class="flex flex-wrap gap-3.5 justify-center lg:justify-start items-center pt-2">
-            <a href="#showcase" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-105 flex items-center gap-2">
-              <span>Explore 3D Smartphone Studio</span> 📱
-            </a>
+          <!-- Left Hero Copy -->
+          <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
             
-            <button onclick="openResumeModal()" class="px-6 py-3.5 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-[#0b1733]/80 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-all shadow-sm flex items-center gap-2 cursor-pointer">
-              <span>View ATS Resume</span> 📄
-            </button>
-
-                        <a href="https://api.whatsapp.com/send?phone=+918758113819&text=Hi%20Keyur%20H.%20Satani%2C%20I%20reviewed%20your%20enterprise%20Flutter%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-2xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 font-bold text-xs sm:text-sm transition-all flex items-center gap-2">
-              <span>WhatsApp Connect</span> 💬
-            </a>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-blue-50/80 dark:bg-blue-950/60 text-blue-700 dark:text-cyan-300 border border-blue-200/80 dark:border-blue-900/80 backdrop-blur-md shadow-sm">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+              <span>Available for full-time roles &amp; freelance opportunities</span>
+            </div>
             
-          </div>
+            <h1 class="text-4xl sm:text-6xl xl:text-7xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight">
+              Architecting <span class="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 bg-clip-text text-transparent">Enterprise-Grade</span> Mobile & Web Systems.
+            </h1>
 
-          <!-- MNC Impact KPI Metrics -->
-          <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-3.5 border-t border-slate-200/80 dark:border-slate-800/80">
-            <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
-              <div class="text-2xl sm:text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono tracking-tight">4+</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Years Experience</div>
+            <div class="text-xs sm:text-sm font-bold text-blue-600 dark:text-cyan-400 font-mono tracking-wide uppercase">
+              ✦ <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-400 to-cyan-400"&gt;Flutter</span> Developer
             </div>
 
-            <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
-              <div class="text-2xl sm:text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono tracking-tight">8+</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Published Apps</div>
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+              Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.
+            </p>
+
+            <div class="flex flex-wrap gap-3.5 justify-center lg:justify-start items-center pt-2">
+              <a href="#showcase" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-105 flex items-center gap-2" aria-label="Explore 3D Smartphone Studio">
+                <span>Explore 3D Smartphone Studio</span> 📱
+              </a>
+              
+              <button onclick="openResumeModal()" class="px-6 py-3.5 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-[#0b1733]/80 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-all shadow-sm flex items-center gap-2 cursor-pointer" aria-label="View ATS Resume">
+                <span>View ATS Resume</span> 📄
+              </button>
+
+                            <a href="https://api.whatsapp.com/send?phone=+918758113819&text=Hi%20Keyur%20H.%20Satani%2C%20I%20reviewed%20your%20enterprise%20Flutter%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-2xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 font-bold text-xs sm:text-sm transition-all flex items-center gap-2" aria-label="Connect with Keyur H. Satani on WhatsApp">
+                <span>WhatsApp Connect</span> 💬
+              </a>
+              
             </div>
 
-            <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
-              <div class="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400 font-mono tracking-tight">99.9%</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Crash-Free Rate</div>
-            </div>
-
-            <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
-              <div class="text-2xl sm:text-3xl font-black text-purple-600 dark:text-purple-400 font-mono tracking-tight">100k+</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Global Users</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Side: Interactive Live Code Playroom & Developer Terminal -->
-        <div class="lg:col-span-5">
-          <div class="rounded-3xl bg-[#090d1a] border border-slate-700/80 shadow-2xl shadow-blue-500/10 overflow-hidden font-mono text-xs text-slate-300">
-            
-            <!-- Terminal Header -->
-            <div class="px-5 py-3.5 bg-[#0e1424] border-b border-slate-800 flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+            <!-- MNC Impact KPI Metrics -->
+            <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-3.5 border-t border-slate-200/80 dark:border-slate-800/80">
+              <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
+                <div class="text-2xl sm:text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono tracking-tight">4+</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Years Experience</div>
               </div>
-              <div class="flex items-center gap-1.5 bg-slate-900/80 p-1 rounded-xl border border-slate-800">
-                <button onclick="switchTerminalTab('arch')" id="tabBtn-arch" class="px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition">architecture.dart</button>
-                <button onclick="switchTerminalTab('cli')" id="tabBtn-cli" class="px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition">terminal.sh</button>
-                <button onclick="switchTerminalTab('json')" id="tabBtn-json" class="px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition">meta.json</button>
+
+              <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
+                <div class="text-2xl sm:text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono tracking-tight">8+</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Published Apps</div>
+              </div>
+
+              <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
+                <div class="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400 font-mono tracking-tight">99.9%</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Crash-Free Rate</div>
+              </div>
+
+              <div class="p-4 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-left">
+                <div class="text-2xl sm:text-3xl font-black text-purple-600 dark:text-purple-400 font-mono tracking-tight">100k+</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Global Users</div>
               </div>
             </div>
+          </div>
 
-            <!-- Terminal Content Pane 1: Architecture Code -->
-            <div id="termPane-arch" class="p-5 overflow-x-auto leading-relaxed max-h-[380px]">
-              <pre><code><span class="token-comment">// MNC Clean Architecture + Bloc Event State</span>
+          <!-- Right Side: Interactive Live Code Playroom & Developer Terminal -->
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl bg-[#090d1a] border border-slate-700/80 shadow-2xl shadow-blue-500/10 overflow-hidden font-mono text-xs text-slate-300">
+              
+              <!-- Terminal Header -->
+              <div class="px-5 py-3.5 bg-[#0e1424] border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2" aria-hidden="true">
+                  <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                </div>
+                <div class="flex items-center gap-1.5 bg-slate-900/80 p-1 rounded-xl border border-slate-800">
+                  <button onclick="switchTerminalTab('arch')" id="tabBtn-arch" class="px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition cursor-pointer">architecture.dart</button>
+                  <button onclick="switchTerminalTab('cli')" id="tabBtn-cli" class="px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition cursor-pointer">terminal.sh</button>
+                  <button onclick="switchTerminalTab('json')" id="tabBtn-json" class="px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition cursor-pointer">meta.json</button>
+                </div>
+              </div>
+
+              <!-- Terminal Content Pane 1: Architecture Code -->
+              <div id="termPane-arch" class="p-5 overflow-x-auto leading-relaxed max-h-[380px]">
+                <pre><code><span class="token-comment">// MNC Clean Architecture + Bloc Event State</span>
 <span class="token-keyword">class</span> <span class="token-class">MobileAppBloc</span> <span class="token-keyword">extends</span> <span class="token-class">Bloc</span>&lt;<span class="token-class">AppEvent</span>, <span class="token-class">AppState</span>&gt; {
   <span class="token-keyword">final</span> <span class="token-class">IEnterpriseRepository</span> _repository;
   
@@ -310,17 +343,17 @@
     );
   }
 }</code></pre>
-            </div>
-
-            <!-- Terminal Content Pane 2: Interactive CLI -->
-            <div id="termPane-cli" class="p-5 hidden max-h-[380px] overflow-y-auto space-y-3">
-              <div class="text-slate-400 text-[11px]">Click an interactive command to execute:</div>
-              <div class="flex flex-wrap gap-2">
-                <button onclick="runCliCommand('analyze')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 text-[11px] font-mono border border-slate-700 transition">flutter analyze</button>
-                <button onclick="runCliCommand('test')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-400 text-[11px] font-mono border border-slate-700 transition">flutter test</button>
-                <button onclick="runCliCommand('build')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-purple-400 text-[11px] font-mono border border-slate-700 transition">flutter build appbundle</button>
               </div>
-              <div id="cliOutput" class="p-3.5 rounded-2xl bg-black/70 border border-slate-800 font-mono text-[11px] text-emerald-400 min-h-[160px] whitespace-pre-wrap">
+
+              <!-- Terminal Content Pane 2: Interactive CLI -->
+              <div id="termPane-cli" class="p-5 hidden max-h-[380px] overflow-y-auto space-y-3">
+                <div class="text-slate-400 text-[11px]">Click an interactive command to execute:</div>
+                <div class="flex flex-wrap gap-2">
+                  <button onclick="runCliCommand('analyze')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 text-[11px] font-mono border border-slate-700 transition cursor-pointer">flutter analyze</button>
+                  <button onclick="runCliCommand('test')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-400 text-[11px] font-mono border border-slate-700 transition cursor-pointer">flutter test</button>
+                  <button onclick="runCliCommand('build')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-purple-400 text-[11px] font-mono border border-slate-700 transition cursor-pointer">flutter build appbundle</button>
+                </div>
+                <div id="cliOutput" class="p-3.5 rounded-2xl bg-black/70 border border-slate-800 font-mono text-[11px] text-emerald-400 min-h-[160px] whitespace-pre-wrap">
 $ flutter doctor -v
 [✓] Flutter (Channel stable, 3.24.x, macOS arm64)
 [✓] Android toolchain - develop for Android devices (Android SDK 34.0.0)
@@ -329,12 +362,12 @@ $ flutter doctor -v
 [✓] Android Studio (version 2024.1)
 [✓] Connected device (3 available)
 • No issues found! 🚀
+                </div>
               </div>
-            </div>
 
-            <!-- Terminal Content Pane 3: JSON Meta -->
-            <div id="termPane-json" class="p-5 hidden max-h-[380px] overflow-y-auto">
-              <pre class="text-cyan-300"><code>{
+              <!-- Terminal Content Pane 3: JSON Meta -->
+              <div id="termPane-json" class="p-5 hidden max-h-[380px] overflow-y-auto">
+                <pre class="text-cyan-300"><code>{
   "engineer": "Keyur H. Satani",
   "title": "Flutter Developer",
   "status": "Available for full-time roles &amp; freelance opportunities",
@@ -343,162 +376,162 @@ $ flutter doctor -v
   "publishedApps": 8,
   "location": "Surat, Gujarat, India"
 }</code></pre>
-            </div>
+              </div>
 
-            <!-- Terminal Footer -->
-            <div class="px-5 py-2.5 bg-[#0e1424] border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> Engine: Flutter 3.x / Dart 3.x</span>
-              <button onclick="copyTerminalCode()" class="hover:text-white transition cursor-pointer">📋 Copy Code</button>
+              <!-- Terminal Footer -->
+              <div class="px-5 py-2.5 bg-[#0e1424] border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Engine: Flutter 3.x / Dart 3.x</span>
+                <button onclick="copyTerminalCode()" class="hover:text-white transition cursor-pointer" aria-label="Copy architecture code snippet">📋 Copy Code</button>
+              </div>
             </div>
           </div>
+
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Centerpiece: 3D Titanium Smartphone App Studio -->
-  <section id="showcase" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
-          ✦ Interactive 3D Device Studio
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-          Test Production Apps in Real-Time
-        </h2>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3 max-w-xl mx-auto">
-          Explore full UI layouts, interactive workflows, and high-fidelity screenshots inside our titanium smartphone simulator.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- Centerpiece: 3D Titanium Smartphone App Studio -->
+    <section id="showcase" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80 relative" aria-labelledby="showcase-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Left: App Switcher & Features list -->
-        <div class="lg:col-span-5 space-y-6">
-          <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400 mb-4">Select Live Application</h3>
-            <div class="space-y-2.5 max-h-[300px] overflow-y-auto pr-1" id="phoneAppSwitcherList">
-              <!-- Dynamically populated -->
-            </div>
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
+            ✦ Interactive 3D Device Studio
           </div>
-
-          <div class="p-6 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl shadow-blue-500/20">
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full">Engineering Highlights</span>
-              <span class="text-xl">⚡</span>
-            </div>
-            <h4 id="phoneHighlightTitle" class="text-lg font-black leading-snug">Enterprise UI Architecture</h4>
-            <p id="phoneHighlightDesc" class="text-xs text-blue-100 mt-2 leading-relaxed">
-              Responsive layouts designed for Android, iOS & Tablets with sub-16ms render times and zero-memory leaks.
-            </p>
-            <div class="mt-4 pt-4 border-t border-white/20 flex items-center justify-between">
-              <span id="phoneHighlightRating" class="text-xs font-bold font-mono">⭐ 4.9 Play Store Rating</span>
-              <button onclick="openMobilePreview(currentPhoneAppIdx)" class="px-3.5 py-1.5 rounded-xl bg-white text-blue-700 text-xs font-extrabold hover:bg-blue-50 transition cursor-pointer shadow-sm">Inspect Fullscreen ↗</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Center / Right: 3D Titanium Smartphone Frame -->
-        <div class="lg:col-span-7 flex justify-center phone-3d-wrapper">
-          <div id="phoneDeviceFrame" class="phone-3d-body relative w-[310px] sm:w-[350px] h-[640px] sm:h-[690px] rounded-[50px] p-3.5 bg-gradient-to-b from-slate-700 via-slate-900 to-black border-4 border-slate-600/60 shadow-2xl select-none">
-            
-            <!-- Side Buttons -->
-            <div class="absolute -left-[7px] top-28 w-[3px] h-9 bg-slate-500 rounded-l-md"></div>
-            <div class="absolute -left-[7px] top-40 w-[3px] h-12 bg-slate-500 rounded-l-md"></div>
-            <div class="absolute -left-[7px] top-56 w-[3px] h-12 bg-slate-500 rounded-l-md"></div>
-            <div class="absolute -right-[7px] top-36 w-[3px] h-16 bg-slate-500 rounded-r-md"></div>
-
-            <!-- Inner Phone Screen -->
-            <div class="relative w-full h-full rounded-[40px] overflow-hidden bg-slate-950 flex flex-col justify-between phone-screen-inner border border-white/10">
-              
-              <!-- Glass Glare overlay -->
-              <div class="absolute inset-0 phone-glass-glare pointer-events-none z-30"></div>
-
-              <!-- Top Status Bar & Dynamic Island -->
-              <div class="relative z-40 px-6 pt-3 pb-1 flex items-center justify-between text-[11px] font-bold text-white">
-                <span id="phoneTime">9:41</span>
-                
-                <!-- Dynamic Island -->
-                <div class="w-24 h-5 rounded-full bg-black flex items-center justify-center gap-1.5 px-2 border border-slate-800 shadow-sm">
-                  <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                  <span class="text-[9px] text-slate-300 truncate max-w-[50px]" id="dynamicIslandText">Live App</span>
-                </div>
-
-                <div class="flex items-center gap-1">
-                  <span class="text-[10px]">5G</span>
-                  <span class="text-[10px]">100%</span>
-                </div>
-              </div>
-
-              <!-- Screen Image Slide Container -->
-              <div class="relative flex-1 w-full overflow-hidden bg-slate-900 flex items-center justify-center">
-                <img id="phoneScreenImg" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="App Screenshot" class="w-full h-full object-cover transition-opacity duration-300" />
-                
-                <!-- Slide Controls on Phone -->
-                <button onclick="prevPhoneSlide()" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center text-xs backdrop-blur-md border border-white/20 hover:scale-110 transition z-30 cursor-pointer">‹</button>
-                <button onclick="nextPhoneSlide()" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center text-xs backdrop-blur-md border border-white/20 hover:scale-110 transition z-30 cursor-pointer">›</button>
-                
-                <!-- Slide Dots on Phone -->
-                <div id="phoneSlideDots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-30">
-                  <!-- Generated via JS -->
-                </div>
-              </div>
-
-              <!-- Phone Bottom Dock / Action Bar -->
-              <div class="relative z-40 p-3 bg-slate-950/90 backdrop-blur-md border-t border-white/10 flex items-center justify-between">
-                <div class="min-w-0 flex-1 pr-2">
-                  <p id="phoneDockTitle" class="text-xs font-bold text-white truncate">Hira Diary</p>
-                  <p id="phoneDockSub" class="text-[10px] text-blue-400 truncate">Slide 1 of 3</p>
-                </div>
-                <button onclick="openMobilePreview(currentPhoneAppIdx)" class="px-3 py-1 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-bold shadow-md transition cursor-pointer">Studio ↗</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Production Projects & Case Studies -->
-  <section id="projects" class="py-20 sm:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-2">
-            ✦ Production Case Studies
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-            Published Applications & Systems
+          <h2 id="showcase-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            Test Production Apps in Real-Time
           </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3 max-w-xl mx-auto">
+            Explore full UI layouts, interactive workflows, and high-fidelity screenshots inside our titanium smartphone simulator.
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left: App Switcher & Features list -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400 mb-4">Select Live Application</h3>
+              <div class="space-y-2.5 max-h-[300px] overflow-y-auto pr-1" id="phoneAppSwitcherList">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl shadow-blue-500/20">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full">Engineering Highlights</span>
+                <span class="text-xl" aria-hidden="true">⚡</span>
+              </div>
+              <h3 id="phoneHighlightTitle" class="text-lg font-black leading-snug">Enterprise UI Architecture</h3>
+              <p id="phoneHighlightDesc" class="text-xs text-blue-100 mt-2 leading-relaxed">
+                Responsive layouts designed for Android, iOS & Tablets with sub-16ms render times and zero-memory leaks.
+              </p>
+              <div class="mt-4 pt-4 border-t border-white/20 flex items-center justify-between">
+                <span id="phoneHighlightRating" class="text-xs font-bold font-mono">⭐ 4.9 Play Store Rating</span>
+                <button onclick="openMobilePreview(currentPhoneAppIdx)" class="px-3.5 py-1.5 rounded-xl bg-white text-blue-700 text-xs font-extrabold hover:bg-blue-50 transition cursor-pointer shadow-sm" aria-label="Inspect application in fullscreen">Inspect Fullscreen ↗</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center / Right: 3D Titanium Smartphone Frame -->
+          <div class="lg:col-span-7 flex justify-center phone-3d-wrapper">
+            <div id="phoneDeviceFrame" class="phone-3d-body relative w-[310px] sm:w-[350px] h-[640px] sm:h-[690px] rounded-[50px] p-3.5 bg-gradient-to-b from-slate-700 via-slate-900 to-black border-4 border-slate-600/60 shadow-2xl select-none" role="region" aria-label="3D Smartphone Simulator">
+              
+              <!-- Side Buttons -->
+              <div class="absolute -left-[7px] top-28 w-[3px] h-9 bg-slate-500 rounded-l-md" aria-hidden="true"></div>
+              <div class="absolute -left-[7px] top-40 w-[3px] h-12 bg-slate-500 rounded-l-md" aria-hidden="true"></div>
+              <div class="absolute -left-[7px] top-56 w-[3px] h-12 bg-slate-500 rounded-l-md" aria-hidden="true"></div>
+              <div class="absolute -right-[7px] top-36 w-[3px] h-16 bg-slate-500 rounded-r-md" aria-hidden="true"></div>
+
+              <!-- Inner Phone Screen -->
+              <div class="relative w-full h-full rounded-[40px] overflow-hidden bg-slate-950 flex flex-col justify-between phone-screen-inner border border-white/10">
+                
+                <!-- Glass Glare overlay -->
+                <div class="absolute inset-0 phone-glass-glare pointer-events-none z-30" aria-hidden="true"></div>
+
+                <!-- Top Status Bar & Dynamic Island -->
+                <div class="relative z-40 px-6 pt-3 pb-1 flex items-center justify-between text-[11px] font-bold text-white">
+                  <span id="phoneTime">9:41</span>
+                  
+                  <!-- Dynamic Island -->
+                  <div class="w-24 h-5 rounded-full bg-black flex items-center justify-center gap-1.5 px-2 border border-slate-800 shadow-sm" aria-hidden="true">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-[9px] text-slate-300 truncate max-w-[50px]" id="dynamicIslandText">Live App</span>
+                  </div>
+
+                  <div class="flex items-center gap-1">
+                    <span class="text-[10px]">5G</span>
+                    <span class="text-[10px]">100%</span>
+                  </div>
+                </div>
+
+                <!-- Screen Image Slide Container -->
+                <div class="relative flex-1 w-full overflow-hidden bg-slate-900 flex items-center justify-center">
+                  <img id="phoneScreenImg" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Application Screenshot on Mobile Simulator" class="w-full h-full object-cover transition-opacity duration-300" width="350" height="690" />
+                  
+                  <!-- Slide Controls on Phone -->
+                  <button onclick="prevPhoneSlide()" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center text-xs backdrop-blur-md border border-white/20 hover:scale-110 transition z-30 cursor-pointer" aria-label="Previous screenshot">‹</button>
+                  <button onclick="nextPhoneSlide()" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center text-xs backdrop-blur-md border border-white/20 hover:scale-110 transition z-30 cursor-pointer" aria-label="Next screenshot">›</button>
+                  
+                  <!-- Slide Dots on Phone -->
+                  <div id="phoneSlideDots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-30">
+                    <!-- Generated via JS -->
+                  </div>
+                </div>
+
+                <!-- Phone Bottom Dock / Action Bar -->
+                <div class="relative z-40 p-3 bg-slate-950/90 backdrop-blur-md border-t border-white/10 flex items-center justify-between">
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p id="phoneDockTitle" class="text-xs font-bold text-white truncate">Hira Diary</p>
+                    <p id="phoneDockSub" class="text-[10px] text-blue-400 truncate">Slide 1 of 3</p>
+                  </div>
+                  <button onclick="openMobilePreview(currentPhoneAppIdx)" class="px-3 py-1 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-bold shadow-md transition cursor-pointer" aria-label="Launch Fullscreen Studio">Studio ↗</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Production Projects & Case Studies -->
+    <section id="projects" class="py-20 sm:py-28" aria-labelledby="projects-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Category Filter Pills -->
-        <div class="flex flex-wrap gap-2">
-          <button onclick="filterProjects('all')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer active-filter bg-blue-600 text-white font-bold shadow-lg shadow-blue-500/25 ring-2 ring-blue-500/40" data-category="all">All Projects (8+)</button>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-2">
+              ✦ Production Case Studies
+            </div>
+            <h2 id="projects-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+              Published Applications & Systems
+            </h2>
+          </div>
+          
+          <!-- Category Filter Pills -->
+          <div class="flex flex-wrap gap-2" role="toolbar" aria-label="Project Category Filter">
+            <button onclick="filterProjects('all')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer active-filter bg-blue-600 text-white font-bold shadow-lg shadow-blue-500/25 ring-2 ring-blue-500/40" data-category="all">All Projects (8+)</button>
 <button onclick="filterProjects('mobile app')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer bg-white/80 dark:bg-[#0b1733]/80 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-category="mobile app">Mobile app</button>
 <button onclick="filterProjects('fitness &amp; productivity')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer bg-white/80 dark:bg-[#0b1733]/80 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-category="fitness &amp; productivity">Fitness &amp; productivity</button>
 <button onclick="filterProjects('media &amp; news')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer bg-white/80 dark:bg-[#0b1733]/80 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-category="media &amp; news">Media &amp; news</button>
 <button onclick="filterProjects('utility &amp; tools')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer bg-white/80 dark:bg-[#0b1733]/80 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-category="utility &amp; tools">Utility &amp; tools</button>
 <button onclick="filterProjects('media &amp; streaming')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer bg-white/80 dark:bg-[#0b1733]/80 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-category="media &amp; streaming">Media &amp; streaming</button>
 <button onclick="filterProjects('e-commerce')" class="proj-filter-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 cursor-pointer bg-white/80 dark:bg-[#0b1733]/80 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-category="e-commerce">E-commerce</button>
+          </div>
         </div>
-      </div>
 
-      <!-- Project Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="projectsGrid">
-                <!-- Project Card: Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game -->
-        <div onclick="openMobilePreview(0)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app">
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="projectsGrid">
+                  <!-- Project Card: Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game -->
+        <article onclick="openMobilePreview(0)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&amp;token=d33672c9-9d6e-4f3a-b710-097eb064dad1" alt="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&amp;token=d33672c9-9d6e-4f3a-b710-097eb064dad1" alt="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -527,21 +560,21 @@ $ flutter doctor -v
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flame Engine</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(0)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(0)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
               <span class="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production Ready</span>
             </div>
           </div>
-        </div>
+        </article>
         <!-- Project Card: Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App -->
-        <div onclick="openMobilePreview(1)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app">
+        <article onclick="openMobilePreview(1)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&amp;token=efe4c49d-a56d-4a4d-863d-13923f750bcd" alt="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&amp;token=efe4c49d-a56d-4a4d-863d-13923f750bcd" alt="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -570,21 +603,21 @@ $ flutter doctor -v
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">GetX</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(1)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(1)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
               <span class="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production Ready</span>
             </div>
           </div>
-        </div>
+        </article>
         <!-- Project Card: Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App -->
-        <div onclick="openMobilePreview(2)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app">
+        <article onclick="openMobilePreview(2)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="mobile app" aria-label="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&amp;token=6ac3d321-745a-4394-959a-32c97ef1bbe6" alt="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&amp;token=6ac3d321-745a-4394-959a-32c97ef1bbe6" alt="Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -617,21 +650,21 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">GetX</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(2)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(2)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
               <span class="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production Ready</span>
             </div>
           </div>
-        </div>
+        </article>
         <!-- Project Card: TheSpeedTurtle App -->
-        <div onclick="openMobilePreview(3)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="fitness &amp; productivity">
+        <article onclick="openMobilePreview(3)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="fitness &amp; productivity" aria-label="TheSpeedTurtle App">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="TheSpeedTurtle App" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="TheSpeedTurtle App Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -660,21 +693,21 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">BLoC</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(3)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(3)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open TheSpeedTurtle App preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
-              <a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105"><span>GitHub</span> ↗</a>
+              <a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105" title="View Source Code on GitHub"><span>GitHub</span> ↗</a>
             </div>
           </div>
-        </div>
+        </article>
         <!-- Project Card: MATA News Application -->
-        <div onclick="openMobilePreview(4)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; news">
+        <article onclick="openMobilePreview(4)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; news" aria-label="MATA News Application">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="MATA News Application" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="MATA News Application Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -703,21 +736,21 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">REST APIs</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">GetX</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(4)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(4)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open MATA News Application preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
-              <a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-all shadow-md shadow-blue-600/20 inline-flex items-center gap-1.5 hover:scale-105"><span>Play Store</span> ↗</a>
+              <a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-all shadow-md shadow-blue-600/20 inline-flex items-center gap-1.5 hover:scale-105" title="View MATA News Application on Play Store"><span>Play Store</span> ↗</a>
             </div>
           </div>
-        </div>
+        </article>
         <!-- Project Card: QR Scanner &amp; Barcode Pro -->
-        <div onclick="openMobilePreview(5)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="utility &amp; tools">
+        <article onclick="openMobilePreview(5)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="utility &amp; tools" aria-label="QR Scanner &amp; Barcode Pro">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="QR Scanner &amp; Barcode Pro" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="QR Scanner &amp; Barcode Pro Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -746,21 +779,21 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Camera ML</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">SQLite</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(5)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(5)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open QR Scanner &amp; Barcode Pro preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
-              <a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105"><span>GitHub</span> ↗</a>
+              <a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105" title="View Source Code on GitHub"><span>GitHub</span> ↗</a>
             </div>
           </div>
-        </div>
+        </article>
         <!-- Project Card: Media Player Application -->
-        <div onclick="openMobilePreview(6)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; streaming">
+        <article onclick="openMobilePreview(6)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="media &amp; streaming" aria-label="Media Player Application">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Media Player Application" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Media Player Application Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -789,21 +822,21 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Audio Service</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Video Player</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(6)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(6)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open Media Player Application preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
-              <a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105"><span>GitHub</span> ↗</a>
+              <a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105" title="View Source Code on GitHub"><span>GitHub</span> ↗</a>
             </div>
           </div>
-        </div>
+        </article>
         <!-- Project Card: E-Commerce &amp; Multi-Vendor Mobile Platform -->
-        <div onclick="openMobilePreview(7)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="e-commerce">
+        <article onclick="openMobilePreview(7)" class="project-card group relative p-6 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/80 dark:hover:border-blue-500/80 shadow-md hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 flex flex-col justify-between cursor-pointer overflow-hidden transform hover:-translate-y-1.5" data-category="e-commerce" aria-label="E-Commerce &amp; Multi-Vendor Mobile Platform">
           <div class="absolute -right-12 -top-12 w-32 h-32 bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-all duration-500 pointer-events-none"></div>
 
           <div>
             <div class="flex items-start gap-4">
               <div class="relative w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/90 p-1 flex-shrink-0 border border-slate-200 dark:border-slate-700 shadow-inner group-hover:scale-105 transition-transform duration-300">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="E-Commerce &amp; Multi-Vendor Mobile Platform" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="E-Commerce &amp; Multi-Vendor Mobile Platform Application Icon" class="w-full h-full object-contain rounded-xl" loading="lazy" width="56" height="56" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
@@ -832,35 +865,35 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">REST APIs</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">Payment Gateway</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="openMobilePreview(7)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5">
+              <button onclick="openMobilePreview(7)" class="px-3.5 py-2 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5" aria-label="Open E-Commerce &amp; Multi-Vendor Mobile Platform preview in 3D simulator">
                 <span>Phone View</span> 📱
               </button>
-              <a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105"><span>GitHub</span> ↗</a>
+              <a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition-all inline-flex items-center gap-1.5 hover:scale-105" title="View Source Code on GitHub"><span>GitHub</span> ↗</a>
             </div>
           </div>
+        </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MNC Tech Radar & Skills Matrix -->
-  <section id="skills" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
-          ✦ Technical Architecture
+    <!-- MNC Tech Radar & Skills Matrix -->
+    <section id="skills" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="skills-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
+            ✦ Technical Architecture
+          </div>
+          <h2 id="skills-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            Enterprise Skills & Technology Radar
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
+            Proficiency matrix across mobile frameworks, reactive state management, cloud backends, and automated DevOps pipelines.
+          </p>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-          Enterprise Skills & Technology Radar
-        </h2>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
-          Proficiency matrix across mobile frameworks, reactive state management, cloud backends, and automated DevOps pipelines.
-        </p>
-      </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <div class="p-5 rounded-2xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-blue-500/60 hover:shadow-lg transition-all duration-300">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                  <div class="p-5 rounded-2xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-blue-500/60 hover:shadow-lg transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-blue-500"></span>
@@ -956,171 +989,171 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <div class="h-full bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 rounded-full transition-all duration-1000" style="width: 92%;"></div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MNC Engineering Lifecycle & Architecture Blueprint -->
-  <section id="architecture" class="py-20 sm:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
-          ✦ Engineering SDLC
         </div>
-        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-          MNC Engineering Delivery Blueprint
-        </h2>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
-          From concept to zero-crash global deployment on App Store & Google Play.
-        </p>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- MNC Engineering Lifecycle & Architecture Blueprint -->
+    <section id="architecture" class="py-20 sm:py-28" aria-labelledby="architecture-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-4">01</div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Domain & System Modeling</h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-            Data contracts, entity definitions, and separation of concerns with Clean Architecture and SOLID foundations.
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
+            ✦ Engineering SDLC
+          </div>
+          <h2 id="architecture-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            MNC Engineering Delivery Blueprint
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
+            From concept to zero-crash global deployment on App Store & Google Play.
           </p>
         </div>
 
-        <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="text-3xl font-black text-indigo-600 dark:text-indigo-400 font-mono mb-4">02</div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Pixel-Perfect Fluid UI/UX</h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-            60/120 FPS high-refresh rate interfaces, Figma design tokens, responsive breakpoints, and micro-interactions.
-          </p>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+            <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-4">01</div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Domain & System Modeling</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              Data contracts, entity definitions, and separation of concerns with Clean Architecture and SOLID foundations.
+            </p>
+          </div>
 
-        <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="text-3xl font-black text-cyan-600 dark:text-cyan-400 font-mono mb-4">03</div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Reactive State & Offline Data</h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-            Bloc / Cubit state propagation, SQLite/Hive local persistence, optimistic caching, and WebSocket streams.
-          </p>
-        </div>
+          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+            <div class="text-3xl font-black text-indigo-600 dark:text-indigo-400 font-mono mb-4">02</div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Pixel-Perfect Fluid UI/UX</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              60/120 FPS high-refresh rate interfaces, Figma design tokens, responsive breakpoints, and micro-interactions.
+            </p>
+          </div>
 
-        <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400 font-mono mb-4">04</div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">CI/CD & Zero-Crash SRE</h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-            Fastlane build automation, unit/widget test suites, Play Console release tracks, and telemetry tracking.
-          </p>
-        </div>
+          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+            <div class="text-3xl font-black text-cyan-600 dark:text-cyan-400 font-mono mb-4">03</div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Reactive State & Offline Data</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              Bloc / Cubit state propagation, SQLite/Hive local persistence, optimistic caching, and WebSocket streams.
+            </p>
+          </div>
 
+          <div class="p-7 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-lg relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+            <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400 font-mono mb-4">04</div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">CI/CD & Zero-Crash SRE</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              Fastlane build automation, unit/widget test suites, Play Console release tracks, and telemetry tracking.
+            </p>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Interactive Project Cost & Timeline Estimator (MNC Exclusive Tool) -->
-  <section id="estimator" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900 mb-3">
-          ✦ Interactive Scope & Cost Estimator
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-          Calculate Your Project Timeline
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2">
-          Select target platforms and key architectural modules to get an instant delivery estimate & direct consultation proposal.
-        </p>
-      </div>
-
-      <div class="p-8 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <!-- Interactive Project Cost & Timeline Estimator -->
+    <section id="estimator" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="estimator-title">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Left: Options selection -->
-        <div class="lg:col-span-7 space-y-6">
-          <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">1. Target Platform</label>
-            <div class="grid grid-cols-3 gap-2 text-xs font-bold">
-              <button onclick="setEstimatorPlatform('mobile')" id="estPlat-mobile" class="est-plat-btn p-3 rounded-2xl border-2 border-blue-600 bg-blue-50 dark:bg-blue-950/80 text-blue-600 dark:text-cyan-400 transition cursor-pointer">Mobile (iOS & Android)</button>
-              <button onclick="setEstimatorPlatform('web')" id="estPlat-web" class="est-plat-btn p-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition cursor-pointer">Flutter Web & Admin</button>
-              <button onclick="setEstimatorPlatform('both')" id="estPlat-both" class="est-plat-btn p-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition cursor-pointer">Complete Suite (Both)</button>
-            </div>
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900 mb-3">
+            ✦ Interactive Scope & Cost Estimator
           </div>
-
-          <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">2. Architecture Modules (Select All Needed)</label>
-            <div class="grid grid-cols-2 gap-2.5 text-xs">
-              <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
-                <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Auth & Security" checked />
-                <span class="font-medium text-slate-800 dark:text-slate-200">Auth & Biometrics</span>
-              </label>
-
-              <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
-                <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Payment Gateway" checked />
-                <span class="font-medium text-slate-800 dark:text-slate-200">Payment Gateway</span>
-              </label>
-
-              <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
-                <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Real-Time Chat" />
-                <span class="font-medium text-slate-800 dark:text-slate-200">Real-Time Chat & Sockets</span>
-              </label>
-
-              <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
-                <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Offline DB" checked />
-                <span class="font-medium text-slate-800 dark:text-slate-200">Offline SQLite/Hive Sync</span>
-              </label>
-
-              <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
-                <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Push Notifications" checked />
-                <span class="font-medium text-slate-800 dark:text-slate-200">Push Notifications & CRM</span>
-              </label>
-
-              <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
-                <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Store Publishing" checked />
-                <span class="font-medium text-slate-800 dark:text-slate-200">Play/App Store Release</span>
-              </label>
-            </div>
-          </div>
+          <h2 id="estimator-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            Calculate Your Project Timeline
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2">
+            Select target platforms and key architectural modules to get an instant delivery estimate & direct consultation proposal.
+          </p>
         </div>
 
-        <!-- Right: Real-time estimate output card -->
-        <div class="lg:col-span-5 p-6 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex flex-col justify-between shadow-xl">
-          <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full">Engineering Proposal</span>
-            
-            <div class="mt-6">
-              <span class="text-xs text-blue-200 uppercase font-semibold">Estimated Delivery Time</span>
-              <div id="estWeeksOutput" class="text-4xl font-black mt-1 font-mono tracking-tight">3 - 4 Weeks</div>
+        <div class="p-8 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Left: Options selection -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">1. Target Platform</label>
+              <div class="grid grid-cols-3 gap-2 text-xs font-bold">
+                <button onclick="setEstimatorPlatform('mobile')" id="estPlat-mobile" class="est-plat-btn p-3 rounded-2xl border-2 border-blue-600 bg-blue-50 dark:bg-blue-950/80 text-blue-600 dark:text-cyan-400 transition cursor-pointer">Mobile (iOS & Android)</button>
+                <button onclick="setEstimatorPlatform('web')" id="estPlat-web" class="est-plat-btn p-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition cursor-pointer">Flutter Web & Admin</button>
+                <button onclick="setEstimatorPlatform('both')" id="estPlat-both" class="est-plat-btn p-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition cursor-pointer">Complete Suite (Both)</button>
+              </div>
             </div>
 
-            <div class="mt-4 pt-4 border-t border-white/20">
-              <span class="text-xs text-blue-200 uppercase font-semibold">Architecture Tier</span>
-              <div id="estTierOutput" class="text-base font-bold mt-0.5">Enterprise Production Tier</div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">2. Architecture Modules (Select All Needed)</label>
+              <div class="grid grid-cols-2 gap-2.5 text-xs">
+                <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
+                  <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Auth & Security" checked />
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Auth & Biometrics</span>
+                </label>
+
+                <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
+                  <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Payment Gateway" checked />
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Payment Gateway</span>
+                </label>
+
+                <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
+                  <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Real-Time Chat" />
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Real-Time Chat & Sockets</span>
+                </label>
+
+                <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
+                  <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Offline DB" checked />
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Offline SQLite/Hive Sync</span>
+                </label>
+
+                <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
+                  <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Push Notifications" checked />
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Push Notifications & CRM</span>
+                </label>
+
+                <label class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 cursor-pointer hover:border-blue-500 transition">
+                  <input type="checkbox" onchange="calculateEstimate()" class="est-mod rounded accent-blue-600" value="Store Publishing" checked />
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Play/App Store Release</span>
+                </label>
+              </div>
             </div>
           </div>
 
-          <div class="mt-8 pt-4">
-            <button onclick="dispatchEstimatorProposal()" class="w-full py-3.5 rounded-2xl bg-white hover:bg-blue-50 text-blue-700 font-extrabold text-xs sm:text-sm transition-all shadow-lg hover:scale-105 cursor-pointer flex items-center justify-center gap-2">
-              <span>Request Quote on WhatsApp</span> 💬
-            </button>
-            <p class="text-[10px] text-center text-blue-200 mt-2">Zero commitment • Direct reply from Keyur H. Satani</p>
+          <!-- Right: Real-time estimate output card -->
+          <div class="lg:col-span-5 p-6 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex flex-col justify-between shadow-xl">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full">Engineering Proposal</span>
+              
+              <div class="mt-6">
+                <span class="text-xs text-blue-200 uppercase font-semibold">Estimated Delivery Time</span>
+                <div id="estWeeksOutput" class="text-4xl font-black mt-1 font-mono tracking-tight">3 - 4 Weeks</div>
+              </div>
+
+              <div class="mt-4 pt-4 border-t border-white/20">
+                <span class="text-xs text-blue-200 uppercase font-semibold">Architecture Tier</span>
+                <div id="estTierOutput" class="text-base font-bold mt-0.5">Enterprise Production Tier</div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4">
+              <button onclick="dispatchEstimatorProposal()" class="w-full py-3.5 rounded-2xl bg-white hover:bg-blue-50 text-blue-700 font-extrabold text-xs sm:text-sm transition-all shadow-lg hover:scale-105 cursor-pointer flex items-center justify-center gap-2" aria-label="Request quote on WhatsApp">
+                <span>Request Quote on WhatsApp</span> 💬
+              </button>
+              <p class="text-[10px] text-center text-blue-200 mt-2">Zero commitment • Direct reply from Keyur H. Satani</p>
+            </div>
           </div>
+
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Work Experience & Milestones -->
-    <section id="experience" class="py-20 sm:py-28">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
-          ✦ Career Timeline
+    <!-- Work Experience & Milestones -->
+        <section id="experience" class="py-20 sm:py-28" aria-labelledby="experience-title">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
+            ✦ Career Timeline
+          </div>
+          <h2 id="experience-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            Professional Experience
+          </h2>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-          Professional Experience
-        </h2>
-      </div>
 
-      <div class="space-y-2">
-                <div class="relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+        <div class="space-y-2">
+                  <div class="relative pl-8 sm:pl-10 pb-10 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
           <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-md shadow-blue-500/40"></div>
           <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md hover:shadow-xl transition-all duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
@@ -1128,7 +1161,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">Flutter Developer</h3>
                 <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 mt-0.5">Code Expert Solutions • Surat, Gujarat</p>
               </div>
-              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Jan 2026 – Present</span>
+              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto"><time>Jan 2026 – Present</time></span>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.</p>
             <div class="mt-4 flex flex-wrap gap-2"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Dart</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Bloc</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">REST APIs</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">E-Commerce</span></div>
@@ -1142,7 +1175,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">Flutter Developer</h3>
                 <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 mt-0.5">Freshcodes Technology • Surat, Gujarat</p>
               </div>
-              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Aug 2024 – Oct 2025</span>
+              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto"><time>Aug 2024 – Oct 2025</time></span>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.</p>
             <div class="mt-4 flex flex-wrap gap-2"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">REST APIs</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">GetX</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Firebase</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">UI/UX</span></div>
@@ -1156,7 +1189,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">Flutter Developer</h3>
                 <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 mt-0.5">StackApp Infotech • Surat, Gujarat</p>
               </div>
-              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Feb 2024 – Aug 2024</span>
+              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto"><time>Feb 2024 – Aug 2024</time></span>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.</p>
             <div class="mt-4 flex flex-wrap gap-2"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Provider</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Git</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Clean Architecture</span></div>
@@ -1170,30 +1203,30 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">Flutter Developer</h3>
                 <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 mt-0.5">Dreamvision Infotech • Surat, Gujarat</p>
               </div>
-              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Aug 2022 – Jan 2024</span>
+              <span class="inline-block px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto"><time>Aug 2022 – Jan 2024</time></span>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Built cross-platform Android &amp; iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.</p>
             <div class="mt-4 flex flex-wrap gap-2"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Android &amp; iOS</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">SQLite</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-lg font-mono border border-slate-200/50 dark:border-slate-700/50">Firebase</span></div>
           </div>
         </div>
+        </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
+    
 
-  <!-- Education & Credentials -->
-    <section id="education" class="py-16 bg-slate-50/50 dark:bg-slate-900/30 border-y border-slate-200/80 dark:border-slate-800/80">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-          Education & Academic Background
-        </h2>
-      </div>
+    <!-- Education & Academic Credentials -->
+        <section id="education" class="py-16 bg-slate-50/50 dark:bg-slate-900/30 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="education-title">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 id="education-title" class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+            Education & Academic Background
+          </h2>
+        </div>
 
-      <div class="space-y-4">
-                <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="space-y-4">
+                  <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h4 class="font-bold text-base text-slate-900 dark:text-white">Bachelor of Computer Application (BCA)</h4>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Bachelor of Computer Application (BCA)</h3>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Saurashtra University</p>
           </div>
           <div class="text-left sm:text-right font-mono text-xs">
@@ -1203,7 +1236,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
         </div>
         <div class="p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h4 class="font-bold text-base text-slate-900 dark:text-white">Bachelor of Science (B.Sc)</h4>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Bachelor of Science (B.Sc)</h3>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Saurashtra University</p>
           </div>
           <div class="text-left sm:text-right font-mono text-xs">
@@ -1211,105 +1244,169 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             <span class="text-slate-500 dark:text-slate-400 font-medium">Graduated</span>
           </div>
         </div>
+        </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
+    
 
-  <!-- Contact & Direct Consultation -->
-  <section id="contact" class="py-20 sm:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- SEO FAQ Section (Google Rich Snippets & High Dwell Time) -->
+    <section id="faq" class="py-20 sm:py-28" aria-labelledby="faq-title">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900">
-            ✦ Direct Connect
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
+            ✦ Frequently Asked Questions
           </div>
-          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-            Let's Build Something Extraordinary
+          <h2 id="faq-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            Engineering Insights & Collaboration
           </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-            Available for Senior Mobile Engineer roles, enterprise cross-platform consulting, or full-stack Flutter MVP deployments.
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
+            Common questions regarding technical specializations, hiring availability, and delivery standards.
           </p>
-
-          <div class="pt-4 space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-            <p class="flex items-center gap-2.5 justify-center lg:justify-start"><strong>Email:</strong> <a href="mailto:kevalsatani1234@gmail.com" class="text-blue-600 dark:text-cyan-400 hover:underline">kevalsatani1234@gmail.com</a></p>
-            <p class="flex items-center gap-2.5 justify-center lg:justify-start"><strong>Phone:</strong> <a href="tel:+918758113819" class="text-blue-600 dark:text-cyan-400 hover:underline">+91 8758113819</a></p>
-            <p class="flex items-center gap-2.5 justify-center lg:justify-start"><strong>Location:</strong> Surat, Gujarat, India</p>
-          </div>
-
-          <div class="pt-4 flex flex-wrap gap-2.5 justify-center lg:justify-start">
-            <a href="https://www.linkedin.com/in/keyur-satani-00643623a" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2"><span>LinkedIn</span> ↗</a>
-<a href="https://github.com/kevalsatani2001" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2"><span>GitHub</span> ↗</a>
-<a href="mailto:kevalsatani1234@gmail.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2"><span>Email</span> ↗</a>
-<a href="https://wa.me/918758113819" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2"><span>Phone / WhatsApp</span> ↗</a>
-          </div>
         </div>
 
-        <div class="lg:col-span-7 bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-slate-800/80 shadow-2xl">
-          <form id="contactForm" name="contact" method="POST" data-netlify="true" class="space-y-4">
-            <input type="hidden" name="form-name" value="contact" />
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Your Name *</label>
-                <input type="text" name="name" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Alex Morgan" />
-              </div>
-              <div>
-                <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Email Address *</label>
-                <input type="email" name="email" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="alex@company.com" />
-              </div>
-            </div>
+        <div class="space-y-4">
+          
+          <details class="group p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-slate-900 dark:text-white cursor-pointer list-none">
+              <span>What technical stack and architecture do you specialize in?</span>
+              <span class="text-blue-600 dark:text-cyan-400 group-open:rotate-180 transition-transform duration-300">▼</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              I specialize in Flutter, Dart 3.x, Clean Architecture, BLoC/Cubit and GetX state management, REST APIs, WebSockets/Socket.IO, Firebase suite, SQLite, Hive, and automated CI/CD store deployments for Android, iOS, and Flutter Web.
+            </p>
+          </details>
 
-            <div>
-              <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Project Type / Inquiry</label>
-              <select name="service" class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#070d1e] text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
-                <option value="Mobile App Development">Full-Lifecycle Mobile Application (iOS & Android)</option>
-                <option value="Senior Flutter Hiring">Full-Time Senior Flutter Developer Role</option>
-                <option value="Cross-Platform Migration">Cross-Platform App Migration & Architecture</option>
-                <option value="Code Review & Optimization">Performance Profiling & Code Review</option>
-              </select>
-            </div>
+          <details class="group p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-slate-900 dark:text-white cursor-pointer list-none">
+              <span>Are you available for full-time roles, contract development, or consulting?</span>
+              <span class="text-blue-600 dark:text-cyan-400 group-open:rotate-180 transition-transform duration-300">▼</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              Yes, I am actively available for Senior Mobile Application Developer positions, full-lifecycle MVP builds, and enterprise mobile architecture consulting. You can reach out directly via email or WhatsApp.
+            </p>
+          </details>
 
-            <div>
-              <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Message *</label>
-              <textarea name="message" rows="3" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Describe your mobile architecture requirements or project timeline..."></textarea>
-            </div>
+          <details class="group p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-slate-900 dark:text-white cursor-pointer list-none">
+              <span>How do you guarantee 60/120 FPS fluid performance and high reliability?</span>
+              <span class="text-blue-600 dark:text-cyan-400 group-open:rotate-180 transition-transform duration-300">▼</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              I enforce Clean Architecture separation of concerns, optimize widget rebuild trees with fine-grained Bloc selectors, execute heavy JSON computations in background Dart Isolates, implement robust offline-first local caching, and track real-time telemetry via Firebase Crashlytics to maintain a 99.9% crash-free session rate.
+            </p>
+          </details>
 
-            <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-black text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-[1.01] cursor-pointer">
-              Send Message / Initiate Consultation 🚀
-            </button>
-          </form>
+          <details class="group p-6 rounded-3xl bg-white/80 dark:bg-[#0b1733]/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-md transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-slate-900 dark:text-white cursor-pointer list-none">
+              <span>Can you handle end-to-end Google Play Store & App Store deployments?</span>
+              <span class="text-blue-600 dark:text-cyan-400 group-open:rotate-180 transition-transform duration-300">▼</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              Yes. I have published 8+ production applications to Google Play Store and configured automated Fastlane & GitHub Actions CI/CD pipelines, release tracks, keystores, app icons, splash screens, and privacy compliance.
+            </p>
+          </details>
+
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Contact & Direct Consultation -->
+    <section id="contact" class="py-20 sm:py-28 bg-slate-50/50 dark:bg-slate-900/30 border-t border-slate-200/80 dark:border-slate-800/80" aria-labelledby="contact-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900">
+              ✦ Direct Connect
+            </div>
+            <h2 id="contact-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+              Let's Build Something Extraordinary
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              Available for Senior Mobile Engineer roles, enterprise cross-platform consulting, or full-stack Flutter MVP deployments.
+            </p>
+
+            <address class="not-italic pt-4 space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <p class="flex items-center gap-2.5 justify-center lg:justify-start"><strong>Email:</strong> <a href="mailto:kevalsatani1234@gmail.com" class="text-blue-600 dark:text-cyan-400 hover:underline" rel="author">kevalsatani1234@gmail.com</a></p>
+              <p class="flex items-center gap-2.5 justify-center lg:justify-start"><strong>Phone:</strong> <a href="tel:+918758113819" class="text-blue-600 dark:text-cyan-400 hover:underline">+91 8758113819</a></p>
+              <p class="flex items-center gap-2.5 justify-center lg:justify-start"><strong>Location:</strong> Surat, Gujarat, India</p>
+            </address>
+
+            <div class="pt-4 flex flex-wrap gap-2.5 justify-center lg:justify-start">
+              <a href="https://www.linkedin.com/in/keyur-satani-00643623a" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2" title="Keyur H. Satani on LinkedIn"><span>LinkedIn</span> ↗</a>
+<a href="https://github.com/kevalsatani2001" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2" title="Keyur H. Satani on GitHub"><span>GitHub</span> ↗</a>
+<a href="mailto:kevalsatani1234@gmail.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2" title="Keyur H. Satani on Email"><span>Email</span> ↗</a>
+<a href="https://wa.me/918758113819" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-[#0b1733]/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold transition-all shadow-sm hover:scale-105 inline-flex items-center gap-2" title="Keyur H. Satani on Phone / WhatsApp"><span>Phone / WhatsApp</span> ↗</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-white/90 dark:bg-[#0b1733]/90 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-slate-800/80 shadow-2xl">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" class="space-y-4">
+              <input type="hidden" name="form-name" value="contact" />
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Your Name *</label>
+                  <input type="text" name="name" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Alex Morgan" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Email Address *</label>
+                  <input type="email" name="email" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="alex@company.com" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Project Type / Inquiry</label>
+                <select name="service" class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#070d1e] text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
+                  <option value="Mobile App Development">Full-Lifecycle Mobile Application (iOS & Android)</option>
+                  <option value="Senior Flutter Hiring">Full-Time Senior Flutter Developer Role</option>
+                  <option value="Cross-Platform Migration">Cross-Platform App Migration & Architecture</option>
+                  <option value="Code Review & Optimization">Performance Profiling & Code Review</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Message *</label>
+                <textarea name="message" rows="3" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Describe your mobile architecture requirements or project timeline..."></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-black text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-[1.01] cursor-pointer" aria-label="Send message">
+                Send Message / Initiate Consultation 🚀
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Global Footer -->
-  <footer class="py-10 text-center text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#060b19]/50">
+  <footer role="contentinfo" class="py-10 text-center text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#060b19]/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        © 2026 Keyur H. Satani • Flutter Developer
+        © 2026 Keyur H. Satani • Flutter Developer • All rights reserved.
       </div>
       <div class="flex items-center gap-3">
-        <span class="text-[11px] font-mono">Press 'T' for Theme • 'M' for Mobile Studio</span>
+        <span class="text-[11px] font-mono">Press 'T' for Theme • 'M' for Mobile Studio • 'R' for Resume</span>
       </div>
     </div>
   </footer>
 
   <!-- ATS Official Resume Modal -->
-  <div id="resumeModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 transition-all duration-300">
+  <div id="resumeModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 transition-all duration-300" role="dialog" aria-modal="true" aria-label="Official Verified Resume">
     <div class="relative w-full max-w-3xl max-h-[90vh] bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
       
       <!-- Modal Header -->
       <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-900/50">
         <div class="flex items-center gap-2.5">
-          <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-600" aria-hidden="true"></span>
           <span class="font-bold text-sm text-slate-900 dark:text-white">Keyur H. Satani — Verified Resume</span>
         </div>
         <div class="flex items-center gap-2">
-          <button onclick="window.print()" class="px-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">🖨️ Print / Save PDF</button>
-          <button onclick="closeResumeModal()" class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center text-sm font-bold transition cursor-pointer">✕</button>
+          <button onclick="window.print()" class="px-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition cursor-pointer" aria-label="Print or Save PDF">🖨️ Print / Save PDF</button>
+          <button onclick="closeResumeModal()" class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center text-sm font-bold transition cursor-pointer" aria-label="Close modal">✕</button>
         </div>
       </div>
 
@@ -1386,10 +1483,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
   </div>
 
   <!-- Fullscreen 3D Mobile Studio Modal -->
-  <div id="mobilePreviewModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300">
+  <div id="mobilePreviewModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300" role="dialog" aria-modal="true" aria-label="3D Mobile Studio Inspection">
     <div class="relative w-full max-w-4xl bg-[#090d1a] border border-slate-700 rounded-3xl shadow-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-8 overflow-hidden">
       
-      <button onclick="closeMobilePreview()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-sm font-bold transition cursor-pointer z-50">✕</button>
+      <button onclick="closeMobilePreview()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-sm font-bold transition cursor-pointer z-50" aria-label="Close modal">✕</button>
 
       <!-- Left: Mobile Frame Simulation in Modal -->
       <div class="relative w-[260px] sm:w-[280px] h-[520px] rounded-[40px] p-3 bg-gradient-to-b from-slate-700 to-black border-4 border-slate-600 shadow-2xl flex flex-col justify-between flex-shrink-0">
@@ -1402,9 +1499,9 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           </div>
 
           <div class="relative flex-1 w-full overflow-hidden bg-slate-900 flex items-center justify-center">
-            <img id="modalPhoneImg" src="" alt="Screenshot" class="w-full h-full object-cover transition-all" />
-            <button onclick="prevModalShot()" class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center text-xs backdrop-blur-md cursor-pointer">‹</button>
-            <button onclick="nextModalShot()" class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center text-xs backdrop-blur-md cursor-pointer">›</button>
+            <img id="modalPhoneImg" src="" alt="Application Screenshot" class="w-full h-full object-cover transition-all" width="280" height="520" />
+            <button onclick="prevModalShot()" class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center text-xs backdrop-blur-md cursor-pointer" aria-label="Previous screenshot">‹</button>
+            <button onclick="nextModalShot()" class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center text-xs backdrop-blur-md cursor-pointer" aria-label="Next screenshot">›</button>
           </div>
 
           <div class="p-2.5 bg-black/90 text-center text-[10px] text-slate-400 z-20" id="modalPhoneCounter">
@@ -1436,12 +1533,12 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
   </div>
 
   <!-- Toast Notification -->
-  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-3 rounded-2xl bg-slate-900 text-white text-xs font-bold shadow-2xl border border-slate-700 opacity-0 pointer-events-none transition-all duration-300 z-50">
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-3 rounded-2xl bg-slate-900 text-white text-xs font-bold shadow-2xl border border-slate-700 opacity-0 pointer-events-none transition-all duration-300 z-50" role="status" aria-live="polite">
     Notification
   </div>
 
   <!-- Floating Back-to-Top Button -->
-  <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 w-12 h-12 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white shadow-xl shadow-blue-500/25 flex items-center justify-center text-sm font-bold opacity-0 pointer-events-none transition-all duration-300 cursor-pointer z-40" title="Back to Top">
+  <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 w-12 h-12 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white shadow-xl shadow-blue-500/25 flex items-center justify-center text-sm font-bold opacity-0 pointer-events-none transition-all duration-300 cursor-pointer z-40" title="Back to Top" aria-label="Back to top">
     ↑
   </button>
 
@@ -1461,7 +1558,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       if (!listContainer || PROJECTS.length === 0) return;
 
       listContainer.innerHTML = PROJECTS.map((p, i) => `
-        <button onclick="selectPhoneApp(${i})" class="w-full p-3 rounded-2xl text-left border ${i === 0 ? 'border-blue-500 bg-blue-50/80 dark:bg-blue-950/60 font-bold' : 'border-slate-200/80 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800/60'} transition flex items-center justify-between cursor-pointer" id="phoneAppBtn-${i}">
+        <button onclick="selectPhoneApp(${i})" class="w-full p-3 rounded-2xl text-left border ${i === 0 ? 'border-blue-500 bg-blue-50/80 dark:bg-blue-950/60 font-bold' : 'border-slate-200/80 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800/60'} transition flex items-center justify-between cursor-pointer" id="phoneAppBtn-${i}" aria-label="Switch to ${p.title}">
           <div class="flex items-center gap-2.5 min-w-0">
             <span class="text-xs">${i + 1}.</span>
             <span class="text-xs text-slate-900 dark:text-white truncate">${p.title}</span>
@@ -1511,7 +1608,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       const dotsContainer = document.getElementById('phoneSlideDots');
       if (dotsContainer) {
         dotsContainer.innerHTML = shots.map((_, sIdx) => `
-          <button onclick="jumpPhoneSlide(${sIdx})" class="w-2 h-2 rounded-full ${sIdx === currentPhoneSlideIdx ? 'bg-blue-500 w-4' : 'bg-white/50'} transition-all cursor-pointer"></button>
+          <button onclick="jumpPhoneSlide(${sIdx})" class="w-2 h-2 rounded-full ${sIdx === currentPhoneSlideIdx ? 'bg-blue-500 w-4' : 'bg-white/50'} transition-all cursor-pointer" aria-label="Jump to slide ${sIdx + 1}"></button>
         `).join('');
       }
     }
@@ -1557,9 +1654,9 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       document.getElementById('termPane-cli').classList.toggle('hidden', tab !== 'cli');
       document.getElementById('termPane-json').classList.toggle('hidden', tab !== 'json');
 
-      document.getElementById('tabBtn-arch').className = tab === 'arch' ? 'px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition' : 'px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition';
-      document.getElementById('tabBtn-cli').className = tab === 'cli' ? 'px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition' : 'px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition';
-      document.getElementById('tabBtn-json').className = tab === 'json' ? 'px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition' : 'px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition';
+      document.getElementById('tabBtn-arch').className = tab === 'arch' ? 'px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition cursor-pointer' : 'px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition cursor-pointer';
+      document.getElementById('tabBtn-cli').className = tab === 'cli' ? 'px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition cursor-pointer' : 'px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition cursor-pointer';
+      document.getElementById('tabBtn-json').className = tab === 'json' ? 'px-3 py-1 rounded-lg text-[11px] font-bold bg-blue-600 text-white transition cursor-pointer' : 'px-3 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-white transition cursor-pointer';
     }
 
     function runCliCommand(cmd) {
@@ -1665,10 +1762,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       if (actionsContainer) {
         let btns = '';
         if (app.liveUrl) {
-          btns += `<a href="${app.liveUrl}" target="_blank" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition">Open Live Store ↗</a>`;
+          btns += `<a href="${app.liveUrl}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition" aria-label="Open live store link">Open Live Store ↗</a>`;
         }
         if (app.githubUrl) {
-          btns += `<a href="${app.githubUrl}" target="_blank" class="px-5 py-2.5 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-800 text-xs font-bold transition">GitHub Code ↗</a>`;
+          btns += `<a href="${app.githubUrl}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-800 text-xs font-bold transition" aria-label="View source code on GitHub">GitHub Code ↗</a>`;
         }
         actionsContainer.innerHTML = btns;
       }
