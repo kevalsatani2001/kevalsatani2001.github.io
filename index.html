@@ -78,6 +78,7 @@
         <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Apps (8+)</a>
         <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
         <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a>
+        <a href="#workflow" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Workflow</a>
         <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Education</a>
         <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
       </nav>
@@ -86,7 +87,9 @@
         <button id="themeBtn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer" title="Toggle Theme">
           🌓
         </button>
-        
+        <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center justify-center px-3.5 py-2 text-xs font-bold text-blue-600 dark:text-blue-400 border border-blue-300 dark:border-blue-800 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-950 transition cursor-pointer">
+          Resume 📄
+        </button>
         <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-sm transition">
           Hire Keyur
         </a>
@@ -164,61 +167,83 @@
   <!-- Published Apps Section -->
   <section id="projects" class="py-20 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="text-center max-w-2xl mx-auto mb-10">
         <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Production Portfolio</h2>
         <p class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Published Google Play Store Applications</p>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">Filter and inspect detailed technical case studies & architecture for verified applications.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10">
+        <button onclick="filterProjects('all')" class="proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-blue-600 text-white font-bold shadow-sm" data-category="all">All Apps (8+)</button>
+<button onclick="filterProjects('mobile app')" class="proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-500 font-medium" data-category="mobile app">Mobile app</button>
+<button onclick="filterProjects('fitness &amp; productivity')" class="proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-500 font-medium" data-category="fitness &amp; productivity">Fitness &amp; productivity</button>
+<button onclick="filterProjects('media &amp; news')" class="proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-500 font-medium" data-category="media &amp; news">Media &amp; news</button>
+<button onclick="filterProjects('utility &amp; tools')" class="proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-500 font-medium" data-category="utility &amp; tools">Utility &amp; tools</button>
+<button onclick="filterProjects('media &amp; streaming')" class="proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-500 font-medium" data-category="media &amp; streaming">Media &amp; streaming</button>
+<button onclick="filterProjects('e-commerce')" class="proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-500 font-medium" data-category="e-commerce">E-commerce</button>
+      </div>
+
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- App Card: Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="mobile app">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&amp;token=d33672c9-9d6e-4f3a-b710-097eb064dad1" alt="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">Mobile App</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • Dart • Flame Engine</span>
-            <span class="px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production</span>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(0)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <span class="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production</span>
+            </div>
           </div>
         </div>
         <!-- App Card: Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="mobile app">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&amp;token=efe4c49d-a56d-4a4d-863d-13923f750bcd" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">Mobile App</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • Dart • GetX</span>
-            <span class="px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production</span>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(1)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <span class="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production</span>
+            </div>
           </div>
         </div>
         <!-- App Card: Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="mobile app">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&amp;token=6ac3d321-745a-4394-959a-32c97ef1bbe6" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">Mobile App</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               Steve&#039;s Barbers (Powered by WhozNxt)
 
 Role: UI/UX &amp; Frontend Development
@@ -226,104 +251,134 @@ Role: UI/UX &amp; Frontend Development
 Overview: A luxury, multi-feature barbershop booking &amp; retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • Dart • GetX</span>
-            <span class="px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production</span>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(2)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <span class="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">Production</span>
+            </div>
           </div>
         </div>
         <!-- App Card: TheSpeedTurtle App -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="fitness &amp; productivity">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="TheSpeedTurtle App" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">Fitness &amp; Productivity</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">TheSpeedTurtle App</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">TheSpeedTurtle App</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • Dart • BLoC</span>
-            <a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">GitHub ↗</a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(3)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition inline-flex items-center gap-1"><span>GitHub</span> ↗</a>
+            </div>
           </div>
         </div>
         <!-- App Card: MATA News Application -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="media &amp; news">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="MATA News Application" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">Media &amp; News</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">MATA News Application</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">MATA News Application</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • REST APIs • GetX</span>
-            <a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition">Play Store ↗</a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(4)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition inline-flex items-center gap-1"><span>Play Store</span> ↗</a>
+            </div>
           </div>
         </div>
         <!-- App Card: QR Scanner &amp; Barcode Pro -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="utility &amp; tools">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="QR Scanner &amp; Barcode Pro" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">Utility &amp; Tools</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">QR Scanner &amp; Barcode Pro</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">QR Scanner &amp; Barcode Pro</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • Camera ML • SQLite</span>
-            <a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">GitHub ↗</a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(5)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition inline-flex items-center gap-1"><span>GitHub</span> ↗</a>
+            </div>
           </div>
         </div>
         <!-- App Card: Media Player Application -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="media &amp; streaming">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Media Player Application" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">Media &amp; Streaming</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">Media Player Application</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">Media Player Application</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • Audio Service • Video Player</span>
-            <a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">GitHub ↗</a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(6)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition inline-flex items-center gap-1"><span>GitHub</span> ↗</a>
+            </div>
           </div>
         </div>
         <!-- App Card: E-Commerce &amp; Multi-Vendor Mobile Platform -->
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div class="project-card p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition" data-category="e-commerce">
           <div>
             <div class="flex items-center gap-3">
               <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="E-Commerce &amp; Multi-Vendor Mobile Platform" class="w-12 h-12 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1 flex-shrink-0" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'" />
-              <div>
+              <div class="min-w-0 flex-1">
                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">E-Commerce</span>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug">E-Commerce &amp; Multi-Vendor Mobile Platform</h3>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 leading-snug truncate">E-Commerce &amp; Multi-Vendor Mobile Platform</h3>
               </div>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed line-clamp-3">
               Scalable e-commerce mobile application featuring real-time product catalogs, cart &amp; checkout workflows, payment gateway integration, and order tracking.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 flex-wrap">
             <span class="text-xs text-slate-400 font-mono">Flutter • REST APIs • Payment Gateway</span>
-            <a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition">GitHub ↗</a>
+            <div class="flex items-center gap-2">
+              <button onclick="openProjectModal(7)" class="px-3 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/80 text-xs font-bold transition cursor-pointer">
+                Case Study 📑
+              </button>
+              <a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition inline-flex items-center gap-1"><span>GitHub</span> ↗</a>
+            </div>
           </div>
         </div>
       </div>
@@ -415,8 +470,105 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
     </div>
   </section>
 
+  <!-- Workflow Section -->
+  <section id="workflow" class="py-20 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Development Process</h2>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">How I Approach Mobile Engineering</p>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">A disciplined, production-proven workflow from initial product requirements to app store release and performance tuning.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-7 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-3xl font-black text-blue-600 dark:text-blue-400">01</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300">Phase 1</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Requirements & Clean Architecture</h3>
+            <p class="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Analyzing functional specs, establishing separation of concerns, choosing state management (Bloc/Cubit), and structuring modular domain/data layers.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-blue-600 dark:text-blue-400 font-bold">Phase 01 of 06</div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-3xl font-black text-blue-600 dark:text-blue-400">02</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300">Phase 2</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Figma to Flutter Pixel Perfection</h3>
+            <p class="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Converting complex Figma / Adobe XD layouts into high-fidelity responsive Flutter widgets with micro-interactions, dark mode, and adaptive screen scales.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-blue-600 dark:text-blue-400 font-bold">Phase 02 of 06</div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-3xl font-black text-blue-600 dark:text-blue-400">03</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300">Phase 3</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">State Management & Reactive Logic</h3>
+            <p class="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Implementing robust Bloc/Cubit & GetX state machines for deterministic UI updates, form validations, stream controllers, and error resilience.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-blue-600 dark:text-blue-400 font-bold">Phase 03 of 06</div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-3xl font-black text-blue-600 dark:text-blue-400">04</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300">Phase 4</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">REST API, Sockets & Backend Sync</h3>
+            <p class="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Integrating HTTP/Dio REST endpoints, Socket.IO real-time event streaming, Firebase Auth/Firestore, offline caching (Hive/SQLite), and JWT auth.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-blue-600 dark:text-blue-400 font-bold">Phase 04 of 06</div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-3xl font-black text-blue-600 dark:text-blue-400">05</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300">Phase 5</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Performance Tuning & 60 FPS</h3>
+            <p class="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Profiling Flutter DevTools memory allocations, widget rebuild trees, isolate background processing, and reducing app bundle size.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-blue-600 dark:text-blue-400 font-bold">Phase 05 of 06</div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-3xl font-black text-blue-600 dark:text-blue-400">06</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300">Phase 6</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Store Publishing & CI/CD</h3>
+            <p class="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Google Play Console & Apple App Store compliance, automated signing, GitHub Actions / Codemagic pipelines, and post-launch crash monitoring.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-blue-600 dark:text-blue-400 font-bold">Phase 06 of 06</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Work Experience Section -->
-    <section id="experience" class="py-20 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <section id="experience" class="py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Work History</h2>
@@ -485,7 +637,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
   </section>
 
   <!-- Education Section -->
-    <section id="education" class="py-20">
+    <section id="education" class="py-20 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Academic Background</h2>
@@ -580,9 +732,255 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
     © 2026 Keyur H. Satani • Flutter Developer (Surat, Gujarat, India)
   </footer>
 
+  <!-- ================= MODALS & POPUPS ================= -->
+
+  <!-- 1. Interactive Resume Modal -->
+  <div id="resumeModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+      <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></span>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white">Keyur H. Satani — Official Resume</h3>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3 py-1.5 rounded-xl bg-blue-600 text-white text-xs font-bold hover:bg-blue-700 transition cursor-pointer">
+            Print / PDF 🖨️
+          </button>
+          <button onclick="closeResumeModal()" class="p-1.5 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-white text-lg font-bold cursor-pointer">
+            ✕
+          </button>
+        </div>
+      </div>
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+        <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Keyur H. Satani</h1>
+          <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 mt-1">Flutter Developer</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">kevalsatani1234@gmail.com • +91 8758113819 • Surat, Gujarat, India</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-blue-600 mb-1.5">Profile Summary</h4>
+          <p class="leading-relaxed text-slate-600 dark:text-slate-400">Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-blue-600 mb-2">Technical Core Competencies</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">Flutter &amp; Dart</span> <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">Bloc &amp; Cubit</span> <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">GetX &amp; Provider</span> <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">REST APIs &amp; JSON</span> <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">Firebase &amp; Firestore</span> <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">SQLite &amp; Local Storage</span> <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">Git, GitHub &amp; CI/CD</span> <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold">Postman &amp; Android Studio</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-blue-600 mb-3">Work History</h4>
+          <div class="space-y-4">
+                    <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">Code Expert Solutions • Surat, Gujarat</p>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Jan 2026 – Present</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Dart</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Bloc</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">REST APIs</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">E-Commerce</span></div>
+          </div>
+        </div>
+        <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">Freshcodes Technology • Surat, Gujarat</p>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Aug 2024 – Oct 2025</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">REST APIs</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">GetX</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Firebase</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">UI/UX</span></div>
+          </div>
+        </div>
+        <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">StackApp Infotech • Surat, Gujarat</p>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Feb 2024 – Aug 2024</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Provider</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Git</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Clean Architecture</span></div>
+          </div>
+        </div>
+        <div class="relative pl-8 sm:pl-10 pb-8 border-l-2 border-blue-500/30 last:border-l-0 last:pb-0">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-[#070d1e] shadow-sm"></div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Flutter Developer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">Dreamvision Infotech • Surat, Gujarat</p>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 self-start sm:self-auto">Aug 2022 – Jan 2024</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Built cross-platform Android &amp; iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Flutter</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Android &amp; iOS</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">SQLite</span> <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-md font-mono">Firebase</span></div>
+          </div>
+        </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-blue-600 mb-3">Education</h4>
+          <div class="space-y-3">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Bachelor of Computer Application (BCA)</h4>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Saurashtra University</p>
+          </div>
+          <div class="text-left sm:text-right font-mono text-xs">
+            <span class="text-blue-600 dark:text-blue-400 font-bold block">2022 – 2025</span>
+            <span class="text-slate-500 dark:text-slate-400">First Class with Distinction</span>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Bachelor of Science (B.Sc)</h4>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Saurashtra University</p>
+          </div>
+          <div class="text-left sm:text-right font-mono text-xs">
+            <span class="text-blue-600 dark:text-blue-400 font-bold block">2018 – 2022</span>
+            <span class="text-slate-500 dark:text-slate-400">Graduated</span>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Project Case Study Modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+      <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img id="modalAppIcon" src="" alt="App Icon" class="w-10 h-10 rounded-xl object-contain bg-slate-100 dark:bg-slate-800 p-1" />
+          <div>
+            <h3 id="modalAppTitle" class="font-bold text-base text-slate-900 dark:text-white"></h3>
+            <span id="modalAppCategory" class="text-[10px] font-bold uppercase text-blue-600 dark:text-blue-400"></span>
+          </div>
+        </div>
+        <button onclick="closeProjectModal()" class="p-1.5 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-white text-lg font-bold cursor-pointer">
+          ✕
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-blue-600 mb-1">Detailed Overview</h4>
+          <p id="modalAppDesc" class="leading-relaxed text-slate-600 dark:text-slate-400"></p>
+        </div>
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-blue-600 mb-1.5">Architecture & Tech Stack</h4>
+          <div id="modalAppTags" class="flex flex-wrap gap-1.5"></div>
+        </div>
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-end gap-3">
+          <a id="modalAppPlayLink" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition inline-flex items-center gap-1.5">
+            <span>Open Application</span> ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Floating WhatsApp CTA -->
+    <a href="https://api.whatsapp.com/send?phone=+918758113819" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 transition hover:scale-105" title="Chat with Keyur on WhatsApp">
+    <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+    <span>Chat on WhatsApp</span> 💬
+  </a>
+
+  <!-- Toast Container -->
   <div id="toast" style="position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px); padding: 12px 24px; border-radius: 12px; background: #0b1733; color: #fff; font-weight: bold; font-size: 13px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); opacity: 0; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 9999;"></div>
 
   <script>
+    // Embedded Project Data for Modals
+    const projectsData = [{"title":"Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game","category":"Mobile App","description":"A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.","tags":["Flutter","Dart","Flame Engine","Forge2D (Box2D)","Flutter BLoC","Game Development","AdMob SDK"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1","liveUrl":"","githubUrl":"","date":"2026"},{"title":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","category":"Mobile App","description":"Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.","tags":["Flutter","Dart","GetX","Dio & REST APIs","Stripe Payments","Biometric Auth","Secure Storage"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd","liveUrl":"","githubUrl":"","date":"2026"},{"title":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","category":"Mobile App","description":"Steve's Barbers (Powered by WhozNxt)\n\nRole: UI/UX & Frontend Development\n\nOverview: A luxury, multi-feature barbershop booking & retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.","tags":["Flutter","Dart","GetX","Dio & REST APIs","Stripe Payments","Biometric Auth","Secure Storage"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6","liveUrl":"","githubUrl":"","date":"2026"},{"title":"TheSpeedTurtle App","category":"Fitness & Productivity","description":"Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.","tags":["Flutter","Dart","BLoC","Firebase","Push Notifications"],"imageUrl":"https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80","liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/speed-turtle-app","date":"2026"},{"title":"MATA News Application","category":"Media & News","description":"High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.","tags":["Flutter","REST APIs","GetX","Play Store Live","Caching"],"imageUrl":"https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80","liveUrl":"https://play.google.com/store/apps/details?id=com.mata.today&hl=en","githubUrl":"","date":"2025"},{"title":"QR Scanner & Barcode Pro","category":"Utility & Tools","description":"High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.","tags":["Flutter","Camera ML","SQLite","Clean Architecture"],"imageUrl":"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80","liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/qr-scanner-app","date":"2025"},{"title":"Media Player Application","category":"Media & Streaming","description":"Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.","tags":["Flutter","Audio Service","Video Player","Bloc"],"imageUrl":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80","liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/media-player-app","date":"2024"},{"title":"E-Commerce & Multi-Vendor Mobile Platform","category":"E-Commerce","description":"Scalable e-commerce mobile application featuring real-time product catalogs, cart & checkout workflows, payment gateway integration, and order tracking.","tags":["Flutter","REST APIs","Payment Gateway","Firebase"],"imageUrl":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80","liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/ecommerce-app","date":"2024"}];
+
+    // Filter projects function
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.proj-filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.className = 'proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-blue-600 text-white font-bold shadow-sm';
+        } else {
+          btn.className = 'proj-filter-btn px-4 py-2 rounded-xl text-xs transition cursor-pointer bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-500 font-medium';
+        }
+      });
+
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category || cardCat.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Handlers
+    function openResumeModal() {
+      document.getElementById('resumeModal')?.classList.remove('hidden');
+    }
+    function closeResumeModal() {
+      document.getElementById('resumeModal')?.classList.add('hidden');
+    }
+
+    function openProjectModal(index) {
+      const p = projectsData[index];
+      if (!p) return;
+      document.getElementById('modalAppTitle').textContent = p.title || '';
+      document.getElementById('modalAppCategory').textContent = p.category || 'Production App';
+      document.getElementById('modalAppDesc').textContent = p.description || '';
+      document.getElementById('modalAppIcon').src = p.imageUrl || 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80';
+      
+      const tagsContainer = document.getElementById('modalAppTags');
+      tagsContainer.innerHTML = '';
+      (p.tags || []).forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-mono font-semibold';
+        span.textContent = t;
+        tagsContainer.appendChild(span);
+      });
+
+      const playLink = document.getElementById('modalAppPlayLink');
+      if (p.liveUrl) {
+        playLink.href = p.liveUrl;
+        playLink.style.display = 'inline-flex';
+      } else if (p.githubUrl) {
+        playLink.href = p.githubUrl;
+        playLink.style.display = 'inline-flex';
+      } else {
+        playLink.style.display = 'none';
+      }
+
+      document.getElementById('projectModal')?.classList.remove('hidden');
+    }
+
+    function closeProjectModal() {
+      document.getElementById('projectModal')?.classList.add('hidden');
+    }
+
+    // Close modals on backdrop click
+    window.addEventListener('click', (e) => {
+      const rModal = document.getElementById('resumeModal');
+      const pModal = document.getElementById('projectModal');
+      if (e.target === rModal) closeResumeModal();
+      if (e.target === pModal) closeProjectModal();
+    });
+
     // Theme toggle
     const themeBtn = document.getElementById('themeBtn');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
