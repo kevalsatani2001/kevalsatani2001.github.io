@@ -1,58 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Recruiter ATS Meta Optimization -->
-  <title>Keyur H. Satani | Senior Flutter & Dart Developer Portfolio</title>
-  <meta name="description" content="Keyur H. Satani is a Senior Flutter Developer with 3.5+ years of experience in cross-platform mobile apps (Android & iOS), BLoC, GetX, Firebase, REST APIs, and high-performance clean architecture.">
-  <meta name="keywords" content="Flutter Developer, Senior Flutter Engineer, Dart, Mobile App Developer, BLoC Pattern, GetX, Provider, Firebase, Firestore, SQLite, REST API, Play Store, Android, iOS, Clean Architecture, Surat, India">
+  <!-- Primary SEO Meta -->
+  <title>Keyur H. Satani | Flutter Developer</title>
+  <meta name="description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and production cross-platform mobile apps.">
   <meta name="author" content="Keyur H. Satani">
+  <meta name="theme-color" content="#070d1e">
 
-  <!-- Open Graph / LinkedIn Preview -->
-  <meta property="og:title" content="Keyur H. Satani - Senior Flutter Developer">
-  <meta property="og:description" content="3.5+ Years Experience building scalable 60FPS mobile apps for e-commerce, media, and productivity.">
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kevalsatani2001.github.io">
+  <meta property="og:title" content="Keyur H. Satani | Flutter Developer">
+  <meta property="og:description" content="Keyur H. Satani is a Flutter Developer specializing in Flutter, Dart, Firebase, APIs, Bloc/Cubit, and production cross-platform mobile apps.">
+  <meta property="og:site_name" content="Keyur H. Satani">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-template="glassmorphism">
 
   <!-- Navigation Bar -->
   <header>
     <div class="container nav-content">
       <a href="#" class="logo">
         <span class="logo-badge">K</span>
-        <span>Keyur H. Satani</span>
+        <div class="logo-info">
+          <span class="logo-title">Keyur H. Satani</span>
+          <span class="logo-sub">&lt;Flutter Developer /&gt;</span>
+        </div>
       </a>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#competencies">Architecture</a></li>
-        <li><a href="#skills">Tech Stack</a></li>
+        <li><a href="#competencies">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-            <a href="mailto:kevalsatani1234@gmail.com" class="nav-cta">
-        <span>Hire Keyur</span> 🚀
-      </a>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙</button>
+        <button class="btn-resume-modal open-resume-btn"><span>Resume</span> 📄</button>
+        <button class="nav-cta open-enquiry-btn">
+          <span>Let's Talk</span> 🚀
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" title="Open Menu">☰</button>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: 800; font-size: 1.15rem;">Menu Navigation</span>
+      <button id="drawerCloseBtn" class="modal-close-btn">✕</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#competencies">Services & Architecture</a></li>
+      <li><a href="#skills">Tech Stack & Skills</a></li>
+      <li><a href="#projects">Featured Projects</a></li>
+      <li><a href="#experience">Work Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact & Enquiry</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+      <button class="btn btn-outline open-resume-btn" style="width: 100%; justify-content: center;">Official Resume 📄</button>
+      <button class="btn btn-primary open-enquiry-btn" style="width: 100%; justify-content: center;">Instant Project Enquiry 🚀</button>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <main>
     <section class="hero" id="about">
       <div class="container hero-grid">
         <div class="reveal">
-                    <div class="status-badge">
+          <div class="status-badge">
             <span class="status-dot"></span>
             <span>Available for full-time roles &amp; freelance opportunities</span>
           </div>
@@ -61,15 +93,16 @@
 
           <div class="hero-subtitle">
             <span class="text-rotator">Flutter Developer</span>
-            <span class="hero-chip">🚀 4+ Years Experience</span>
+            <span class="hero-chip">🚀 4+ Yrs Exp</span>
             <span class="hero-chip">📍 Surat, Gujarat, India</span>
           </div>
 
           <p class="hero-bio">Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.</p>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Explore Featured Works ↓</a>
-            
+            <a href="#projects" class="btn btn-primary">Explore Case Studies ↓</a>
+            <button class="btn btn-outline open-resume-btn">Official Resume 📄</button>
+            <button class="btn btn-outline open-enquiry-btn">Let's Discuss 💬</button>
             <button onclick="copyText('kevalsatani1234@gmail.com', 'Email copied to clipboard!')" class="btn btn-outline">Copy Email 📋</button>
           </div>
 
@@ -78,19 +111,22 @@
 <a href="https://github.com/kevalsatani2001" target="_blank" rel="noopener" class="social-pill">GitHub ↗</a>
 <a href="mailto:kevalsatani1234@gmail.com" target="_blank" rel="noopener" class="social-pill">Email ↗</a>
 <a href="https://wa.me/918758113819" target="_blank" rel="noopener" class="social-pill">Phone / WhatsApp ↗</a>
+                        <a href="https://api.whatsapp.com/send?phone=+918758113819" target="_blank" rel="noopener" class="social-pill" style="color: #10B981; border-color: rgba(16, 185, 129, 0.4);">
+              <span>Chat on WhatsApp</span> 💬
+            </a>
           </div>
         </div>
 
         <div class="hero-visual reveal">
           <div class="avatar-card">
             <div class="floating-badge badge-top-left">
-              <span>⚡</span>
+              <span>💙</span>
               <span>Flutter & BLoC Specialist</span>
             </div>
 
             <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&amp;token=f922f1c6-700b-473d-a8cd-7c2c65a402aa" alt="Keyur H. Satani" class="hero-avatar" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';">
             <div class="avatar-fallback" style="display: none;">
-              <span>KS</span>
+              <span>K</span>
               <span class="sub">Keyur H. Satani</span>
             </div>
 
@@ -103,28 +139,28 @@
       </div>
     </section>
 
-    <!-- Bento Stats Grid -->
+    <!-- Bento Stats & Metrics -->
     <div class="container">
       <div class="bento-stats reveal">
-        <div class="glass stat-box">
+        <div class="card stat-box">
           <div class="stat-number">4+</div>
-          <div class="stat-label">Years Experience</div>
+          <div class="stat-label">Years of Experience</div>
         </div>
-        <div class="glass stat-box">
-          <div class="stat-number">4</div>
-          <div class="stat-label">Companies Worked</div>
-        </div>
-        <div class="glass stat-box">
+        <div class="card stat-box">
           <div class="stat-number">8+</div>
-          <div class="stat-label">Featured Projects</div>
+          <div class="stat-label">Published Store Apps & Projects</div>
         </div>
-        <div class="glass stat-box">
+        <div class="card stat-box">
           <div class="stat-number">99.9%</div>
           <div class="stat-label">Crash-Free Code Quality</div>
         </div>
+        <div class="card stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Clean Architecture & Fidelity</div>
+        </div>
       </div>
 
-      <!-- Premium Unified Recruiter Quick Info Bar -->
+      <!-- Recruiter Quick Info Bar -->
       <div class="recruiter-bar reveal">
         <div class="recruiter-pill-item">
           <div class="pill-icon-box">⚡</div>
@@ -150,35 +186,40 @@
         <div class="recruiter-pill-item">
           <div class="pill-icon-box">🎯</div>
           <div class="pill-text-wrap">
-            <span class="pill-label">Primary Expertise</span>
-            <span class="pill-value">Flutter, BLoC, Clean Arch</span>
+            <span class="pill-label">Core Specialization</span>
+            <span class="pill-value">Flutter, Dart, Bloc, Firebase</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Recruiter Competencies Bento Section -->
+    <!-- Core Engineering Pillars / Services -->
     <section id="competencies" style="padding-top: 0;">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">System Architecture</span>
-          <h2 class="section-title">Core Engineering Highlights</h2>
+          <span class="section-tag">Core Capabilities</span>
+          <h2 class="section-title">Engineering Pillars & Services</h2>
         </div>
         <div class="competency-grid">
-          <div class="glass competency-card reveal">
-            <div class="competency-icon">🏗️</div>
-            <h3 class="competency-title">Clean Architecture & State</h3>
-            <p class="competency-desc">Mastery of BLoC Pattern, Cubit, GetX, and Provider with strict Separation of Concerns and Repository design for enterprise-grade scalability.</p>
+          <div class="card competency-card reveal">
+            <div class="competency-icon">📱</div>
+            <h3 class="competency-title">Cross-Platform Mobile Apps</h3>
+            <p class="competency-desc">High-performance native compilation for iOS and Android from a single Dart codebase with unified responsive design.</p>
           </div>
-          <div class="glass competency-card reveal">
+          <div class="card competency-card reveal">
+            <div class="competency-icon">🎨</div>
+            <h3 class="competency-title">Pixel-Perfect UI & Figma</h3>
+            <p class="competency-desc">Precision conversion from Figma design files into fluid, responsive Flutter widgets with 60fps micro-interactions.</p>
+          </div>
+          <div class="card competency-card reveal">
             <div class="competency-icon">⚡</div>
-            <h3 class="competency-title">60/120 FPS Performance</h3>
-            <p class="competency-desc">Deep profiling of Flutter widget trees, memory optimization, isolate computation, and frame rendering to deliver butter-smooth UX.</p>
+            <h3 class="competency-title">BLoC & Clean Architecture</h3>
+            <p class="competency-desc">Predictable reactive data flows, repository pattern, SOLID principles, and decoupled state management for enterprise scale.</p>
           </div>
-          <div class="glass competency-card reveal">
-            <div class="competency-icon">🚀</div>
-            <h3 class="competency-title">End-to-End Release Automation</h3>
-            <p class="competency-desc">Google Play Console & App Store release lifecycle, CI/CD pipelines, Firebase Crashlytics monitoring, and remote config updates.</p>
+          <div class="card competency-card reveal">
+            <div class="competency-icon">☁️</div>
+            <h3 class="competency-title">Cloud, APIs & Publishing</h3>
+            <p class="competency-desc">Firebase, REST APIs, Socket.IO, Razorpay gateways, and end-to-end Google Play Store & Apple App Store deployment.</p>
           </div>
         </div>
       </div>
@@ -188,11 +229,11 @@
     <section id="skills">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Tech Stack & Tools</span>
-          <h2 class="section-title">Technical Expertise</h2>
+          <span class="section-tag">Technical Matrix</span>
+          <h2 class="section-title">Skills & Tech Stack</h2>
         </div>
         <div class="skills-grid">
-                <div class="glass skill-card reveal">
+                <div class="card skill-card reveal" data-category="mobile">
         <div class="skill-top">
           <span class="skill-name">Flutter &amp; Dart</span>
           <span class="skill-pct">95%</span>
@@ -201,7 +242,7 @@
           <div class="skill-bar-fill" style="width: 95%;"></div>
         </div>
       </div>
-      <div class="glass skill-card reveal">
+      <div class="card skill-card reveal" data-category="state_management">
         <div class="skill-top">
           <span class="skill-name">Bloc &amp; Cubit</span>
           <span class="skill-pct">92%</span>
@@ -210,7 +251,7 @@
           <div class="skill-bar-fill" style="width: 92%;"></div>
         </div>
       </div>
-      <div class="glass skill-card reveal">
+      <div class="card skill-card reveal" data-category="state_management">
         <div class="skill-top">
           <span class="skill-name">GetX &amp; Provider</span>
           <span class="skill-pct">90%</span>
@@ -219,7 +260,7 @@
           <div class="skill-bar-fill" style="width: 90%;"></div>
         </div>
       </div>
-      <div class="glass skill-card reveal">
+      <div class="card skill-card reveal" data-category="backend">
         <div class="skill-top">
           <span class="skill-name">REST APIs &amp; JSON</span>
           <span class="skill-pct">94%</span>
@@ -228,7 +269,7 @@
           <div class="skill-bar-fill" style="width: 94%;"></div>
         </div>
       </div>
-      <div class="glass skill-card reveal">
+      <div class="card skill-card reveal" data-category="backend">
         <div class="skill-top">
           <span class="skill-name">Firebase &amp; Firestore</span>
           <span class="skill-pct">92%</span>
@@ -237,7 +278,7 @@
           <div class="skill-bar-fill" style="width: 92%;"></div>
         </div>
       </div>
-      <div class="glass skill-card reveal">
+      <div class="card skill-card reveal" data-category="database">
         <div class="skill-top">
           <span class="skill-name">SQLite &amp; Local Storage</span>
           <span class="skill-pct">88%</span>
@@ -246,7 +287,7 @@
           <div class="skill-bar-fill" style="width: 88%;"></div>
         </div>
       </div>
-      <div class="glass skill-card reveal">
+      <div class="card skill-card reveal" data-category="tools">
         <div class="skill-top">
           <span class="skill-name">Git, GitHub &amp; CI/CD</span>
           <span class="skill-pct">90%</span>
@@ -255,7 +296,7 @@
           <div class="skill-bar-fill" style="width: 90%;"></div>
         </div>
       </div>
-      <div class="glass skill-card reveal">
+      <div class="card skill-card reveal" data-category="tools">
         <div class="skill-top">
           <span class="skill-name">Postman &amp; Android Studio</span>
           <span class="skill-pct">92%</span>
@@ -276,7 +317,7 @@
           <h2 class="section-title">Featured Production Applications</h2>
         </div>
         <div class="projects-grid">
-                <div class="glass project-card reveal" data-category="mobile_app">
+                <div class="card project-card reveal" data-category="mobile_app" onclick="openProjectModal('3d3ce08a-0828-46ae-9252-6de0cbc47744')">
         <div class="project-img-wrapper">
           <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&amp;token=d33672c9-9d6e-4f3a-b710-097eb064dad1" alt="Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game" class="project-image" loading="lazy">
           <div class="project-badge-top">Mobile App</div>
@@ -285,10 +326,10 @@
           <h3 class="project-title">Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game</h3>
           <p class="project-desc">A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">Flame Engine</span> <span class="tag">Forge2D (Box2D)</span> <span class="tag">Flutter BLoC</span> <span class="tag">Game Development</span> <span class="tag">AdMob SDK</span></div>
-          
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('3d3ce08a-0828-46ae-9252-6de0cbc47744')">Detailed Case Study 🔍</button> </div>
         </div>
       </div>
-      <div class="glass project-card reveal" data-category="mobile_app">
+      <div class="card project-card reveal" data-category="mobile_app" onclick="openProjectModal('9a2da804-ff86-43f4-9a35-cb5960b86903')">
         <div class="project-img-wrapper">
           <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&amp;token=efe4c49d-a56d-4a4d-863d-13923f750bcd" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="project-image" loading="lazy">
           <div class="project-badge-top">Mobile App</div>
@@ -297,10 +338,10 @@
           <h3 class="project-title">Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App</h3>
           <p class="project-desc">Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">GetX</span> <span class="tag">Dio &amp; REST APIs</span> <span class="tag">Stripe Payments</span> <span class="tag">Biometric Auth</span> <span class="tag">Secure Storage</span></div>
-          
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('9a2da804-ff86-43f4-9a35-cb5960b86903')">Detailed Case Study 🔍</button> </div>
         </div>
       </div>
-      <div class="glass project-card reveal" data-category="mobile_app">
+      <div class="card project-card reveal" data-category="mobile_app" onclick="openProjectModal('173b889c-1b8a-4032-a5ca-d850509d37a3')">
         <div class="project-img-wrapper">
           <img src="https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&amp;token=6ac3d321-745a-4394-959a-32c97ef1bbe6" alt="Who&#039;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App" class="project-image" loading="lazy">
           <div class="project-badge-top">Mobile App</div>
@@ -313,10 +354,10 @@ Role: UI/UX &amp; Frontend Development
 
 Overview: A luxury, multi-feature barbershop booking &amp; retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">GetX</span> <span class="tag">Dio &amp; REST APIs</span> <span class="tag">Stripe Payments</span> <span class="tag">Biometric Auth</span> <span class="tag">Secure Storage</span></div>
-          
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('173b889c-1b8a-4032-a5ca-d850509d37a3')">Detailed Case Study 🔍</button> </div>
         </div>
       </div>
-      <div class="glass project-card reveal" data-category="fitness_productivity">
+      <div class="card project-card reveal" data-category="fitness_productivity" onclick="openProjectModal('1')">
         <div class="project-img-wrapper">
           <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="TheSpeedTurtle App" class="project-image" loading="lazy">
           <div class="project-badge-top">Fitness &amp; Productivity</div>
@@ -325,10 +366,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <h3 class="project-title">TheSpeedTurtle App</h3>
           <p class="project-desc">Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">BLoC</span> <span class="tag">Firebase</span> <span class="tag">Push Notifications</span></div>
-          <div class="project-links"><a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener" class="link-code">Source Code ↗</a></div>
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('1')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/speed-turtle-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
         </div>
       </div>
-      <div class="glass project-card reveal" data-category="media_news">
+      <div class="card project-card reveal" data-category="media_news" onclick="openProjectModal('2')">
         <div class="project-img-wrapper">
           <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="MATA News Application" class="project-image" loading="lazy">
           <div class="project-badge-top">Media &amp; News</div>
@@ -337,10 +378,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <h3 class="project-title">MATA News Application</h3>
           <p class="project-desc">High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">REST APIs</span> <span class="tag">GetX</span> <span class="tag">Play Store Live</span> <span class="tag">Caching</span></div>
-          <div class="project-links"><a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener" class="link-playstore">▶ Google Play Store</a> </div>
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('2')">Detailed Case Study 🔍</button> <a href="https://play.google.com/store/apps/details?id=com.mata.today&amp;hl=en" target="_blank" rel="noopener" class="link-playstore">▶ Google Play</a> </div>
         </div>
       </div>
-      <div class="glass project-card reveal" data-category="utility_tools">
+      <div class="card project-card reveal" data-category="utility_tools" onclick="openProjectModal('3')">
         <div class="project-img-wrapper">
           <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="QR Scanner &amp; Barcode Pro" class="project-image" loading="lazy">
           <div class="project-badge-top">Utility &amp; Tools</div>
@@ -349,10 +390,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <h3 class="project-title">QR Scanner &amp; Barcode Pro</h3>
           <p class="project-desc">High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Camera ML</span> <span class="tag">SQLite</span> <span class="tag">Clean Architecture</span></div>
-          <div class="project-links"><a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener" class="link-code">Source Code ↗</a></div>
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('3')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/qr-scanner-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
         </div>
       </div>
-      <div class="glass project-card reveal" data-category="media_streaming">
+      <div class="card project-card reveal" data-category="media_streaming" onclick="openProjectModal('4')">
         <div class="project-img-wrapper">
           <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Media Player Application" class="project-image" loading="lazy">
           <div class="project-badge-top">Media &amp; Streaming</div>
@@ -361,10 +402,10 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <h3 class="project-title">Media Player Application</h3>
           <p class="project-desc">Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Audio Service</span> <span class="tag">Video Player</span> <span class="tag">Bloc</span></div>
-          <div class="project-links"><a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener" class="link-code">Source Code ↗</a></div>
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('4')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/media-player-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
         </div>
       </div>
-      <div class="glass project-card reveal" data-category="e_commerce">
+      <div class="card project-card reveal" data-category="e_commerce" onclick="openProjectModal('5')">
         <div class="project-img-wrapper">
           <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="E-Commerce &amp; Multi-Vendor Mobile Platform" class="project-image" loading="lazy">
           <div class="project-badge-top">E-Commerce</div>
@@ -373,7 +414,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <h3 class="project-title">E-Commerce &amp; Multi-Vendor Mobile Platform</h3>
           <p class="project-desc">Scalable e-commerce mobile application featuring real-time product catalogs, cart &amp; checkout workflows, payment gateway integration, and order tracking.</p>
           <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">REST APIs</span> <span class="tag">Payment Gateway</span> <span class="tag">Firebase</span></div>
-          <div class="project-links"><a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener" class="link-code">Source Code ↗</a></div>
+          <div class="project-links" onclick="event.stopPropagation()"><button class="link-case-study" onclick="openProjectModal('5')">Detailed Case Study 🔍</button> <a href="https://github.com/kevalsatani2001/ecommerce-app" target="_blank" rel="noopener" class="link-code">GitHub ↗</a></div>
         </div>
       </div>
         </div>
@@ -384,13 +425,13 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
         <section id="experience">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Career Trajectory</span>
-          <h2 class="section-title">Work History & Roles</h2>
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Professional Experience</h2>
         </div>
         <div class="timeline">
                 <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="glass timeline-card">
+        <div class="card timeline-card">
           <div class="timeline-header">
             <div>
               <div class="timeline-role">Flutter Developer</div>
@@ -404,7 +445,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="glass timeline-card">
+        <div class="card timeline-card">
           <div class="timeline-header">
             <div>
               <div class="timeline-role">Flutter Developer</div>
@@ -418,7 +459,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="glass timeline-card">
+        <div class="card timeline-card">
           <div class="timeline-header">
             <div>
               <div class="timeline-role">Flutter Developer</div>
@@ -432,7 +473,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="glass timeline-card">
+        <div class="card timeline-card">
           <div class="timeline-header">
             <div>
               <div class="timeline-role">Flutter Developer</div>
@@ -456,7 +497,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <h2 class="section-title">Education & Credentials</h2>
         </div>
         <div class="edu-grid">
-                <div class="glass edu-card reveal">
+                <div class="card edu-card reveal">
         <div class="edu-degree">Bachelor of Computer Application (BCA)</div>
         <div class="edu-school">Saurashtra University</div>
         <div class="edu-meta">
@@ -464,7 +505,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <span>• 🏆 First Class with Distinction</span>
         </div>
       </div>
-      <div class="glass edu-card reveal">
+      <div class="card edu-card reveal">
         <div class="edu-degree">Bachelor of Science (B.Sc)</div>
         <div class="edu-school">Saurashtra University</div>
         <div class="edu-meta">
@@ -476,32 +517,32 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       </div>
     </section>
 
-    <!-- Contact & Recruiter Connect Section -->
+    <!-- Contact & Project Enquiry Section -->
     <section id="contact">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Let's Build Something Exceptional</h2>
+          <h2 class="section-title">Start a Project or Hire Keyur</h2>
         </div>
         <div class="contact-grid">
           <div class="contact-info reveal">
-                        <a href="mailto:kevalsatani1234@gmail.com" class="glass contact-tile">
+                        <a href="mailto:kevalsatani1234@gmail.com" class="card contact-tile">
               <div class="contact-icon">✉️</div>
               <div>
-                <div class="contact-label">Direct Email Address</div>
+                <div class="contact-label">Email Address</div>
                 <div class="contact-value">kevalsatani1234@gmail.com</div>
               </div>
             </a>
 
-                        <a href="tel:+91 8758113819" class="glass contact-tile">
-              <div class="contact-icon">📞</div>
+                        <a href="https://api.whatsapp.com/send?phone=+918758113819" target="_blank" rel="noopener" class="card contact-tile">
+              <div class="contact-icon">💬</div>
               <div>
                 <div class="contact-label">Phone & WhatsApp</div>
                 <div class="contact-value">+91 8758113819</div>
               </div>
             </a>
 
-                        <div class="glass contact-tile">
+                        <div class="card contact-tile">
               <div class="contact-icon">📍</div>
               <div>
                 <div class="contact-label">Location</div>
@@ -510,21 +551,65 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
             </div>
           </div>
 
-          <form id="portfolioContactForm" class="glass contact-form reveal">
-            <div class="form-group">
-              <label class="form-label">Your Name / Company</label>
-              <input type="text" class="form-control" placeholder="HR Manager / Tech Recruiter" required>
+          <form id="portfolioContactForm" class="card contact-form reveal">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Your Name *</label>
+                <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Your Email *</label>
+                <input type="email" name="email" class="form-control" placeholder="john@company.com" required>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Work Email</label>
-              <input type="email" class="form-control" placeholder="recruiter@company.com" required>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">WhatsApp / Phone</label>
+                <input type="tel" name="phone" class="form-control" placeholder="+91 98765 43210">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Service Required</label>
+                <select name="service" class="form-control">
+                  <option value="Flutter Mobile App Development">Flutter Mobile App Development</option>
+                  <option value="Figma to Flutter Code Conversion">Figma to Flutter Code Conversion</option>
+                  <option value="BLoC / Clean Architecture Refactoring">BLoC / Clean Architecture Refactoring</option>
+                  <option value="Store Publishing & CI/CD">Store Publishing & CI/CD</option>
+                  <option value="Full-Time Flutter Developer Role">Full-Time Flutter Developer Role</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Role or Project Details</label>
-              <textarea class="form-control" rows="4" placeholder="Hi Keyur, we are looking for a Senior Flutter Developer for our mobile team..." required></textarea>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Estimated Budget</label>
+                <select name="budget" class="form-control">
+                  <option value="Under ₹25,000">Under ₹25,000</option>
+                  <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
+                  <option value="₹50,000 – ₹1,00,000">₹50,000 – ₹1,00,000</option>
+                  <option value="₹1,00,000+">₹1,00,000+</option>
+                  <option value="Flexible">Flexible / Hourly</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Target Timeline</label>
+                <select name="timeline" class="form-control">
+                  <option value="Immediately">Immediately</option>
+                  <option value="1–2 Weeks">1–2 Weeks</option>
+                  <option value="2–4 Weeks">2–4 Weeks</option>
+                  <option value="1–2 Months">1–2 Months</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              Send Message 🚀
+
+            <div class="form-group">
+              <label class="form-label">Project Details & Message *</label>
+              <textarea name="message" class="form-control" rows="3" placeholder="Describe your app requirement, features, or job role..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Submit Project Enquiry 🚀
             </button>
           </form>
         </div>
@@ -532,13 +617,233 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
     </section>
   </main>
 
+  <!-- Interactive Resume Modal -->
+  <div id="resumeModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-weight: 800; font-size: 1.25rem;">Keyur H. Satani — Official Resume</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Flutter Developer</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button onclick="window.print()" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;">Print 🖨️</button>
+          
+          <button id="closeResumeModal" class="modal-close-btn">✕</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div style="margin-bottom: 20px;">
+          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 6px;">Profile Summary</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter &amp; Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.</p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 8px;">Technical Skills Matrix</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Flutter &amp; Dart</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Bloc &amp; Cubit</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">GetX &amp; Provider</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">REST APIs &amp; JSON</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Firebase &amp; Firestore</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">SQLite &amp; Local Storage</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Git, GitHub &amp; CI/CD</span><span class="tag" style="background: var(--primary-accent-light); color: var(--primary-accent);">Postman &amp; Android Studio</span>
+          </div>
+        </div>
+
+                <div style="margin-bottom: 20px;">
+          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 10px;">Work History</h4>
+                <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Flutter Developer</div>
+              <div class="timeline-company">Code Expert Solutions • Surat, Gujarat</div>
+            </div>
+            <div class="timeline-date">Jan 2026 - Present</div>
+          </div>
+          <p class="timeline-desc">Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.</p>
+          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Dart</span> <span class="tag">Bloc</span> <span class="tag">REST APIs</span> <span class="tag">E-Commerce</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Flutter Developer</div>
+              <div class="timeline-company">Freshcodes Technology • Surat, Gujarat</div>
+            </div>
+            <div class="timeline-date">Aug 2024 - Oct 2025</div>
+          </div>
+          <p class="timeline-desc">Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.</p>
+          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">REST APIs</span> <span class="tag">GetX</span> <span class="tag">Firebase</span> <span class="tag">UI/UX</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Flutter Developer</div>
+              <div class="timeline-company">StackApp Infotech • Surat, Gujarat</div>
+            </div>
+            <div class="timeline-date">Feb 2024 - Aug 2024</div>
+          </div>
+          <p class="timeline-desc">Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.</p>
+          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Provider</span> <span class="tag">Git</span> <span class="tag">Clean Architecture</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Flutter Developer</div>
+              <div class="timeline-company">Dreamvision Infotech • Surat, Gujarat</div>
+            </div>
+            <div class="timeline-date">Aug 2022 - Jan 2024</div>
+          </div>
+          <p class="timeline-desc">Built cross-platform Android &amp; iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.</p>
+          <div class="project-tags"><span class="tag">Flutter</span> <span class="tag">Android &amp; iOS</span> <span class="tag">SQLite</span> <span class="tag">Firebase</span></div>
+        </div>
+      </div>
+        </div>
+
+                <div>
+          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 10px;">Education & Credentials</h4>
+                <div class="card edu-card reveal">
+        <div class="edu-degree">Bachelor of Computer Application (BCA)</div>
+        <div class="edu-school">Saurashtra University</div>
+        <div class="edu-meta">
+          <span>📅 2022 - 2025</span>
+          <span>• 🏆 First Class with Distinction</span>
+        </div>
+      </div>
+      <div class="card edu-card reveal">
+        <div class="edu-degree">Bachelor of Science (B.Sc)</div>
+        <div class="edu-school">Saurashtra University</div>
+        <div class="edu-meta">
+          <span>📅 2018 - 2022</span>
+          <span>• 🏆 Graduated</span>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instant Project Enquiry Popup Modal -->
+  <div id="enquiryModal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 620px;">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-weight: 800; font-size: 1.2rem;">Instant Project Enquiry</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Have an app requirement? Let's discuss directly on WhatsApp/Email.</p>
+        </div>
+        <button id="closeEnquiryModal" class="modal-close-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="popupEnquiryForm">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Your Name *</label>
+              <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Email *</label>
+              <input type="email" name="email" class="form-control" placeholder="john@company.com" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Phone / WhatsApp</label>
+              <input type="tel" name="phone" class="form-control" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Service Required</label>
+              <select name="service" class="form-control">
+                <option value="Flutter Mobile App Development">Flutter Mobile App Development</option>
+                <option value="Figma to Flutter UI Conversion">Figma to Flutter UI Conversion</option>
+                <option value="BLoC & Architecture Setup">BLoC & Architecture Setup</option>
+                <option value="Bug Fixing & Maintenance">Bug Fixing & Maintenance</option>
+                <option value="Full-Time Senior Role">Full-Time Senior Role</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Estimated Budget</label>
+              <select name="budget" class="form-control">
+                <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
+                <option value="₹50,000 – ₹1,00,000">₹50,000 – ₹1,00,000</option>
+                <option value="₹1,00,000+">₹1,00,000+</option>
+                <option value="Under ₹25,000">Under ₹25,000</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Target Timeline</label>
+              <select name="timeline" class="form-control">
+                <option value="Immediately">Immediately</option>
+                <option value="1–2 Weeks">1–2 Weeks</option>
+                <option value="2–4 Weeks">2–4 Weeks</option>
+                <option value="1–2 Months">1–2 Months</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Brief Overview *</label>
+            <textarea name="message" class="form-control" rows="3" placeholder="Tell me about your project or role requirement..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Send Enquiry Directly 🚀
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Project Case Study Modal -->
+  <div id="projectCaseStudyModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span id="caseStudyCategory" class="section-tag" style="margin-bottom: 2px;">Mobile App</span>
+          <h3 id="caseStudyTitle" style="font-weight: 800; font-size: 1.3rem;">Project Title</h3>
+        </div>
+        <button id="closeProjectModal" class="modal-close-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="border-radius: 16px; overflow: hidden; max-height: 320px; margin-bottom: 20px; background: var(--bg-card-subtle);">
+          <img id="caseStudyImg" src="" alt="Case Study Mockup" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 6px;">Overview & Problem Statement</h4>
+          <p id="caseStudyDesc" style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.65;"></p>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h4 style="font-size: 1.1rem; color: var(--primary-accent); margin-bottom: 8px;">Technologies & Architecture</h4>
+          <div id="caseStudyTags" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border-main);">
+          <a id="caseStudyPlayStore" href="#" target="_blank" rel="noopener" class="btn link-playstore" style="display: none;">▶ Google Play Store</a>
+          <a id="caseStudyLiveDemo" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="display: none;">Live Demo ↗</a>
+          <a id="caseStudyGithub" href="#" target="_blank" rel="noopener" class="btn btn-outline" style="display: none;">Source Code ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2026 Keyur H. Satani • Crafted with Flutter & Published Live on GitHub Pages.</p>
+      <p>© 2026 Keyur H. Satani • Senior Mobile Application Developer.</p>
     </div>
   </footer>
 
+  <button id="backToTopBtn" class="back-to-top" title="Back to Top">↑</button>
   <div id="toast"></div>
 
   <script src="script.js"></script>
