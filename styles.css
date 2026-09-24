@@ -2,6 +2,5 @@
   --primary-color: #6366F1;
   --accent-color: #06B6D4;
 }
-/* Tailwind CSS v4 is delivered via CDN script in HTML */
 body { font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; }
 code, pre { font-family: 'JetBrains Mono', monospace; }
