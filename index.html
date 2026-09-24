@@ -15,8 +15,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   
-  <!-- Tailwind CSS v4 CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Tailwind CSS Play CDN with Class Dark Mode -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    };
+  </script>
 
   <!-- Schema.org Person Structured Data -->
   <script type="application/ld+json">
@@ -92,8 +114,8 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <button id="themeBtn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer" title="Toggle Theme">
-          🌓
+        <button id="themeBtn" class="p-2 sm:p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 bg-slate-100/70 dark:bg-[#0b1733] hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer text-sm font-semibold flex items-center justify-center gap-1.5" title="Toggle Theme" aria-label="Toggle Theme">
+          <span>🌙</span>
         </button>
         <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center justify-center px-3.5 py-2 text-xs font-bold text-blue-600 dark:text-blue-400 border border-blue-300 dark:border-blue-800 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-950 transition cursor-pointer">
           Resume 📄
@@ -1281,22 +1303,43 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
 
     // Theme toggle
     const themeBtn = document.getElementById('themeBtn');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('portfolio-theme') || (prefersDark ? 'dark' : 'light');
+
+    function updateThemeIcon(isDark) {
+      if (!themeBtn) return;
+      themeBtn.innerHTML = isDark ? '<span>☀️</span>' : '<span>🌙</span>';
+      themeBtn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      themeBtn.setAttribute('aria-label', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+    }
 
     function applyTheme(theme) {
-      if (theme === 'dark') {
+      const isDark = (theme === 'dark');
+      if (isDark) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
-      localStorage.setItem('portfolio-theme', theme);
+      updateThemeIcon(isDark);
+      try {
+        localStorage.setItem('portfolio-theme', theme);
+      } catch (err) {}
     }
-    applyTheme(savedTheme);
 
-    themeBtn?.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.contains('dark');
-      applyTheme(isDark ? 'light' : 'dark');
+    let initialTheme = 'dark';
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        initialTheme = savedTheme;
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        initialTheme = 'light';
+      }
+    } catch (err) {}
+
+    applyTheme(initialTheme);
+
+    themeBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      applyTheme(isCurrentlyDark ? 'light' : 'dark');
     });
 
     // Toast
