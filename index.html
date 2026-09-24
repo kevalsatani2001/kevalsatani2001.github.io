@@ -160,6 +160,12 @@
       transition: width 0.1s ease;
     }
 
+    /* Custom Sleek Scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+    ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.4); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.8); }
+
     /* Code Terminal Syntax */
     .token-keyword { color: #f43f5e; font-weight: 600; }
     .token-class { color: #38bdf8; font-weight: 600; }
@@ -189,50 +195,103 @@
   <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
   <div class="fixed bottom-10 left-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
 
-  <!-- Global Header Navigation -->
-  <header role="banner" class="sticky top-0 z-40 backdrop-blur-2xl bg-white/80 dark:bg-[#060b19]/80 border-b border-slate-200/80 dark:border-slate-800/80 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3.5 group" aria-label="Keyur H. Satani Homepage">
-        <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 p-0.5 shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
-          <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-sm tracking-wider">
+  <!-- Global Header Navigation (Ultra-Premium Silicon Valley Capsule Header) -->
+  <header role="banner" class="sticky top-0 z-40 backdrop-blur-2xl bg-white/85 dark:bg-[#060b19]/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-all shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Identity (Single Line, Never Wraps) -->
+      <a href="#home" class="flex items-center gap-3 shrink-0 group" aria-label="Keyur H. Satani Homepage">
+        <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 p-[1.5px] shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform shrink-0">
+          <div class="w-full h-full rounded-[14px] bg-[#070d1e] flex items-center justify-center text-white font-black text-xs sm:text-sm tracking-wider">
             KH
           </div>
         </div>
-        <div>
-          <span class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white block leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Keyur H. Satani</span>
-          <span class="text-[11px] font-semibold text-blue-600 dark:text-cyan-400 flex items-center gap-1">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" aria-hidden="true"></span> Flutter Developer
+        <div class="flex flex-col shrink-0">
+          <span class="font-extrabold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white leading-tight whitespace-nowrap group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">Keyur H. Satani</span>
+          <span class="text-[11px] font-semibold text-blue-600 dark:text-cyan-400 flex items-center gap-1.5 whitespace-nowrap">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span> Flutter Developer
           </span>
         </div>
       </a>
 
-      <nav role="navigation" aria-label="Primary Navigation" class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300">
-        <a href="#about" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Overview</a>
-        <a href="#showcase" class="hover:text-blue-600 dark:hover:text-cyan-400 transition flex items-center gap-1.5">3D Studio <span class="px-1.5 py-0.5 text-[10px] bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 rounded-md font-mono font-bold">PRO</span></a>
-        <a href="#projects" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Apps (8+)</a>
-        <a href="#skills" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills Radar</a>
-        <a href="#architecture" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Architecture</a>
-        <a href="#experience" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
-        <a href="#estimator" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Cost Estimator</a>
-        <a href="#faq" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">FAQ</a>
-        <a href="#contact" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Contact</a>
+      <!-- Desktop Nav Capsule (Sleek Glass Pill, No Wrapping) -->
+      <nav role="navigation" aria-label="Primary Navigation" class="hidden xl:flex items-center gap-1 p-1.5 rounded-full bg-slate-100/90 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md">
+        <a href="#home" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Overview</a>
+        <a href="#showcase" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap flex items-center gap-1"><span>3D Studio</span><span class="px-1.5 py-0.5 text-[9px] bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 rounded-md font-mono font-bold">PRO</span></a>
+        <a href="#projects" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Apps (8+)</a>
+        <a href="#skills" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Skills</a>
+        <a href="#architecture" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Architecture</a>
+        <a href="#experience" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Experience</a>
+        <a href="#estimator" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Estimator</a>
+        <a href="#faq" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">FAQ</a>
+        <a href="#contact" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <button id="themeBtn" class="p-2.5 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 bg-slate-100/80 dark:bg-[#0b1733] hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer text-sm font-semibold flex items-center justify-center min-w-[40px] min-h-[40px] shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+      <!-- Right Controls & CTA -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <button id="themeBtn" class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-amber-400 bg-slate-100/80 dark:bg-[#0b1733] hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer text-sm font-semibold flex items-center justify-center shrink-0 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
           <span>🌙</span>
         </button>
 
-        <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 bg-blue-50/50 dark:bg-blue-950/40 rounded-2xl hover:bg-blue-100 dark:hover:bg-blue-950 transition cursor-pointer shadow-sm" aria-label="Open ATS Resume">
-          Resume 📄
+        <button onclick="openResumeModal()" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 sm:py-2.5 text-xs font-bold text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-cyan-500/30 bg-blue-50/60 dark:bg-cyan-500/10 hover:bg-blue-100 dark:hover:bg-cyan-500/20 rounded-2xl transition cursor-pointer shadow-sm shrink-0 whitespace-nowrap" aria-label="Open ATS Resume">
+          <span>Resume</span> 📄
         </button>
 
-        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-extrabold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-2xl shadow-lg shadow-blue-500/25 transition-all hover:scale-105" aria-label="Hire Keyur for Flutter projects">
-          Hire Keyur ⚡
+        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 text-xs font-extrabold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:opacity-95 rounded-2xl shadow-lg shadow-blue-500/25 transition-all hover:scale-105 shrink-0 whitespace-nowrap" aria-label="Hire Keyur for Flutter projects">
+          <span>Hire Keyur</span> ⚡
+        </a>
+
+        <!-- Mobile Navigation Menu Toggle -->
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-[#0b1733] text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer shrink-0" aria-label="Toggle Mobile Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Slide-out Drawer -->
+  <div id="mobileNavDrawer" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-xl hidden transition-all duration-300 xl:hidden">
+    <div class="fixed top-0 right-0 bottom-0 w-4/5 max-w-xs bg-[#060b19] border-l border-slate-800 p-6 flex flex-col justify-between shadow-2xl overflow-y-auto">
+      <div class="space-y-6">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-[1.5px]">
+              <div class="w-full h-full rounded-[9px] bg-[#070d1e] flex items-center justify-center text-white font-black text-xs">KH</div>
+            </div>
+            <div>
+              <div class="font-extrabold text-sm text-white">Keyur H. Satani</div>
+              <div class="text-[11px] text-cyan-400">Flutter Developer</div>
+            </div>
+          </div>
+          <button onclick="toggleMobileMenu()" class="p-2 rounded-xl text-slate-400 hover:text-white bg-slate-900 border border-slate-800 cursor-pointer" aria-label="Close Mobile Menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-2 text-sm font-semibold">
+          <a href="#home" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Overview</a>
+          <a href="#showcase" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition flex items-center justify-between"><span>3D Smartphone Studio</span><span class="px-1.5 py-0.5 text-[10px] bg-blue-900/60 text-cyan-300 rounded font-mono font-bold">PRO</span></a>
+          <a href="#projects" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Production Apps (8+)</a>
+          <a href="#skills" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Skills Radar</a>
+          <a href="#architecture" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Architecture & CLI</a>
+          <a href="#experience" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Experience</a>
+          <a href="#estimator" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Cost Estimator</a>
+          <a href="#faq" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">FAQ</a>
+          <a href="#contact" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Contact & Hire</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 space-y-3">
+        <button onclick="toggleMobileMenu(); openResumeModal();" class="w-full py-3 rounded-2xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-bold text-xs flex items-center justify-center gap-2 cursor-pointer shadow-sm">
+          <span>View ATS Resume</span> 📄
+        </button>
+        <a href="#contact" onclick="toggleMobileMenu()" class="w-full py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25">
+          <span>Hire Keyur ⚡</span>
         </a>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- Main Content Landmark -->
   <main id="main-content" role="main">
@@ -1917,6 +1976,13 @@ $ flutter doctor -v
       setTimeout(() => {
         t.style.opacity = '0';
       }, 3000);
+    }
+
+    // Mobile Navigation Drawer Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      if (!drawer) return;
+      drawer.classList.toggle('hidden');
     }
 
     // Direct WhatsApp Form submit fallback
