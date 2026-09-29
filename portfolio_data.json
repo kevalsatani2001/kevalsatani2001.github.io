@@ -7,10 +7,13 @@
     "location": "Surat, Gujarat, India",
     "email": "kevalsatani1234@gmail.com",
     "phone": "+91 8758113819",
-    "resumeUrl": "",
+    "resumeUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fresumes%2F1790671170725_keyur_satani_resume%20(1).pdf?alt=media&token=498af2af-a779-4ae6-bf3d-0018d7c3cfbc",
     "status": "Available for full-time roles & freelance opportunities",
     "yearsOfExperience": 4,
-    "githubUsername": "kevalsatani2001"
+    "githubUsername": "kevalsatani2001",
+    "customRoles": "Senior Flutter Developer, Cross-Platform Mobile Engineer, BLoC & Clean Architecture Specialist, CI/CD & App Store Expert, High-Performance Dart Developer",
+    "crashFreeRate": "99.9%",
+    "cleanArchRate": "100%"
   },
   "skills": [
     {
@@ -97,6 +100,9 @@
       "screenshots": [],
       "liveUrl": "",
       "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
       "isFeatured": true,
       "date": "2026"
     },
@@ -118,6 +124,9 @@
       "screenshots": [],
       "liveUrl": "",
       "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
       "isFeatured": true,
       "date": "2026"
     },
@@ -139,6 +148,9 @@
       "screenshots": [],
       "liveUrl": "",
       "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
       "isFeatured": true,
       "date": "2026"
     },
@@ -158,6 +170,9 @@
       "screenshots": [],
       "liveUrl": "",
       "githubUrl": "https://github.com/kevalsatani2001/speed-turtle-app",
+      "demoUrl": "https://flutter.github.io/samples/web/gallery/",
+      "videoDemoUrl": "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-41235-large.mp4",
+      "apkDownloadUrl": "https://github.com/kevalsatani2001/speed-turtle-app/releases/download/v1.0.0/app-release.apk",
       "isFeatured": true,
       "date": "2026"
     },
@@ -177,6 +192,9 @@
       "screenshots": [],
       "liveUrl": "https://play.google.com/store/apps/details?id=com.mata.today&hl=en",
       "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "https://github.com/kevalsatani2001/mata-news/releases/download/v2.1.0/mata-news-v2.1.0.apk",
       "isFeatured": true,
       "date": "2025"
     },
@@ -195,6 +213,9 @@
       "screenshots": [],
       "liveUrl": "",
       "githubUrl": "https://github.com/kevalsatani2001/qr-scanner-app",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "https://github.com/kevalsatani2001/qr-scanner-app/releases/download/v1.0.0/qr-pro-release.apk",
       "isFeatured": true,
       "date": "2025"
     },
@@ -213,6 +234,9 @@
       "screenshots": [],
       "liveUrl": "",
       "githubUrl": "https://github.com/kevalsatani2001/media-player-app",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
       "isFeatured": false,
       "date": "2024"
     },
@@ -231,6 +255,9 @@
       "screenshots": [],
       "liveUrl": "",
       "githubUrl": "https://github.com/kevalsatani2001/ecommerce-app",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "https://github.com/kevalsatani2001/ecommerce-app/releases/download/v1.0.0/ecommerce-release.apk",
       "isFeatured": true,
       "date": "2024"
     }
@@ -357,5 +384,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-24T15:04:28.579194"
+  "updatedAt": "2026-09-29T17:35:28.443727"
 }
