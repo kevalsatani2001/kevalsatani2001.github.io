@@ -3470,7 +3470,7 @@ $ flutter doctor -v
               from_name: name,
               service: service || 'General Mobile Consulting',
               message: msg,
-              subject: `🚀 [Portfolio Inquiry] ${service ? service + ' — ' : ''}${name}`
+              subject: `Portfolio Inquiry from ${name} — ${service || 'Mobile App Development'}`
             })
           });
           const web3Data = await web3Res.json().catch(() => ({}));
