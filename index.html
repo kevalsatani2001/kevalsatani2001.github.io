@@ -3391,7 +3391,7 @@ $ flutter doctor -v
       drawer.classList.toggle('hidden');
     }
 
-    // Contact Form Submission Handler (Direct FormSubmit AJAX Inbox Delivery + Activation UI + Resilient Fallback)
+    // Contact Form Submission Handler (Web3Forms Direct Inbox Gateway + Multi-Service Failover)
     let isContactSubmitting = false;
     async function handleContactSubmit(e) {
       if (e) e.preventDefault();
@@ -3445,36 +3445,67 @@ $ flutter doctor -v
         statusBox.className = 'p-4 rounded-2xl text-xs font-medium text-center bg-blue-500/15 text-blue-300 border border-blue-500/30 block';
         statusBox.innerHTML = `
           <div class="font-bold text-white mb-1 flex items-center justify-center gap-2">
-            <span>🚀 Delivering message to inbox...</span>
+            <span>🚀 Delivering message directly to inbox...</span>
           </div>
           <p class="text-slate-300 text-[11px]">Connecting directly to mail gateway for <strong>${targetEmail}</strong>. Please wait a moment...</p>
         `;
       }
 
       try {
-        const response = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            name: name,
-            email: senderEmail,
-            _replyto: senderEmail,
-            service: service || 'General Mobile Consulting',
-            message: msg,
-            _subject: `🚀 [Portfolio Inquiry] ${service ? service + ' — ' : ''}${name}`,
-            _template: 'table',
-            _captcha: 'false'
-          })
-        });
+        let isSuccess = false;
 
-        const result = await response.json().catch(() => ({}));
+        // 1. Primary: Web3Forms High-Speed API
+        try {
+          const web3Res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: '480d603e-21dd-43a4-b965-3c829ab608b0',
+              name: name,
+              email: senderEmail,
+              replyto: senderEmail,
+              from_name: name,
+              service: service || 'General Mobile Consulting',
+              message: msg,
+              subject: `🚀 [Portfolio Inquiry] ${service ? service + ' — ' : ''}${name}`
+            })
+          });
+          const web3Data = await web3Res.json().catch(() => ({}));
+          if (web3Res.ok && (web3Data.success === true || web3Data.success === 'true')) {
+            isSuccess = true;
+          }
+        } catch (_) {
+          isSuccess = false;
+        }
+
+        // 2. Secondary Fallback: FormSubmit
+        if (!isSuccess) {
+          try {
+            const fsRes = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify({
+                name: name,
+                email: senderEmail,
+                _replyto: senderEmail,
+                service: service || 'General Mobile Consulting',
+                message: msg,
+                _subject: `🚀 [Portfolio Inquiry] ${service ? service + ' — ' : ''}${name}`,
+                _template: 'table',
+                _captcha: 'false'
+              })
+            });
+            const fsData = await fsRes.json().catch(() => ({}));
+            if (fsRes.ok && (fsData.success === true || fsData.success === 'true')) {
+              isSuccess = true;
+            }
+          } catch (_) {}
+        }
+
         isContactSubmitting = false;
-
-        const isSuccess = response.ok && (result.success === 'true' || result.success === true || (result.message && !result.message.toLowerCase().includes('activation')));
-        const isActivationRequired = result.message && result.message.toLowerCase().includes('activation');
 
         if (isSuccess) {
           if (submitBtn) {
@@ -3511,33 +3542,8 @@ $ flutter doctor -v
             `;
           }
           return false;
-        } else if (isActivationRequired) {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.style.opacity = '1';
-            submitBtn.style.cursor = 'pointer';
-            submitBtn.innerHTML = originalBtnHtml;
-          }
-
-          showToast('One-time email activation link sent! 📩');
-
-          if (statusBox) {
-            statusBox.className = 'p-5 rounded-2xl text-xs font-medium text-center bg-amber-500/20 text-amber-200 border border-amber-500/40 block shadow-xl';
-            statusBox.innerHTML = `
-              <div class="font-bold text-white text-sm mb-1.5 flex items-center justify-center gap-2">
-                <span>📩 1-Time Email Activation Required</span>
-              </div>
-              <p class="text-amber-100 text-xs leading-relaxed">
-                An activation link has been sent to <strong>${targetEmail}</strong>.
-              </p>
-              <p class="text-amber-200/90 text-[11px] mt-2 leading-relaxed">
-                👉 Please check your inbox (<strong>${targetEmail}</strong>) and click <strong>"Activate Form"</strong> once. After this 1-step verification, all client messages will reach your inbox instantly!
-              </p>
-            `;
-          }
-          return false;
         } else {
-          throw new Error((result && result.message) || 'Submission did not succeed');
+          throw new Error('API dispatch failed');
         }
       } catch (err) {
         console.warn('Form submission gateway fallback:', err);
