@@ -310,6 +310,8 @@
         <a href="#showcase" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap flex items-center gap-1"><span>3D Studio</span><span class="px-1.5 py-0.5 text-[9px] bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 rounded-md font-mono font-bold">PRO</span></a>
         <a href="#projects" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Apps (8+)</a>
         <a href="#skills" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Skills</a>
+        <a href="#services" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Services</a>
+        <a href="#workflow" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Workflow</a>
         <a href="#architecture" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Architecture</a>
         <a href="#experience" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Experience</a>
         <a href="#estimator" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white dark:hover:bg-white/10 transition-all whitespace-nowrap">Estimator</a>
@@ -364,6 +366,8 @@
           <a href="#showcase" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition flex items-center justify-between"><span>3D Smartphone Studio</span><span class="px-1.5 py-0.5 text-[10px] bg-blue-900/60 text-cyan-300 rounded font-mono font-bold">PRO</span></a>
           <a href="#projects" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Production Apps (8+)</a>
           <a href="#skills" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Skills Radar</a>
+          <a href="#services" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Services (10)</a>
+          <a href="#workflow" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Workflow (6-Step)</a>
           <a href="#architecture" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Architecture & CLI</a>
           <a href="#experience" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Experience</a>
           <a href="#estimator" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition">Cost Estimator</a>
@@ -628,7 +632,7 @@
                 
                 
               </div>
-              <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Client Delivery</span></div>
+              <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Featured</span></div>
             </div>
           </div>
 
@@ -654,13 +658,11 @@
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flame Engine</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(0, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(0, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game preview in 3D simulator"><span>3D View</span> 📱</button>
                 
                 
                 
-                <span class="px-3 py-1.5 rounded-xl bg-blue-950/80 border border-blue-800/80 text-cyan-400 text-xs font-bold">Client Delivery</span>
+                
               </div>
             </div>
           </div>
@@ -683,7 +685,7 @@
                 
                 
               </div>
-              <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Client Delivery</span></div>
+              <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Featured</span></div>
             </div>
           </div>
 
@@ -709,13 +711,11 @@
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">GetX</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(1, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(1, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App preview in 3D simulator"><span>3D View</span> 📱</button>
                 
                 
                 
-                <span class="px-3 py-1.5 rounded-xl bg-blue-950/80 border border-blue-800/80 text-cyan-400 text-xs font-bold">Client Delivery</span>
+                
               </div>
             </div>
           </div>
@@ -738,7 +738,7 @@
                 
                 
               </div>
-              <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Client Delivery</span></div>
+              <div class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-slate-800 shadow-md"><span class="text-[10px] font-semibold text-blue-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Featured</span></div>
             </div>
           </div>
 
@@ -768,13 +768,11 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">GetX</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(2, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(2, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Who&#39;s Nxt – Salon Appointment Booking &amp; Retail E-Commerce App preview in 3D simulator"><span>3D View</span> 📱</button>
                 
                 
                 
-                <span class="px-3 py-1.5 rounded-xl bg-blue-950/80 border border-blue-800/80 text-cyan-400 text-xs font-bold">Client Delivery</span>
+                
               </div>
             </div>
           </div>
@@ -823,9 +821,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Dart</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">BLoC</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(3, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open TheSpeedTurtle App preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(3, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open TheSpeedTurtle App preview in 3D simulator"><span>3D View</span> 📱</button>
                 <button onclick="openLiveDemo(3)" class="px-2.5 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500 border border-amber-500/40 text-amber-300 hover:text-black text-xs font-bold transition-all inline-flex items-center gap-1" title="Interactive Live Web Demo"><span>Demo</span> ⚡</button>
                 <button onclick="openVideoDemo(3)" class="px-2.5 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500 border border-rose-500/40 text-rose-300 hover:text-white text-xs font-bold transition-all inline-flex items-center gap-1" title="Video Walkthrough"><span>Video</span> ▶</button>
                 <button onclick="openApkInstall(3)" class="px-2.5 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-bold transition-all inline-flex items-center gap-1" title="Install APK / QR Code"><span>APK</span> 📲</button>
@@ -878,9 +874,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">REST APIs</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">GetX</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(4, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open MATA News Application preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(4, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open MATA News Application preview in 3D simulator"><span>3D View</span> 📱</button>
                 
                 
                 <button onclick="openApkInstall(4)" class="px-2.5 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-bold transition-all inline-flex items-center gap-1" title="Install APK / QR Code"><span>APK</span> 📲</button>
@@ -933,9 +927,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Camera ML</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">SQLite</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(5, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open QR Scanner &amp; Barcode Pro preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(5, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open QR Scanner &amp; Barcode Pro preview in 3D simulator"><span>3D View</span> 📱</button>
                 
                 
                 <button onclick="openApkInstall(5)" class="px-2.5 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-bold transition-all inline-flex items-center gap-1" title="Install APK / QR Code"><span>APK</span> 📲</button>
@@ -988,9 +980,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Audio Service</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Video Player</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(6, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Media Player Application preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(6, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open Media Player Application preview in 3D simulator"><span>3D View</span> 📱</button>
                 
                 
                 
@@ -1043,9 +1033,7 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Flutter</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">REST APIs</span> <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-800">Payment Gateway</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <button onclick="openMobilePreview(7, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open E-Commerce &amp; Multi-Vendor Mobile Platform preview in 3D simulator">
-                  <span>3D View</span> 📱
-                </button>
+                <button onclick="openMobilePreview(7, 'shots')" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600 border border-blue-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-sm" aria-label="Open E-Commerce &amp; Multi-Vendor Mobile Platform preview in 3D simulator"><span>3D View</span> 📱</button>
                 
                 
                 <button onclick="openApkInstall(7)" class="px-2.5 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-bold transition-all inline-flex items-center gap-1" title="Install APK / QR Code"><span>APK</span> 📲</button>
@@ -1059,24 +1047,477 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
       </div>
     </section>
 
-    <!-- MNC Tech Radar & Skills Matrix -->
+    <!-- MNC Tech Radar & 9-Cluster Skills Matrix (Matching Anand Makhanasa UI) -->
     <section id="skills" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="skills-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
-            ✦ Technical Architecture
+            ✦ Technical Architecture & Core Specializations
           </div>
           <h2 id="skills-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-            Enterprise Skills & Technology Radar
+            Categorized Skills & Technology Radar
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
-            Proficiency matrix across mobile frameworks, reactive state management, cloud backends, and automated DevOps pipelines.
+            In-depth proficiency matrix across cross-platform frameworks, state management architectures, cloud backends, and store release ecosystems.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                  <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        <!-- 9-Cluster Categorized Skills Matrix -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                  <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                📱
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Core Mobile &amp; Languages</h3>
+                <span class="text-[11px] text-slate-400">6 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Cross-platform mobile development for Android &amp; iOS with compiled native speed</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Flutter Framework</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">3.5+ yrs building custom widgets &amp; responsive layouts</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Dart</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Object-oriented, strong typing, async streams &amp; isolates</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Flutter Web</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Production web applications, responsive dashboards &amp; admin consoles</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Cross-Platform UI</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Single codebase for iOS, Android and Web</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Android (Java/Kotlin)</span>
+              
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Platform channel awareness &amp; manifest setup</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">iOS (Swift/Obj-C)</span>
+              
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Xcode signing, CocoaPods, Info.plist configurations</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                🧱
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">State Management</h3>
+                <span class="text-[11px] text-slate-400">4 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Scalable reactive data flows, unidirectional state, and decoupled architecture</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Bloc / Cubit</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Event-driven reactive streams &amp; state separation</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">GetX</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Lightweight state, route management &amp; dependency injection</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Provider</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">InheritedWidget wrapper for scoped widget tree state</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Riverpod</span>
+              
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Compile-safe declarative providers &amp; scoping</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                ⚡
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Networking &amp; Real-Time</h3>
+                <span class="text-[11px] text-slate-400">4 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Low-latency data synchronization, web sockets, and RESTful communication</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">RESTful APIs</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">HTTP/HTTPS communication, interceptors &amp; error handling</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">JSON Data Handling</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Model serialization, deserialization &amp; null safety</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Dio Interceptors</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Token auto-refresh &amp; global request pipeline</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Socket.IO &amp; WebSockets</span>
+              
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Real-time bidirectional event streaming</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                ☁️
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Backend &amp; Cloud Services</h3>
+                <span class="text-[11px] text-slate-400">5 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Cloud databases, serverless workflows, and push messaging</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Firebase Firestore</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">NoSQL real-time document database &amp; query indexing</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Firebase Authentication</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Phone OTP, email/password &amp; session persistence</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Cloud Messaging (FCM)</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Push notification payloads &amp; background handlers</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Stripe Payments</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Payment Sheet integration &amp; 3DS security</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Razorpay Gateway</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Checkout SDK integration &amp; transaction verification</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                💾
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Local Storage &amp; Caching</h3>
+                <span class="text-[11px] text-slate-400">3 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Offline-first capability, persistence, and relational tables on device</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">SQLite / SQFlite</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Structured SQLite relational database on device</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Hive</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Blazing fast, lightweight key-value NoSQL database</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Shared Preferences</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Platform key-value storage for settings &amp; tokens</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                🏗️
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Architecture &amp; Standards</h3>
+                <span class="text-[11px] text-slate-400">4 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Industry-standard engineering patterns for maintainability and scalability</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Clean Architecture</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Domain, data, and presentation layer decoupling</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">SOLID Principles</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Modular, extensible, single-responsibility components</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Figma to Flutter Code</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Pixel-perfect conversion maintaining design fidelity</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">App Performance Optimization</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Widget tree rebuilding reduction &amp; profiling</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                🔒
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Device Features &amp; APIs</h3>
+                <span class="text-[11px] text-slate-400">4 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Hardware capabilities, maps, and native integrations</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Biometric Authentication</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Hardware fingerprint, Touch ID &amp; Face ID</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Camera ML Scanner</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Real-time barcode/QR detection with canvas overlays</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Audio/Video Streaming</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Background audio service &amp; visualizers</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Maps &amp; Location</span>
+              
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Google Maps SDK, geocoding &amp; live location</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                🛠️
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Tools, Store &amp; CI/CD</h3>
+                <span class="text-[11px] text-slate-400">4 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Tooling for agile development, code management, and store releases</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Google Play Console</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Production release, internal testing tracks &amp; app bundles</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Apple App Store &amp; TestFlight</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">App Store Connect, certificates &amp; beta distribution</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Git &amp; GitHub</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Version control, branching strategies &amp; PR code reviews</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Android Studio &amp; VS Code</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Primary IDEs with Flutter/Dart DevTools &amp; profiler</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll bg-white dark:bg-[#0b1733] rounded-3xl border border-slate-200 dark:border-slate-800/80 p-6 shadow-sm hover:shadow-xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 text-xl">
+                🌐
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Web, Admin &amp; Deployment</h3>
+                <span class="text-[11px] text-slate-400">4 core technologies</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Production web applications, responsive back-office admin dashboards, and SEO</p>
+            <div class="space-y-2">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Flutter Web Development</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Responsive web dashboards &amp; adaptive layouts</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Technical SEO Implementation</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Structured data (Schema.org JSON-LD) &amp; OpenGraph</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Responsive Web UI</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Fluid cross-device viewports from mobile to desktop</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:border-blue-300 dark:hover:border-blue-800 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Netlify &amp; GitHub Pages</span>
+              <span class="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-cyan-400 border border-blue-200 dark:border-blue-800">SPECIALIST</span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">Continuous deployment &amp; custom domains</p>
+          </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+            <span>Production Tested</span>
+            <span class="text-emerald-500 font-semibold flex items-center gap-1">✓ Verified</span>
+          </div>
+        </div>
+        </div>
+
+        <!-- Dynamic Proficiency Progress Bars -->
+        <div class="mt-8 pt-10 border-t border-slate-200/80 dark:border-slate-800/80">
+          <h3 class="text-xl font-black text-slate-900 dark:text-white mb-6 text-center">Core Proficiency Indices</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="tilt-card reveal-on-scroll p-5 rounded-2xl bg-[#090e1f]/80 dark:bg-[#090e1f]/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
           <div class="flex justify-between items-center mb-2.5">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
@@ -1171,6 +1612,279 @@ Overview: A luxury, multi-feature barbershop booking &amp; retail web applicatio
           <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
             <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" data-width="92" style="width: 0%;"></div>
           </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Comprehensive Engineering Services (Matching Anand Makhanasa UI) -->
+    <section id="services" class="py-20 sm:py-28" aria-labelledby="services-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
+            ✦ Engineering Capabilities
+          </div>
+          <h2 id="services-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            Services & Technical Solutions
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
+            End-to-end mobile development services from initial design translation to store deployment and continuous optimization.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+                  <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              📱
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              Cross-Platform Mobile Apps
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              End-to-end development of high-performance iOS and Android applications from a single, clean Dart codebase.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('Cross-Platform Mobile Apps')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#01</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              🎨
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              Pixel-Perfect UI Implementation
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Precision conversion from Figma design files into fluid, responsive Flutter widgets with micro-interactions.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('Pixel-Perfect UI Implementation')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#02</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              🧱
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              State Management Architecture
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Production mastery of Bloc/Cubit, GetX, and Provider following Clean Architecture and SOLID principles.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('State Management Architecture')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#03</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              ⚡
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              REST APIs &amp; Real-Time Sync
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Synchronous REST integration with Dio interceptors and real-time Socket.IO streams for live booking and chat.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('REST APIs &amp; Real-Time Sync')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#04</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              ☁️
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              Firebase Cloud Ecosystem
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Implementation of Cloud Firestore, Firebase Authentication (OTP/Email), Push Notifications (FCM), and cloud functions.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('Firebase Cloud Ecosystem')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#05</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              💾
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              Local Storage &amp; Offline First
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Offline-first resilience using SQLite, Hive, and Shared Preferences for instantaneous local data access.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('Local Storage &amp; Offline First')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#06</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              🔒
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              Biometrics &amp; Hardware Features
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Fingerprint / Face ID security, Camera ML scanner overlays, and background audio streaming engines.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('Biometrics &amp; Hardware Features')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#07</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              💳
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              Payment Gateway Integration
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Integration of Stripe Payment Sheet and Razorpay checkout SDK for in-app purchases, deposits, and wallets.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('Payment Gateway Integration')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#08</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              🚀
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              Store Deployment (Play Store &amp; iOS)
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Hands-on experience publishing to Google Play Console, internal tracks, Apple App Store Connect, and TestFlight.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('Store Deployment (Play Store &amp; iOS)')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#09</span>
+          </div>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 w-fit mb-4 group-hover:scale-110 transition text-2xl">
+              ⏱️
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition">
+              App Performance &amp; 60fps Tuning
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Auditing rebuild counts, profiling frame render times, minimizing app bundle sizes, and resolving production defects.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <button onclick="selectServiceAndScroll('App Performance &amp; 60fps Tuning')" class="text-xs font-bold text-blue-600 dark:text-cyan-400 hover:text-blue-700 flex items-center gap-1 cursor-pointer group/btn">
+              <span>Request Quote</span>
+              <span class="group-hover/btn:translate-x-1 transition">→</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400">#010</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6-Step Engineering Workflow (Matching Anand Makhanasa UI) -->
+    <section id="workflow" class="py-20 sm:py-28 bg-slate-50/70 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80" aria-labelledby="workflow-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-blue-900 mb-3">
+            ✦ Structured Delivery Process
+          </div>
+          <h2 id="workflow-title" class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            6-Step Engineering Lifecycle
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
+            A battle-tested agile development methodology for delivering zero-defect, high-performance mobile products.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-3">01</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">Understand Requirements</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Analyze product requirements, user flows, edge cases, and business constraints to design a rock-solid technical roadmap.</p>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-3">02</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">UI / Figma to Flutter</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Convert Figma / design assets into pixel-perfect, responsive Flutter widgets matching every typography, color, and spacing detail.</p>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-3">03</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">Architecture &amp; State Management</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Set up Clean Architecture with Bloc/Cubit or GetX, decoupling business logic from UI widgets for maintainable, testable code.</p>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-3">04</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">API, Socket &amp; Backend Sync</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Integrate RESTful APIs, Socket.IO real-time channels, Firebase/Supabase, and payment gateways with robust error handling.</p>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-3">05</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">Testing &amp; Performance Optimization</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Optimize widget trees, eliminate redundant re-renders, test on real devices across screen resolutions, and profile memory.</p>
+        </div>
+        <div class="tilt-card reveal-on-scroll p-6 rounded-3xl bg-white dark:bg-[#0b1733] border border-slate-200 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all duration-300">
+          <div class="text-3xl font-black text-blue-600 dark:text-cyan-400 font-mono mb-3">06</div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">Release &amp; Store Deployment</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Generate signed release APKs, AABs, and IPAs; configure Google Play Console &amp; Apple App Store Connect / TestFlight for launch.</p>
         </div>
         </div>
       </div>
@@ -1640,37 +2354,45 @@ $ flutter doctor -v
           </div>
 
           <div class="lg:col-span-7 tilt-card reveal-on-scroll bg-white/90 dark:bg-[#090e1f]/95 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-slate-800/90 shadow-2xl">
-            <form id="contactForm" name="contact" method="POST" data-netlify="true" class="space-y-4">
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
               <input type="hidden" name="form-name" value="contact" />
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Your Name *</label>
-                  <input type="text" name="name" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Alex Morgan" />
+                  <input type="text" id="contactName" name="name" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition text-slate-900 dark:text-white" placeholder="Alex Morgan" />
                 </div>
                 <div>
                   <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Email Address *</label>
-                  <input type="email" name="email" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="alex@company.com" />
+                  <input type="email" id="contactEmail" name="email" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition text-slate-900 dark:text-white" placeholder="alex@company.com" />
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Project Type / Inquiry</label>
-                <select name="service" class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#070d1e] text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
-                  <option value="Mobile App Development">Full-Lifecycle Mobile Application (iOS & Android)</option>
+                <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Project Type / Service Requested</label>
+                <select id="contactService" name="service" class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#070d1e] text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition text-slate-900 dark:text-white">
+                  <option value="Cross-Platform Mobile Apps">Cross-Platform Mobile Apps (iOS & Android)</option>
+                  <option value="Pixel-Perfect UI Implementation">Pixel-Perfect Figma to Flutter UI</option>
+                  <option value="State Management Architecture">State Management & Clean Architecture (Bloc/GetX)</option>
+                  <option value="REST APIs & Real-Time Sync">REST APIs & Real-Time WebSockets</option>
+                  <option value="Firebase Cloud Ecosystem">Firebase Suite (Auth, Firestore, FCM)</option>
+                  <option value="Local Storage & Offline First">Local Storage & Offline-First (SQLite/Hive)</option>
+                  <option value="Payment Gateway Integration">Payment Gateway Integration (Stripe/Razorpay)</option>
+                  <option value="Store Deployment (Play Store & iOS)">Store Deployment & CI/CD Fastlane</option>
+                  <option value="App Performance & 60fps Tuning">App Performance & 60fps Profiling</option>
                   <option value="Senior Flutter Hiring">Full-Time Senior Flutter Developer Role</option>
-                  <option value="Cross-Platform Migration">Cross-Platform App Migration & Architecture</option>
-                  <option value="Code Review & Optimization">Performance Profiling & Code Review</option>
+                  <option value="Other Consulting">General Mobile Consulting & Audit</option>
                 </select>
               </div>
 
               <div>
                 <label class="block text-xs font-bold mb-1.5 text-slate-700 dark:text-slate-300">Message *</label>
-                <textarea name="message" rows="3" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Describe your mobile architecture requirements or project timeline..."></textarea>
+                <textarea id="contactMessage" name="message" rows="3" required class="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 outline-none transition text-slate-900 dark:text-white" placeholder="Describe your mobile architecture requirements or project timeline..."></textarea>
               </div>
 
-              <button type="submit" class="shimmer-btn w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:opacity-95 text-white font-black text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-[1.01] cursor-pointer" aria-label="Send message">
-                Send Message / Initiate Consultation 🚀
+              <button type="submit" id="contactSubmitBtn" class="shimmer-btn w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:opacity-95 text-white font-black text-xs sm:text-sm shadow-xl shadow-blue-500/25 transition-all hover:scale-[1.01] cursor-pointer inline-flex items-center justify-center gap-2" aria-label="Send message">
+                <span>Send Message / Initiate Consultation</span> 🚀
               </button>
+              <div id="contactFormStatus" class="hidden p-4 rounded-2xl text-xs font-medium text-center"></div>
             </form>
           </div>
 
@@ -1901,7 +2623,7 @@ $ flutter doctor -v
   <!-- Interactive JavaScript Engine -->
   <script>
     // Embedded Project Catalog
-    const PROJECTS = [{"title":"Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game","category":"Mobile App","description":"A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.","tags":["Flutter","Dart","Flame Engine","Forge2D (Box2D)","Flutter BLoC","Game Development","AdMob SDK"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1","screenshots":["https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1"],"liveUrl":"","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2026"},{"title":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","category":"Mobile App","description":"Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.","tags":["Flutter","Dart","GetX","Dio & REST APIs","Stripe Payments","Biometric Auth","Secure Storage"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd","screenshots":["https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd"],"liveUrl":"","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2026"},{"title":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","category":"Mobile App","description":"Steve's Barbers (Powered by WhozNxt)\n\nRole: UI/UX & Frontend Development\n\nOverview: A luxury, multi-feature barbershop booking & retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.","tags":["Flutter","Dart","GetX","Dio & REST APIs","Stripe Payments","Biometric Auth","Secure Storage"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6","screenshots":["https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6"],"liveUrl":"","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2026"},{"title":"TheSpeedTurtle App","category":"Fitness & Productivity","description":"Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.","tags":["Flutter","Dart","BLoC","Firebase","Push Notifications"],"imageUrl":"https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/speed-turtle-app","demoUrl":"https://flutter.github.io/samples/web/gallery/","videoDemoUrl":"https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-41235-large.mp4","apkDownloadUrl":"https://github.com/kevalsatani2001/speed-turtle-app/releases/download/v1.0.0/app-release.apk","date":"2026"},{"title":"MATA News Application","category":"Media & News","description":"High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.","tags":["Flutter","REST APIs","GetX","Play Store Live","Caching"],"imageUrl":"https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80"],"liveUrl":"https://play.google.com/store/apps/details?id=com.mata.today&hl=en","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"https://github.com/kevalsatani2001/mata-news/releases/download/v2.1.0/mata-news-v2.1.0.apk","date":"2025"},{"title":"QR Scanner & Barcode Pro","category":"Utility & Tools","description":"High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.","tags":["Flutter","Camera ML","SQLite","Clean Architecture"],"imageUrl":"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/qr-scanner-app","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"https://github.com/kevalsatani2001/qr-scanner-app/releases/download/v1.0.0/qr-pro-release.apk","date":"2025"},{"title":"Media Player Application","category":"Media & Streaming","description":"Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.","tags":["Flutter","Audio Service","Video Player","Bloc"],"imageUrl":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/media-player-app","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2024"},{"title":"E-Commerce & Multi-Vendor Mobile Platform","category":"E-Commerce","description":"Scalable e-commerce mobile application featuring real-time product catalogs, cart & checkout workflows, payment gateway integration, and order tracking.","tags":["Flutter","REST APIs","Payment Gateway","Firebase"],"imageUrl":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/ecommerce-app","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"https://github.com/kevalsatani2001/ecommerce-app/releases/download/v1.0.0/ecommerce-release.apk","date":"2024"}];
+    const PROJECTS = [{"title":"Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game","category":"Mobile App","description":"A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.","tags":["Flutter","Dart","Flame Engine","Forge2D (Box2D)","Flutter BLoC","Game Development","AdMob SDK"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1","screenshots":["https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1"],"liveUrl":"","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2026","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true},{"title":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","category":"Mobile App","description":"Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.","tags":["Flutter","Dart","GetX","Dio & REST APIs","Stripe Payments","Biometric Auth","Secure Storage"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd","screenshots":["https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd"],"liveUrl":"","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2026","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true},{"title":"Who's Nxt – Salon Appointment Booking & Retail E-Commerce App","category":"Mobile App","description":"Steve's Barbers (Powered by WhozNxt)\n\nRole: UI/UX & Frontend Development\n\nOverview: A luxury, multi-feature barbershop booking & retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.","tags":["Flutter","Dart","GetX","Dio & REST APIs","Stripe Payments","Biometric Auth","Secure Storage"],"imageUrl":"https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6","screenshots":["https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6"],"liveUrl":"","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2026","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true},{"title":"TheSpeedTurtle App","category":"Fitness & Productivity","description":"Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.","tags":["Flutter","Dart","BLoC","Firebase","Push Notifications"],"imageUrl":"https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/speed-turtle-app","demoUrl":"https://flutter.github.io/samples/web/gallery/","videoDemoUrl":"https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-41235-large.mp4","apkDownloadUrl":"https://github.com/kevalsatani2001/speed-turtle-app/releases/download/v1.0.0/app-release.apk","date":"2026","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true},{"title":"MATA News Application","category":"Media & News","description":"High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.","tags":["Flutter","REST APIs","GetX","Play Store Live","Caching"],"imageUrl":"https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80"],"liveUrl":"https://play.google.com/store/apps/details?id=com.mata.today&hl=en","githubUrl":"","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"https://github.com/kevalsatani2001/mata-news/releases/download/v2.1.0/mata-news-v2.1.0.apk","date":"2025","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true},{"title":"QR Scanner & Barcode Pro","category":"Utility & Tools","description":"High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.","tags":["Flutter","Camera ML","SQLite","Clean Architecture"],"imageUrl":"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/qr-scanner-app","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"https://github.com/kevalsatani2001/qr-scanner-app/releases/download/v1.0.0/qr-pro-release.apk","date":"2025","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true},{"title":"Media Player Application","category":"Media & Streaming","description":"Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.","tags":["Flutter","Audio Service","Video Player","Bloc"],"imageUrl":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/media-player-app","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"","date":"2024","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true},{"title":"E-Commerce & Multi-Vendor Mobile Platform","category":"E-Commerce","description":"Scalable e-commerce mobile application featuring real-time product catalogs, cart & checkout workflows, payment gateway integration, and order tracking.","tags":["Flutter","REST APIs","Payment Gateway","Firebase"],"imageUrl":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80","screenshots":["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"],"liveUrl":"","githubUrl":"https://github.com/kevalsatani2001/ecommerce-app","demoUrl":"","videoDemoUrl":"","apkDownloadUrl":"https://github.com/kevalsatani2001/ecommerce-app/releases/download/v1.0.0/ecommerce-release.apk","date":"2024","show3DView":true,"showDemo":true,"showVideo":true,"showApk":true,"showGithub":true,"showLive":true}];
     let currentPhoneAppIdx = 0;
     let currentPhoneSlideIdx = 0;
     let currentModalAppIdx = 0;
@@ -2279,6 +3001,35 @@ $ flutter doctor -v
       showToast('Architecture snippet copied to clipboard! 📋');
     }
 
+    // Service Quote Selector & Scroll
+    function selectServiceAndScroll(serviceTitle) {
+      const serviceSelect = document.getElementById('contactService');
+      if (serviceSelect && serviceTitle) {
+        let found = false;
+        for (let i = 0; i < serviceSelect.options.length; i++) {
+          const optVal = serviceSelect.options[i].value;
+          if (optVal.toLowerCase().includes(serviceTitle.toLowerCase()) || serviceTitle.toLowerCase().includes(optVal.toLowerCase())) {
+            serviceSelect.selectedIndex = i;
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          const newOpt = document.createElement('option');
+          newOpt.value = serviceTitle;
+          newOpt.text = serviceTitle;
+          newOpt.selected = true;
+          serviceSelect.appendChild(newOpt);
+        }
+      }
+      const contactEl = document.getElementById('contact');
+      if (contactEl) {
+        contactEl.scrollIntoView({ behavior: 'smooth' });
+        const nameInput = document.getElementById('contactName');
+        if (nameInput) setTimeout(() => nameInput.focus(), 500);
+      }
+    }
+
     // Category Filtering
     function filterProjects(cat) {
       document.querySelectorAll('.proj-filter-btn').forEach(btn => {
@@ -2420,42 +3171,53 @@ $ flutter doctor -v
       }
 
       // Configure Tab visibility
+      const tabShots = document.getElementById('modalTabShots');
       const tabDemo = document.getElementById('modalTabDemo');
       const tabVideo = document.getElementById('modalTabVideo');
       const tabApk = document.getElementById('modalTabApk');
 
+      if (tabShots) {
+        if (app.show3DView !== false) tabShots.classList.remove('hidden');
+        else tabShots.classList.add('hidden');
+      }
       if (tabDemo) {
-        if (app.demoUrl || app.liveUrl) tabDemo.classList.remove('hidden');
+        if (app.showDemo !== false && (app.demoUrl || app.liveUrl)) tabDemo.classList.remove('hidden');
         else tabDemo.classList.add('hidden');
       }
       if (tabVideo) {
-        if (app.videoDemoUrl) tabVideo.classList.remove('hidden');
+        if (app.showVideo !== false && app.videoDemoUrl) tabVideo.classList.remove('hidden');
         else tabVideo.classList.add('hidden');
       }
       if (tabApk) {
-        if (app.apkDownloadUrl) tabApk.classList.remove('hidden');
+        if (app.showApk !== false && app.apkDownloadUrl) tabApk.classList.remove('hidden');
         else tabApk.classList.add('hidden');
       }
 
       const actionsContainer = document.getElementById('modalAppActions');
       if (actionsContainer) {
         let btns = '';
-        if (app.demoUrl) {
+        if (app.showDemo !== false && app.demoUrl) {
           btns += `<a href="${app.demoUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold transition shadow-sm inline-flex items-center gap-1"><span>Live Demo</span> ⚡</a>`;
         }
-        if (app.videoDemoUrl) {
+        if (app.showVideo !== false && app.videoDemoUrl) {
           btns += `<a href="${app.videoDemoUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold transition shadow-sm inline-flex items-center gap-1"><span>Video Walkthrough</span> ▶</a>`;
         }
-        if (app.apkDownloadUrl) {
+        if (app.showApk !== false && app.apkDownloadUrl) {
           btns += `<a href="${app.apkDownloadUrl}" download class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-sm inline-flex items-center gap-1"><span>Download APK</span> 📲</a>`;
         }
-        if (app.liveUrl) {
+        if (app.showLive !== false && app.liveUrl) {
           btns += `<a href="${app.liveUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition" aria-label="Open live store link">Store / Live ↗</a>`;
         }
-        if (app.githubUrl) {
+        if (app.showGithub !== false && app.githubUrl) {
           btns += `<a href="${app.githubUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-800 text-xs font-bold transition" aria-label="View source code on GitHub">GitHub ↗</a>`;
         }
         actionsContainer.innerHTML = btns;
+      }
+
+      if (initialMode === 'shots' && app.show3DView === false) {
+        if (app.showDemo !== false && (app.demoUrl || app.liveUrl)) initialMode = 'demo';
+        else if (app.showVideo !== false && app.videoDemoUrl) initialMode = 'video';
+        else if (app.showApk !== false && app.apkDownloadUrl) initialMode = 'apk';
       }
 
       setModalMode(initialMode);
@@ -2629,18 +3391,81 @@ $ flutter doctor -v
       drawer.classList.toggle('hidden');
     }
 
-    // Direct WhatsApp Form submit fallback
-    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-      const name = e.target.elements['name']?.value || '';
-      const email = e.target.elements['email']?.value || '';
-      const service = e.target.elements['service']?.value || '';
-      const msg = e.target.elements['message']?.value || '';
+    // Contact Form Submission Handler (Direct RFC-Compliant Mailto + WhatsApp & Status UI)
+    function handleContactSubmit(e) {
+      if (e) e.preventDefault();
+      const name = (document.getElementById('contactName')?.value || '').trim();
+      const senderEmail = (document.getElementById('contactEmail')?.value || '').trim();
+      const service = (document.getElementById('contactService')?.value || '').trim();
+      const msg = (document.getElementById('contactMessage')?.value || '').trim();
+      const statusBox = document.getElementById('contactFormStatus');
+      const targetEmail = 'kevalsatani1234@gmail.com'.trim();
 
-      const whatsappText = encodeURIComponent(`Hi Keyur H. Satani, my name is ${name} (${email}). I am interested in ${service}: ${msg}`);
-      if ('+918758113819'.length > 5) {
-        window.open(`https://api.whatsapp.com/send?phone=+918758113819&text=${whatsappText}`, '_blank');
+      if (!name || !senderEmail || !msg) {
+        showToast('Please fill all required fields (Name, Email, Message)! ⚠️');
+        if (statusBox) {
+          statusBox.className = 'p-4 rounded-2xl text-xs font-semibold text-center bg-amber-500/15 text-amber-300 border border-amber-500/30 block';
+          statusBox.innerHTML = '⚠️ Please fill all required fields: Name, Email Address, and Message.';
+        }
+        return false;
       }
-    });
+
+      const subject = encodeURIComponent(`[Portfolio Consultation] ${service ? service + ' — ' : ''}${name}`);
+      const body = encodeURIComponent(
+        `Hello Keyur H. Satani,
+
+` +
+        `I would like to inquire about your mobile development services.
+
+` +
+        `• Inquiry / Project: ${service || 'Mobile App Development'}
+` +
+        `• Client Name: ${name}
+` +
+        `• Client Email: ${senderEmail}
+
+` +
+        `Message Details:
+${msg}
+
+` +
+        `---
+` +
+        `Sent via Keyur H. Satani Portfolio Website (https://kevalsatani2001.github.io)`
+      );
+
+      const mailtoUrl = `mailto:${targetEmail || 'kevalsatani1234@gmail.com'}?subject=${subject}&body=${body}`;
+
+      if (statusBox) {
+        statusBox.className = 'p-4 rounded-2xl text-xs font-medium text-center bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 block shadow-lg';
+        statusBox.innerHTML = `
+          <div class="font-bold text-white mb-1.5 flex items-center justify-center gap-2">
+            <span>✉️ Launching Email Client...</span>
+          </div>
+          <p class="text-slate-300">Opening your default mail app to send your message to <strong>${targetEmail || 'kevalsatani1234@gmail.com'}</strong>.</p>
+          <div class="mt-3 flex flex-wrap items-center justify-center gap-2">
+            <a href="${mailtoUrl}" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs inline-flex items-center gap-1.5 shadow transition hover:scale-105">
+              <span>Open Mail App</span> ✉️
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=+918758113819&text=' + encodeURIComponent('Hi Keyur H. Satani, my name is ' + name + ' (' + senderEmail + '). I am interested in ' + service + ': ' + msg) + '" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-flex items-center gap-1.5 shadow transition hover:scale-105"><span>Chat on WhatsApp</span> 💬</a>
+          </div>
+        `;
+      }
+
+      showToast('Opening email client... ✉️');
+
+      setTimeout(() => {
+        try {
+          window.location.href = mailtoUrl;
+        } catch (_) {
+          window.open(mailtoUrl, '_self');
+        }
+      }, 100);
+
+      return false;
+    }
+
+    document.getElementById('contactForm')?.addEventListener('submit', handleContactSubmit);
 
     // Init on DOM ready
     window.addEventListener('DOMContentLoaded', () => {
