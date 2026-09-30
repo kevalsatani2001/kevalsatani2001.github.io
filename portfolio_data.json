@@ -425,12 +425,12 @@
     }
   ],
   "theme": {
-    "templateId": "aurora",
+    "templateId": "glassmorphism",
     "primaryColorHex": "#6366F1",
     "accentColorHex": "#06B6D4",
     "fontName": "Outfit",
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-29T17:35:28.443727"
+  "updatedAt": "2026-09-30T10:05:57.495013"
 }
