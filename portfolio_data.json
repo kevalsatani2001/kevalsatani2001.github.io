@@ -104,7 +104,13 @@
       "videoDemoUrl": "",
       "apkDownloadUrl": "",
       "isFeatured": true,
-      "date": "2026"
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     },
     {
       "id": "9a2da804-ff86-43f4-9a35-cb5960b86903",
@@ -128,7 +134,13 @@
       "videoDemoUrl": "",
       "apkDownloadUrl": "",
       "isFeatured": true,
-      "date": "2026"
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     },
     {
       "id": "173b889c-1b8a-4032-a5ca-d850509d37a3",
@@ -152,7 +164,13 @@
       "videoDemoUrl": "",
       "apkDownloadUrl": "",
       "isFeatured": true,
-      "date": "2026"
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     },
     {
       "id": "1",
@@ -174,7 +192,13 @@
       "videoDemoUrl": "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-41235-large.mp4",
       "apkDownloadUrl": "https://github.com/kevalsatani2001/speed-turtle-app/releases/download/v1.0.0/app-release.apk",
       "isFeatured": true,
-      "date": "2026"
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     },
     {
       "id": "2",
@@ -196,7 +220,13 @@
       "videoDemoUrl": "",
       "apkDownloadUrl": "https://github.com/kevalsatani2001/mata-news/releases/download/v2.1.0/mata-news-v2.1.0.apk",
       "isFeatured": true,
-      "date": "2025"
+      "date": "2025",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     },
     {
       "id": "3",
@@ -217,7 +247,13 @@
       "videoDemoUrl": "",
       "apkDownloadUrl": "https://github.com/kevalsatani2001/qr-scanner-app/releases/download/v1.0.0/qr-pro-release.apk",
       "isFeatured": true,
-      "date": "2025"
+      "date": "2025",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     },
     {
       "id": "4",
@@ -238,7 +274,13 @@
       "videoDemoUrl": "",
       "apkDownloadUrl": "",
       "isFeatured": false,
-      "date": "2024"
+      "date": "2024",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     },
     {
       "id": "5",
@@ -259,7 +301,13 @@
       "videoDemoUrl": "",
       "apkDownloadUrl": "https://github.com/kevalsatani2001/ecommerce-app/releases/download/v1.0.0/ecommerce-release.apk",
       "isFeatured": true,
-      "date": "2024"
+      "date": "2024",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
     }
   ],
   "experiences": [
