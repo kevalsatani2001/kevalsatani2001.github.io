@@ -1,13 +1,13 @@
 {
   "profile": {
-    "name": "Keyur H. Satani",
+    "name": "KEYUR H. SATANI",
     "title": "Flutter Developer",
-    "bio": "Flutter Developer with 3.5+ years of experience building scalable and high-performance mobile applications across e-commerce, media, and productivity domains. Expertise in Flutter & Dart with strong knowledge of state management (GetX, Bloc, Provider), REST API integration, and Firebase services. Proven ability to deliver user-centric solutions, optimize performance, and collaborate effectively in agile environments.",
+    "bio": "A passionate and result-oriented Flutter developer with 3.5 years experience across multiple industries, from law enforcement to tech startups. Proficient in building scalable, performant apps using Flutter & Dart. Known for integrating cutting-edge features like payment systems, localization. Demonstrated expertise in API integration, state management (GetX), and performance optimization. Strong problem-solving ability and a collaborative team player committed to delivering user-centric, high-quality solutions.",
     "avatarUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Favatars%2F1788800452026_scaled_1000595709.webp?alt=media&token=f922f1c6-700b-473d-a8cd-7c2c65a402aa",
-    "location": "Surat, Gujarat, India",
+    "location": "Surat, Gujarat",
     "email": "kevalsatani1234@gmail.com",
-    "phone": "+91 8758113819",
-    "resumeUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fresumes%2F1790671170725_keyur_satani_resume%20(1).pdf?alt=media&token=498af2af-a779-4ae6-bf3d-0018d7c3cfbc",
+    "phone": "+91-8758113819",
+    "resumeUrl": "",
     "status": "Available for full-time roles & freelance opportunities",
     "yearsOfExperience": 4,
     "githubUsername": "kevalsatani2001",
@@ -18,15 +18,15 @@
   "skills": [
     {
       "id": "1",
-      "name": "Flutter & Dart",
-      "category": "Mobile",
+      "name": "Flutter, Dart",
+      "category": "Languages & Frameworks",
       "proficiency": 95,
       "icon": "flutter",
       "colorHex": "#02569B"
     },
     {
       "id": "2",
-      "name": "Bloc & Cubit",
+      "name": "GetX, Bloc",
       "category": "State Management",
       "proficiency": 92,
       "icon": "code",
@@ -34,72 +34,77 @@
     },
     {
       "id": "3",
-      "name": "GetX & Provider",
-      "category": "State Management",
+      "name": "Auth, Firestore, Analytics, Crashlytics",
+      "category": "Firebase",
       "proficiency": 90,
-      "icon": "code",
-      "colorHex": "#8B5CF6"
+      "icon": "firebase",
+      "colorHex": "#FFA611"
     },
     {
       "id": "4",
-      "name": "REST APIs & JSON",
-      "category": "Backend",
+      "name": "REST API's",
+      "category": "API's",
       "proficiency": 94,
       "icon": "api",
       "colorHex": "#10B981"
     },
     {
       "id": "5",
-      "name": "Firebase & Firestore",
-      "category": "Backend",
-      "proficiency": 92,
-      "icon": "firebase",
-      "colorHex": "#FFA611"
-    },
-    {
-      "id": "6",
-      "name": "SQLite & Local Storage",
+      "name": "Firebase database, SQLite",
       "category": "Database",
       "proficiency": 88,
       "icon": "database",
       "colorHex": "#06B6D4"
-    },
-    {
-      "id": "7",
-      "name": "Git, GitHub & CI/CD",
-      "category": "Tools",
-      "proficiency": 90,
-      "icon": "github",
-      "colorHex": "#F43F5E"
-    },
-    {
-      "id": "8",
-      "name": "Postman & Android Studio",
-      "category": "Tools",
-      "proficiency": 92,
-      "icon": "tools",
-      "colorHex": "#EC4899"
     }
   ],
   "projects": [
     {
-      "id": "3d3ce08a-0828-46ae-9252-6de0cbc47744",
-      "title": "Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game",
-      "description": "A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture. Implements real-time structural stress calculations, material fracture mechanics, articulated train physics across 30 dynamic levels, Google AdMob monetization, and GitHub-based Remote Config at a locked 60 FPS.",
-      "category": "Mobile App",
+      "id": "62c30e26-f0b7-4d07-bc73-6670781a6a42",
+      "title": "MediaVault — All-in-One WhatsApp Status Saver & Social Media Utility Engine",
+      "description": "Engineered a high-performance Flutter & Android media management suite featuring Storage Access Framework (SAF) scoped-storage compliance, native MediaStore ContentResolver integration, and GetX reactive architecture. Implemented zero-lag 60 FPS video/photo grid caching, biometric PIN vault security, batch background downloads, and dynamic AdMob monetization with remote config fallback. Solved strict Google Play scoped-storage and package visibility compliance requirements while delivering seamless cross-version Android (API 23–36) compatibility.",
+      "category": "Utility & Tools",
       "tags": [
         "Flutter",
         "Dart",
-        "Flame Engine",
-        "Forge2D (Box2D)",
-        "Flutter BLoC",
-        "Game Development",
-        "AdMob SDK"
+        "GetX",
+        "Android SAF",
+        "Platform Channels",
+        "AdMob",
+        "Shared preferences"
       ],
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1790856221040_scaled_1000804880.jpg?alt=media&token=69c93702-42c0-45e5-9814-d8d49fa85895",
+      "screenshots": [
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1790856221040_scaled_1000804880.jpg?alt=media&token=69c93702-42c0-45e5-9814-d8d49fa85895"
+      ],
+      "liveUrl": "https://play.google.com/store/apps/details?id=com.mediavault.mediavault",
+      "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
+      "isFeatured": true,
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": false,
+      "showVideo": false,
+      "showApk": false,
+      "showGithub": false,
+      "showLive": true
+    },
+    {
+      "id": "1",
+      "title": "The Speed Turtle App",
+      "description": "Designed for trainers, trainees, and life coaches to build consistency, discipline, and high-performance habits.",
+      "category": "Mobile Application",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Habit Coaching",
+        "Discipline"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80",
       "screenshots": [],
       "liveUrl": "",
-      "githubUrl": "",
+      "githubUrl": "https://github.com/kevalsatani2001/speed-turtle-app",
       "demoUrl": "",
       "videoDemoUrl": "",
       "apkDownloadUrl": "",
@@ -113,18 +118,152 @@
       "showLive": true
     },
     {
-      "id": "9a2da804-ff86-43f4-9a35-cb5960b86903",
+      "id": "2",
+      "title": "MATA News Application",
+      "description": "Visual-first, personalized news platform with fast, intuitive storytelling and a tailored news feed based on user interests.",
+      "category": "News & Media",
+      "tags": [
+        "Flutter",
+        "REST APIs",
+        "News Feed",
+        "Play Store Live"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80",
+      "screenshots": [],
+      "liveUrl": "",
+      "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
+      "isFeatured": true,
+      "date": "2025",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
+    },
+    {
+      "id": "3",
+      "title": "QR Scanner Application",
+      "description": "High-accuracy QR & barcode scanning app with instant decoding, smooth performance, and a user-friendly interface for everyday scanning needs.",
+      "category": "Utility & Tools",
+      "tags": [
+        "Flutter",
+        "Barcode ML",
+        "Scanner",
+        "Instant Decoding"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+      "screenshots": [],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani2001/qr-scanner-app",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
+      "isFeatured": true,
+      "date": "2025",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
+    },
+    {
+      "id": "4",
+      "title": "Media Player Application",
+      "description": "The Ultimate All-in-One Player: A seamless audio and video experience with smart playback controls and an intuitive interface for all your media needs.",
+      "category": "Media & Streaming",
+      "tags": [
+        "Flutter",
+        "Audio Service",
+        "Video Player",
+        "Playback"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+      "screenshots": [],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani2001/media-player-app",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
+      "isFeatured": true,
+      "date": "2024",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
+    },
+    {
+      "id": "5",
+      "title": "Other Products Developed",
+      "description": "E-commerce application, exercise & fitness tracking app, and education/learning applications tailored for scalable, real-world use cases.",
+      "category": "E-Commerce & Fitness",
+      "tags": [
+        "E-Commerce",
+        "Fitness Tracking",
+        "EdTech",
+        "Flutter"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80",
+      "screenshots": [],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/kevalsatani2001/ecommerce-app",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
+      "isFeatured": false,
+      "date": "2024",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": true,
+      "showLive": true
+    },
+    {
+      "id": "6",
+      "title": "Bridge Builder: Master Architect – 2D Real-Time Physics Puzzle Game",
+      "description": "A high-performance 2D bridge construction simulator engineered with Flutter, Flame Engine (v1.38), Forge2D (Box2D), and BLoC architecture.",
+      "category": "Game Development",
+      "tags": [
+        "Flutter",
+        "Flame Engine",
+        "Forge2D",
+        "BLoC"
+      ],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1",
+      "screenshots": [
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1"
+      ],
+      "liveUrl": "https://play.google.com/store/apps/details?id=com.codexatgames.bridgebuilder",
+      "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "https://play.google.com/store/apps/details?id=com.codexatgames.bridgebuilder",
+      "isFeatured": true,
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": false,
+      "showVideo": false,
+      "showApk": true,
+      "showGithub": false,
+      "showLive": true
+    },
+    {
+      "id": "7",
       "title": "Who's Nxt – Salon Appointment Booking & Retail E-Commerce App",
-      "description": "Architected and engineered an enterprise-grade salon scheduling and retail mobile application utilizing Flutter and GetX modular state management with RESTful Dio interceptors. Integrated native Stripe Payment Sheets for seamless deposit processing and checkout alongside biometric authentication (Face ID / Fingerprint) and secure encrypted token storage. Streamlined the entire customer journey with real-time slot calendar availability, click-and-collect retail ordering, loyalty points gamification, and automated PDF receipt generation.",
+      "description": "Luxury barbershop booking & retail mobile application with real-time slot calendar, Stripe payments, and loyalty rewards.",
       "category": "Mobile App",
       "tags": [
         "Flutter",
         "Dart",
         "GetX",
-        "Dio & REST APIs",
-        "Stripe Payments",
-        "Biometric Auth",
-        "Secure Storage"
+        "Stripe Payments"
       ],
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788888449042_scaled_1000795488.jpg?alt=media&token=efe4c49d-a56d-4a4d-863d-13923f750bcd",
       "screenshots": [],
@@ -141,235 +280,66 @@
       "showApk": true,
       "showGithub": true,
       "showLive": true
-    },
-    {
-      "id": "173b889c-1b8a-4032-a5ca-d850509d37a3",
-      "title": "Who's Nxt – Salon Appointment Booking & Retail E-Commerce App",
-      "description": "Steve's Barbers (Powered by WhozNxt)\n\nRole: UI/UX & Frontend Development\n\nOverview: A luxury, multi-feature barbershop booking & retail web application built with a modern, mobile-first design system. Includes multi-step appointment scheduling, stylist portfolios, integrated e-commerce aftercare shop, and loyalty rewards system.",
-      "category": "Mobile App",
-      "tags": [
-        "Flutter",
-        "Dart",
-        "GetX",
-        "Dio & REST APIs",
-        "Stripe Payments",
-        "Biometric Auth",
-        "Secure Storage"
-      ],
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6",
-      "screenshots": [],
-      "liveUrl": "",
-      "githubUrl": "",
-      "demoUrl": "",
-      "videoDemoUrl": "",
-      "apkDownloadUrl": "",
-      "isFeatured": true,
-      "date": "2026",
-      "show3DView": true,
-      "showDemo": true,
-      "showVideo": true,
-      "showApk": true,
-      "showGithub": true,
-      "showLive": true
-    },
-    {
-      "id": "1",
-      "title": "TheSpeedTurtle App",
-      "description": "Habit tracking and discipline coach platform designed for trainers, trainees, and life coaches to build consistency, daily routines, and high-performance habits with real-time analytics.",
-      "category": "Fitness & Productivity",
-      "tags": [
-        "Flutter",
-        "Dart",
-        "BLoC",
-        "Firebase",
-        "Push Notifications"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=80",
-      "screenshots": [],
-      "liveUrl": "",
-      "githubUrl": "https://github.com/kevalsatani2001/speed-turtle-app",
-      "demoUrl": "https://flutter.github.io/samples/web/gallery/",
-      "videoDemoUrl": "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-41235-large.mp4",
-      "apkDownloadUrl": "https://github.com/kevalsatani2001/speed-turtle-app/releases/download/v1.0.0/app-release.apk",
-      "isFeatured": true,
-      "date": "2026",
-      "show3DView": true,
-      "showDemo": true,
-      "showVideo": true,
-      "showApk": true,
-      "showGithub": true,
-      "showLive": true
-    },
-    {
-      "id": "2",
-      "title": "MATA News Application",
-      "description": "High-performance personalized news feed application published on Google Play Store featuring fast UI rendering, offline article caching, category filtering, and real-time push alerts.",
-      "category": "Media & News",
-      "tags": [
-        "Flutter",
-        "REST APIs",
-        "GetX",
-        "Play Store Live",
-        "Caching"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80",
-      "screenshots": [],
-      "liveUrl": "https://play.google.com/store/apps/details?id=com.mata.today&hl=en",
-      "githubUrl": "",
-      "demoUrl": "",
-      "videoDemoUrl": "",
-      "apkDownloadUrl": "https://github.com/kevalsatani2001/mata-news/releases/download/v2.1.0/mata-news-v2.1.0.apk",
-      "isFeatured": true,
-      "date": "2025",
-      "show3DView": true,
-      "showDemo": true,
-      "showVideo": true,
-      "showApk": true,
-      "showGithub": true,
-      "showLive": true
-    },
-    {
-      "id": "3",
-      "title": "QR Scanner & Barcode Pro",
-      "description": "High-performance QR and barcode scanning application with real-time camera detection, scan history management, custom QR code generation, and export capabilities.",
-      "category": "Utility & Tools",
-      "tags": [
-        "Flutter",
-        "Camera ML",
-        "SQLite",
-        "Clean Architecture"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
-      "screenshots": [],
-      "liveUrl": "",
-      "githubUrl": "https://github.com/kevalsatani2001/qr-scanner-app",
-      "demoUrl": "",
-      "videoDemoUrl": "",
-      "apkDownloadUrl": "https://github.com/kevalsatani2001/qr-scanner-app/releases/download/v1.0.0/qr-pro-release.apk",
-      "isFeatured": true,
-      "date": "2025",
-      "show3DView": true,
-      "showDemo": true,
-      "showVideo": true,
-      "showApk": true,
-      "showGithub": true,
-      "showLive": true
-    },
-    {
-      "id": "4",
-      "title": "Media Player Application",
-      "description": "Custom audio and video player application with advanced playback controls, background audio playback, playlist management, and dynamic audio visualization.",
-      "category": "Media & Streaming",
-      "tags": [
-        "Flutter",
-        "Audio Service",
-        "Video Player",
-        "Bloc"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
-      "screenshots": [],
-      "liveUrl": "",
-      "githubUrl": "https://github.com/kevalsatani2001/media-player-app",
-      "demoUrl": "",
-      "videoDemoUrl": "",
-      "apkDownloadUrl": "",
-      "isFeatured": false,
-      "date": "2024",
-      "show3DView": true,
-      "showDemo": true,
-      "showVideo": true,
-      "showApk": true,
-      "showGithub": true,
-      "showLive": true
-    },
-    {
-      "id": "5",
-      "title": "E-Commerce & Multi-Vendor Mobile Platform",
-      "description": "Scalable e-commerce mobile application featuring real-time product catalogs, cart & checkout workflows, payment gateway integration, and order tracking.",
-      "category": "E-Commerce",
-      "tags": [
-        "Flutter",
-        "REST APIs",
-        "Payment Gateway",
-        "Firebase"
-      ],
-      "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80",
-      "screenshots": [],
-      "liveUrl": "",
-      "githubUrl": "https://github.com/kevalsatani2001/ecommerce-app",
-      "demoUrl": "",
-      "videoDemoUrl": "",
-      "apkDownloadUrl": "https://github.com/kevalsatani2001/ecommerce-app/releases/download/v1.0.0/ecommerce-release.apk",
-      "isFeatured": true,
-      "date": "2024",
-      "show3DView": true,
-      "showDemo": true,
-      "showVideo": true,
-      "showApk": true,
-      "showGithub": true,
-      "showLive": true
     }
   ],
   "experiences": [
     {
       "id": "1",
-      "company": "Code Expert Solutions",
-      "role": "Flutter Developer",
+      "company": "Codexport solution",
+      "role": "Senior Flutter Developer",
       "location": "Surat, Gujarat",
       "startDate": "Jan 2026",
       "endDate": "Present",
       "isCurrent": true,
-      "description": "Developing scalable e-commerce features and core application modules; collaborating with cross-functional agile engineering teams to build modern mobile experiences.",
+      "description": "✔ Contributing to the end-to-end development of a new e-commerce marketplace platform\n✔ Collaborating with the team to design user-friendly features and core app functionalities.",
       "techStack": [
         "Flutter",
         "Dart",
-        "Bloc",
-        "REST APIs",
-        "E-Commerce"
+        "E-Commerce",
+        "REST APIs"
       ]
     },
     {
       "id": "2",
       "company": "Freshcodes Technology",
-      "role": "Flutter Developer",
+      "role": "Junior Flutter Developer",
       "location": "Surat, Gujarat",
       "startDate": "Aug 2024",
-      "endDate": "Oct 2025",
+      "endDate": "October 2025",
       "isCurrent": false,
-      "description": "Built high-performance cross-platform apps, integrated complex REST APIs, improved overall UI/UX responsiveness and enhanced app loading performance.",
+      "description": "✔ Developed & maintained high-performance apps with Flutter/Dart\n✔ Worked directly with clients to optimize user experience\n✔ Implemented new features across mobile platforms",
       "techStack": [
         "Flutter",
-        "REST APIs",
+        "Dart",
         "GetX",
-        "Firebase",
-        "UI/UX"
+        "REST APIs"
       ]
     },
     {
       "id": "3",
       "company": "StackApp Infotech",
-      "role": "Flutter Developer",
-      "location": "Surat, Gujarat",
+      "role": "Junior Flutter Developer",
+      "location": "",
       "startDate": "Feb 2024",
       "endDate": "Aug 2024",
       "isCurrent": false,
-      "description": "Developed reusable UI component libraries, maintained clean code architecture, and resolved critical production performance and state synchronization bugs.",
+      "description": "✔ Collaborated with cross-functional teams\n✔ Developed user-focused Flutter applications\n✔ Ensured responsive designs and bug-free delivery",
       "techStack": [
         "Flutter",
-        "Provider",
-        "Git",
-        "Clean Architecture"
+        "Dart",
+        "Responsive UI",
+        "Bug-free Delivery"
       ]
     },
     {
       "id": "4",
       "company": "Dreamvision Infotech",
-      "role": "Flutter Developer",
-      "location": "Surat, Gujarat",
+      "role": "Junior Flutter Developer",
+      "location": "",
       "startDate": "Aug 2022",
       "endDate": "Jan 2024",
       "isCurrent": false,
-      "description": "Built cross-platform Android & iOS applications, optimized UI/UX rendering performance, and integrated SQLite local databases and Firebase backend.",
+      "description": "✔ Built and maintained scalable Flutter applications for Android & iOS\n✔ Improved UI/UX by implementing clean, responsive, and reusable components\n✔ Contributed to code reviews, testing, and continuous improvement processes",
       "techStack": [
         "Flutter",
         "Android & iOS",
@@ -381,21 +351,12 @@
   "education": [
     {
       "id": "1",
-      "institution": "Saurashtra University",
-      "degree": "Bachelor of Computer Application (BCA)",
-      "fieldOfStudy": "Computer Applications & Software Engineering",
-      "startYear": "2022",
-      "endYear": "2025",
-      "grade": "First Class with Distinction"
-    },
-    {
-      "id": "2",
-      "institution": "Saurashtra University",
-      "degree": "Bachelor of Science (B.Sc)",
-      "fieldOfStudy": "Science & Computer Basics",
+      "institution": "VNSGU",
+      "degree": "Bachelor of Science",
+      "fieldOfStudy": "Computer Applications",
       "startYear": "2018",
       "endYear": "2022",
-      "grade": "Graduated"
+      "grade": ""
     }
   ],
   "socialLinks": [
@@ -419,18 +380,18 @@
     },
     {
       "id": "4",
-      "platform": "Phone / WhatsApp",
-      "url": "https://wa.me/918758113819",
-      "username": "+91 8758113819"
+      "platform": "Phone",
+      "url": "tel:+918758113819",
+      "username": "+91-8758113819"
     }
   ],
   "theme": {
-    "templateId": "glassmorphism",
+    "templateId": "aurora",
     "primaryColorHex": "#6366F1",
     "accentColorHex": "#06B6D4",
     "fontName": "Outfit",
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-09-30T10:05:57.495013"
+  "updatedAt": "2026-10-01T17:36:18.591663"
 }
