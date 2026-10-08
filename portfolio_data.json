@@ -73,7 +73,11 @@
       ],
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791434860304_scaled_1000807439.jpg?alt=media&token=b467bb12-e187-4724-b559-636b443d547e",
       "screenshots": [
-        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791434860304_scaled_1000807439.jpg?alt=media&token=b467bb12-e187-4724-b559-636b443d547e"
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791434860304_scaled_1000807439.jpg?alt=media&token=b467bb12-e187-4724-b559-636b443d547e",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791435789077_scaled_1000807484.jpg?alt=media&token=6489e28e-ce3f-4a9e-805d-3dd2c5a3d331",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791435807207_scaled_1000807485.jpg?alt=media&token=51535a2b-f2ce-46e9-b0f8-0973aeab3c41",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791435821156_scaled_1000807486.jpg?alt=media&token=8a191720-1044-4de5-80d0-654c20cd11a2",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791435834636_scaled_1000807487.jpg?alt=media&token=4917180a-0cc0-4701-8404-562e42a0e1ee"
       ],
       "liveUrl": "",
       "githubUrl": "",
@@ -390,5 +394,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-10-08T10:19:20.123196"
+  "updatedAt": "2026-10-08T10:34:06.275436"
 }
