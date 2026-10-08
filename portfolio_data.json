@@ -59,34 +59,33 @@
   ],
   "projects": [
     {
-      "id": "62c30e26-f0b7-4d07-bc73-6670781a6a42",
-      "title": "MediaVault — All-in-One WhatsApp Status Saver & Social Media Utility Engine",
-      "description": "Engineered a high-performance Flutter & Android media management suite featuring Storage Access Framework (SAF) scoped-storage compliance, native MediaStore ContentResolver integration, and GetX reactive architecture. Implemented zero-lag 60 FPS video/photo grid caching, biometric PIN vault security, batch background downloads, and dynamic AdMob monetization with remote config fallback. Solved strict Google Play scoped-storage and package visibility compliance requirements while delivering seamless cross-version Android (API 23–36) compatibility.",
+      "id": "5717430f-59dc-4537-a240-99391b232649",
+      "title": "Status Saver & 4K Media Downloader",
+      "description": "Engineered a production-ready media utility in Flutter engineered for strict Android 11–15 Scoped Storage (SAF) compliance without broad storage permissions. Features a resilient chunked stream downloader with auto-resume and HTTP 403 token recovery for YouTube (up to 4K/Audio extraction) and Instagram, alongside an encrypted biometric private vault and offline HD playback. Architected dynamic cloud control via Firebase Remote Config for instant feature toggles, app updates, and policy-compliant AdMob monetization with Google UMP GDPR consent.",
       "category": "Utility & Tools",
       "tags": [
         "Flutter",
         "Dart",
-        "GetX",
-        "Android SAF",
-        "Platform Channels",
-        "AdMob",
-        "Shared preferences"
+        "Android Scoped Storage",
+        "Firebase Remote Config",
+        "Google AdMob",
+        "Video Streaming"
       ],
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1790856221040_scaled_1000804880.jpg?alt=media&token=69c93702-42c0-45e5-9814-d8d49fa85895",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791434860304_scaled_1000807439.jpg?alt=media&token=b467bb12-e187-4724-b559-636b443d547e",
       "screenshots": [
-        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1790856221040_scaled_1000804880.jpg?alt=media&token=69c93702-42c0-45e5-9814-d8d49fa85895"
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791434860304_scaled_1000807439.jpg?alt=media&token=b467bb12-e187-4724-b559-636b443d547e"
       ],
-      "liveUrl": "https://play.google.com/store/apps/details?id=com.mediavault.mediavault",
+      "liveUrl": "",
       "githubUrl": "",
       "demoUrl": "",
       "videoDemoUrl": "",
-      "apkDownloadUrl": "",
+      "apkDownloadUrl": "https://drive.google.com/file/d/1YDtUpg_y65kxAJUCo-h_ciPzju2IWoGG/view?usp=drivesdk",
       "isFeatured": true,
       "date": "2026",
       "show3DView": true,
       "showDemo": false,
       "showVideo": false,
-      "showApk": false,
+      "showApk": true,
       "showGithub": false,
       "showLive": true
     },
@@ -130,7 +129,7 @@
       ],
       "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop&q=80",
       "screenshots": [],
-      "liveUrl": "",
+      "liveUrl": "https://play.google.com/store/apps/details?id=com.mata.today&hl=en",
       "githubUrl": "",
       "demoUrl": "",
       "videoDemoUrl": "",
@@ -237,21 +236,19 @@
         "BLoC"
       ],
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1",
-      "screenshots": [
-        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1789567750923_scaled_1000798797.jpg?alt=media&token=d33672c9-9d6e-4f3a-b710-097eb064dad1"
-      ],
-      "liveUrl": "https://play.google.com/store/apps/details?id=com.codexatgames.bridgebuilder",
+      "screenshots": [],
+      "liveUrl": "",
       "githubUrl": "",
       "demoUrl": "",
       "videoDemoUrl": "",
-      "apkDownloadUrl": "https://play.google.com/store/apps/details?id=com.codexatgames.bridgebuilder",
+      "apkDownloadUrl": "",
       "isFeatured": true,
       "date": "2026",
       "show3DView": true,
-      "showDemo": false,
-      "showVideo": false,
+      "showDemo": true,
+      "showVideo": true,
       "showApk": true,
-      "showGithub": false,
+      "showGithub": true,
       "showLive": true
     },
     {
@@ -285,8 +282,8 @@
   "experiences": [
     {
       "id": "1",
-      "company": "Codexport solution",
-      "role": "Senior Flutter Developer",
+      "company": "Letmegrab e-platform private Limited",
+      "role": "Junior Flutter Developer",
       "location": "Surat, Gujarat",
       "startDate": "Jan 2026",
       "endDate": "Present",
@@ -351,8 +348,8 @@
   "education": [
     {
       "id": "1",
-      "institution": "VNSGU",
-      "degree": "Bachelor of Science",
+      "institution": "Saurashtra University",
+      "degree": "Bachelor of Computer Application (BCA)",
       "fieldOfStudy": "Computer Applications",
       "startYear": "2018",
       "endYear": "2022",
@@ -393,5 +390,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-10-01T17:36:18.591663"
+  "updatedAt": "2026-10-08T10:19:20.123196"
 }
