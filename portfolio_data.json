@@ -59,6 +59,38 @@
   ],
   "projects": [
     {
+      "id": "de01ab4f-3548-4556-8d79-91b0aed1e7b9",
+      "title": "WhozNxt – Enterprise Salon & Appointment Management SaaS App",
+      "description": "Built a comprehensive B2B salon & appointment management mobile ERP using Flutter and GetX to streamline operations for beauty and wellness businesses. Engineered seamless modules for real-time diary scheduling, staff availability tracking, CRM client management, marketing broadcasts, and revenue analytics across 50+ REST API endpoints. Integrated Firebase Cloud Messaging (FCM) for background push alerts with fluid 60 FPS UI rendering.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "GetX",
+        "REST APIs",
+        "Firebase Cloud Messaging",
+        "State Management",
+        "Mobile ERP"
+      ],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6",
+      "screenshots": [
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1788883559516_scaled_1000795449.png?alt=media&token=6ac3d321-745a-4394-959a-32c97ef1bbe6"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
+      "isFeatured": true,
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": false,
+      "showVideo": false,
+      "showApk": false,
+      "showGithub": false,
+      "showLive": false
+    },
+    {
       "id": "5717430f-59dc-4537-a240-99391b232649",
       "title": "Status Saver & 4K Media Downloader",
       "description": "Engineered a production-ready media utility in Flutter engineered for strict Android 11–15 Scoped Storage (SAF) compliance without broad storage permissions. Features a resilient chunked stream downloader with auto-resume and HTTP 403 token recovery for YouTube (up to 4K/Audio extraction) and Instagram, alongside an encrypted biometric private vault and offline HD playback. Architected dynamic cloud control via Firebase Remote Config for instant feature toggles, app updates, and policy-compliant AdMob monetization with Google UMP GDPR consent.",
@@ -394,5 +426,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-10-08T10:34:06.275436"
+  "updatedAt": "2026-10-08T10:43:48.050683"
 }
