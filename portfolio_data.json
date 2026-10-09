@@ -59,6 +59,45 @@
   ],
   "projects": [
     {
+      "id": "cfef4489-935f-40c5-8bb1-02e61df5f505",
+      "title": "Magic Paint – Kids Creative Art Studio & AR Learning App",
+      "description": "Architected a studio-grade Flutter and Dart creative learning platform powered by BLoC state management and a custom sub-11ms True Span Scanline flood-fill graphics engine with zero-GC memory allocation. Integrated AR 3D camera projection, an interactive STEM Color Science Lab, dynamic 300-DPI vector PDF book generation, and AES-256 encrypted local storage. Includes Firebase Remote Config, child-directed COPPA compliance, and bilingual TTS audio feedback backed by an automated test suite.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "BLoC",
+        "Custom Graphics Engine",
+        "AR & Camera",
+        "PDF Generation",
+        "Firebase Remote Config",
+        "AES-256 Encryption"
+      ],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791519371585_scaled_1000807933.jpg?alt=media&token=041002ff-a36a-47e7-ac35-ae958b79f43a",
+      "screenshots": [
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791519371585_scaled_1000807933.jpg?alt=media&token=041002ff-a36a-47e7-ac35-ae958b79f43a",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791520224133_scaled_fded6b73-4b33-499e-b1ca-82d5b6fd7cc2-1_all_197438.jpg?alt=media&token=66a0cbbd-b2aa-47bf-a0e6-6fb86f8d0ddb",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791520259366_scaled_fded6b73-4b33-499e-b1ca-82d5b6fd7cc2-1_all_197429.jpg?alt=media&token=880d0296-e5aa-4167-a1d5-ccd8a41313b6",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791520302172_scaled_fded6b73-4b33-499e-b1ca-82d5b6fd7cc2-1_all_197435.jpg?alt=media&token=65693a07-7fa6-4709-acdd-d753505abb3f",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791520355463_scaled_fded6b73-4b33-499e-b1ca-82d5b6fd7cc2-1_all_197430.jpg?alt=media&token=0571c54d-cce3-4e59-a18f-355cc5ae0f52",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791520530714_scaled_fded6b73-4b33-499e-b1ca-82d5b6fd7cc2-1_all_197487.jpg?alt=media&token=32647193-45bb-41bc-861b-814cdb7ad0ec",
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1791520627506_scaled_fded6b73-4b33-499e-b1ca-82d5b6fd7cc2-1_all_197427.jpg?alt=media&token=03688bfc-6ab1-42cc-b423-ff57e149342b"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "https://drive.google.com/file/d/1za_PKotvs1QdhIqB8vs7QTb8x7GzbazC/view?usp=drivesdk",
+      "isFeatured": true,
+      "date": "2026",
+      "show3DView": true,
+      "showDemo": true,
+      "showVideo": true,
+      "showApk": true,
+      "showGithub": false,
+      "showLive": false
+    },
+    {
       "id": "de01ab4f-3548-4556-8d79-91b0aed1e7b9",
       "title": "WhozNxt – Enterprise Salon & Appointment Management SaaS App",
       "description": "Built a comprehensive B2B salon & appointment management mobile ERP using Flutter and GetX to streamline operations for beauty and wellness businesses. Engineered seamless modules for real-time diary scheduling, staff availability tracking, CRM client management, marketing broadcasts, and revenue analytics across 50+ REST API endpoints. Integrated Firebase Cloud Messaging (FCM) for background push alerts with fluid 60 FPS UI rendering.",
@@ -426,5 +465,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-10-08T10:43:48.050683"
+  "updatedAt": "2026-10-09T10:08:03.321103"
 }
