@@ -59,6 +59,38 @@
   ],
   "projects": [
     {
+      "id": "17684364-43b9-42e7-be16-c8f2c6d91eef",
+      "title": "Hill Craze 2D: Physics Racing Engine & Arcade Game",
+      "description": "Engineered a high-performance 2D physics-based arcade racing game in Flutter using Flame and Forge2D (Box2D), achieving a smooth 60 FPS gameplay experience with procedural terrain and rigid-body vehicle suspension. Integrated full monetization with Google AdMob & European GDPR (UMP) compliance, real-time cloud remote configuration, and anti-reverse engineering protections.",
+      "category": "Mobile App",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Flame Engine",
+        "Forge2D",
+        "Google AdMob",
+        "Remote Config",
+        "Game Architecture"
+      ],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1792816220144_scaled_1000815751.jpg?alt=media&token=78c971b6-d8d6-4985-b61a-00b9a7021de2",
+      "screenshots": [
+        "https://firebasestorage.googleapis.com/v0/b/building-guard-app.firebasestorage.app/o/portfolios%2Fprojects%2F1792816220144_scaled_1000815751.jpg?alt=media&token=78c971b6-d8d6-4985-b61a-00b9a7021de2"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "demoUrl": "",
+      "videoDemoUrl": "",
+      "apkDownloadUrl": "",
+      "isFeatured": true,
+      "date": "2026",
+      "show3DView": false,
+      "showDemo": false,
+      "showVideo": false,
+      "showApk": false,
+      "showGithub": false,
+      "showLive": false
+    },
+    {
       "id": "cfef4489-935f-40c5-8bb1-02e61df5f505",
       "title": "Magic Paint – Kids Creative Art Studio & AR Learning App",
       "description": "Architected a studio-grade Flutter and Dart creative learning platform powered by BLoC state management and a custom sub-11ms True Span Scanline flood-fill graphics engine with zero-GC memory allocation. Integrated AR 3D camera projection, an interactive STEM Color Science Lab, dynamic 300-DPI vector PDF book generation, and AES-256 encrypted local storage. Includes Firebase Remote Config, child-directed COPPA compliance, and bilingual TTS audio feedback backed by an automated test suite.",
@@ -465,5 +497,5 @@
     "enableGlowEffects": true,
     "showContactForm": true
   },
-  "updatedAt": "2026-10-09T10:08:03.321103"
+  "updatedAt": "2026-10-24T10:05:47.320190"
 }
